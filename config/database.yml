@@ -1,0 +1,24 @@
+development:
+  adapter: mysql
+  host: localhost
+  database: workout_development
+  username: root
+  password: root
+
+test: &TEST
+  adapter: mysql
+  host: localhost
+  database: workout_test
+  username: root
+  password: root
+
+production:
+  adapter: mysql
+  host: localhost
+  database: workout_production
+  username: root
+  password: root
+
+cucumber:
+  <<: *TEST
+
