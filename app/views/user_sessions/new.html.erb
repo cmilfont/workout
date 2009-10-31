@@ -1,6 +1,6 @@
 <h1>Login</h1>
 
-<% form_for @user_session, :url => user_session_path do |f| %>
+<% form_for @user_session, :builder => WorkoutFormBuilder, :url => user_session_path do |f| %>
   <%= f.error_messages %>
   <div id="login_container"<% unless @user_session.openid_identifier.blank? %> style="display: none;"<% end %>>
     <%= f.label :login %> (or <%= link_to_function "login using OpenID", "$('login_container').toggle(); $('openid_container').toggle();" %>)<br />

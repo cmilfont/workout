@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :trainings
+
+  map.resources :exercises
+
+  map.resources :types_of_exercises
+
+  map.resources :workouts
+
 
   map.resource :account, :controller => "users"
   map.resources :password_resets

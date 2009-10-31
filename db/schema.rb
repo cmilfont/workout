@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081120163933) do
+ActiveRecord::Schema.define(:version => 20091030203331) do
+
+  create_table "exercises", :force => true do |t|
+    t.string   "name"
+    t.integer  "types_of_exercise_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "open_id_authentication_associations", :force => true do |t|
     t.integer "issued"
@@ -36,9 +43,28 @@ ActiveRecord::Schema.define(:version => 20081120163933) do
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
+  create_table "trainings", :force => true do |t|
+    t.integer  "exercise_id"
+    t.integer  "workout_id"
+    t.datetime "start"
+    t.datetime "finish"
+    t.integer  "health_frequency"
+    t.integer  "distance"
+    t.integer  "effort"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "types_of_exercises", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
     t.string   "login"
     t.string   "crypted_password"
     t.string   "password_salt"
@@ -58,5 +84,11 @@ ActiveRecord::Schema.define(:version => 20081120163933) do
   add_index "users", ["login"], :name => "index_users_on_login"
   add_index "users", ["openid_identifier"], :name => "index_users_on_openid_identifier"
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
+
+  create_table "workouts", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

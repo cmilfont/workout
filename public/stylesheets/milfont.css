@@ -7,97 +7,49 @@ input#openid_url {
    padding-left: 18px;
 }
 
-ul li {
-border-radius: 13px 13px 13px 13px;-webkit-border-radius: 13px;-moz-border-radius:13px;
-/*background:transparent url(http://tapbots.com//images-global/ui/bg_sitelinks.png) repeat scroll 0 0;*/
-float:left;margin:0 0 0 18px;padding:4px 10px 4px 6px;
-}
-ul li a {background-position:0 50%;background-repeat:no-repeat;border:0 none;color:#AAAAAA;display:block;font-size:12px;line-height:1.5em;padding-left:20px;}
-ul li#link-blog a {background-image:url(http://tapbots.com//images-global/ui/icon_blog.png);}
-ul li#link-about a {background-image:url(http://tapbots.com//images-global/ui/icon_about.png);}
-ul li#link-help a {background-image:url(http://tapbots.com//images-global/ui/icon_help.png);}
 
-.input {background-color:#111;margin-bottom:5px;color:#DDF5FF;border:#222 1px solid;}
-.input_focus {
-background-color:#333;margin-bottom:5px;color:#fff;border:#555 1px solid;
-}
 .go_form {color:#01b0f0;}
 .go_form:hover {color:#AEEE00/*aeee00*/;}
 
+/*
+azul bem claro #EFF7FF
+rosa choque #C40098
 
-body {background-color:#000/*#100000*/;}
-html {background-color:#000;}
+*/
+html {background-color:#fff;}
+body {background-color:#fff /*#100000*/; width:960px;
+  margin-left:auto; margin-right:auto; margin-bottom:0; height:600px;
+margin-top:0;
+}
+#hd { background-color:#81a4d6; color:#fff;height:40px; margin-top:0px;
+  font-size:12px; border-bottom:#1E6CBB 3px inset;
+}
 
-#services {height:70px;}
-  .service_title {color:#FFFFFF;font-size:24px;font-weight:bold;}
-  .service_subtitle {color:#7DC6F0;font-size:16px;font-weight:bold;}
+#hd a {color:#fff;}
+#hd_search {float:right; margin-right:5px;margin-top:5px;}
+#hd_menu {float:left; margin-left:5px;margin-top:5px;}
+#message {float:left; margin-left:50px;margin-top:5px;}
 
-#depoimentos {height:80px;}
+#user_profile { background-color:#d9e6f7; font-size:11px;
+   height:110px; color:#1E6CBB; font-weight:bold;margin-top:5px;
+}
+#user_profile a {color:#b2bb1d;}
+#user_info_show {float:left; margin-right:10px; margin-left:10px;}
+
+.ultimos_treinos {color:#D7B381; float:left; height:100px; background-color:#EFF7FF; margin:5px; width:200px;}
+
+
+#workout_home {color:#fff; height:300px; background-color:#D0D781; width:960px;
+margin:5px 0px 5px 0px; }
+#friends_home {color:#fff; height:300px; background-color:#EFF7FF/*D781A5*/; width:960px; margin-right:5px 0px 5px 0px;}
+
+
+#ft {}
+
+#avatar {float:left;margin-left:5px; margin-top:5px; margin-right: 5px;}
 
 #intermediario {background-color:#03899c/*7DC6F0*/;color:#FFF;margin-left:-10px; margin-right:-10px; height:600px;
 /*background:transparent url(http://tearoundapp.com/images/wood.jpg) repeat-x scroll center top;*/
 border-top:#015965 5px solid; border-bottom:#333 5px solid;
 }
-
-#intermediario2 {background-color:#6B5B3A;color:#FFF;margin-left:-10px; margin-right:-10px; height:30px;
-}
-
-#about_us_and_contact { background-color:#6B5B3A;margin-left:-10px; margin-right:-10px;
-    /*background:transparent url(http://tearoundapp.com/images/wood.jpg) repeat-x scroll center bottom;*/
-}
-
-#contact_div {border-bottom:#222 0.5px solid;margin-top:-35px;margin-bottom:-50px;}
-/* o background da borda superior é 6B5B3A */
-
-#ft {background-color:#695F48; margin-left:-10px; margin-right:-10px; height:50px;
-background:transparent url(http://tearoundapp.com/images/foot.jpg) repeat-x scroll center top;
-}
-
-
-/* set millions of background images */
-.rbroundbox { background: url(nt.gif) repeat; }
-.rbtop div { background: url(tl.gif) no-repeat top left; }
-.rbtop { background: url(tr.gif) no-repeat top right; }
-.rbbot div { background: url(bl.gif) no-repeat bottom left; }
-.rbbot { background: url(br.gif) no-repeat bottom right; }
-/* height and width stuff, width not really nessisary. */
-.rbtop div, .rbtop, .rbbot div, .rbbot {
-width: 100%;
-height: 7px;
-font-size: 1px;
-}
-.rbcontent { margin: 0 7px; }
-.rbroundbox { width: 100%; margin: 1em auto; }
-
-/* roundbox blue */
-.rbroundbox-blue { background: url(/images/roundbox-blue/nt.gif) repeat; color:#fff;}
-.rbroundbox-blue a {color:#fff;display:block;font-size:12px; font-weight:bold;}
-.rbtop-blue div { background: url(/images/roundbox-blue/tl.gif) no-repeat top left; }
-.rbtop-blue { background: url(/images/roundbox-blue/tr.gif) no-repeat top right; }
-.rbbot-blue div { background: url(/images/roundbox-blue/bl.gif) no-repeat bottom left; }
-.rbbot-blue { background: url(/images/roundbox-blue/br.gif) no-repeat bottom right; }
-
-/* height and width stuff, width not really nessisary. */
-.rbtop-blue div, .rbtop-blue, .rbbot-blue div, .rbbot-blue {
-width: 100%;height: 7px;font-size: 1px;
-}
-.rbcontent-blue { margin: 0 7px; margin-top:-22px;}
-.rbroundbox-blue { width: 50%; margin: 1em auto; }
-
-/* roundbox green  7DB20D 97BD12*/
-
-/* roundbox-white */
-.rbroundbox-white { background: url(/images/roundbox-white/nt.gif) repeat;
-	float:left; margin: 15px; width:300px;
-}
-.rbtop-white div { background: url(/images/roundbox-white/tl.gif) no-repeat top left; }
-.rbtop-white { background: url(/images/roundbox-white/tr.gif) no-repeat top right; }
-.rbbot-white div { background: url(/images/roundbox-white/bl.gif) no-repeat bottom left; }
-.rbbot-white { background: url(/images/roundbox-white/br.gif) no-repeat bottom right; }
-/* height and width stuff, width not really nessisary. */
-.rbtop-white div, .rbtop-white, .rbbot-white div, .rbbot-white {
-width: 100%;height: 7px;font-size: 1px;
-}
-.rbcontent-white { margin: 0 7px; }
-.rbroundbox-white { /*width: 50%;*/ }
 

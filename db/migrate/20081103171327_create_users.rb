@@ -2,6 +2,7 @@ class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
       t.timestamps
+      t.string :name
       t.string :login
       t.string :crypted_password
       t.string :password_salt
@@ -15,7 +16,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :last_login_ip
       t.string :current_login_ip
     end
-    
+
     add_index :users, :login
     add_index :users, :email
     add_index :users, :openid_identifier
@@ -27,3 +28,4 @@ class CreateUsers < ActiveRecord::Migration
     drop_table :users
   end
 end
+

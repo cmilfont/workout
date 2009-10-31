@@ -4,60 +4,48 @@
 <head>
   <title><%= controller.controller_name %>: <%= controller.action_name %></title>
 
-  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.7.0/build/reset-fonts-grids/reset-fonts-grids.css">
-
   <%= stylesheet_link_tag 'milfont' %>
 
-  <link rel="stylesheet" href="<% root_path %>/milfont.css" type="text/css">
+<!--
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" language="javascript" type="text/javascript"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js" language="javascript" type="text/javascript"></script>
-
+-->
 
 </head>
 <body>
-<div id="doc3" class="yui-t7">
+<div id="home">
 
-   <div id="hd" style="height:70px; margin-top:10px;">
+   <div id="hd">
 
-		<div class="yui-gb">
-				<div class="yui-u first">
-					<span id="logo_div">
-						<%= image_tag 'MIlfont_topo_off.jpg', :id => 'logo', :alt => 'Milfont', :style => 'margin-top: -15px;' %>
-					</span>
-    			</div>
-    			<div class="yui-u">
-					<ul>
-						<li id="link-blog"><a href="tech" style="color:#AEEE00;">Blog</a></li>
-						<li id="link-about"><a href="about.html" style="color:#94e2f8;">Clientes</a></li>
-						<li id="link-help"><a href="help.html" style="color:#ee596c;">Sobre nós</a></li>
-					</ul>
-				</div>
-				<div class="yui-u">
+    <% if current_user %>
+      <div id="hd_menu">
+        <%= link_to "Início", root_path %>
+        <%= link_to "Perfil", account_path %>
+      </div>
 
-<div class="rbroundbox-blue">
-		<div class="rbcontent-blue">
-<% if current_user %>
-  <%= link_to "My Account", account_path %>
-  <%= link_to "Logout", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %>
-<% else %>
-  <%= link_to "Register", new_account_path %>
-  <%= link_to "Log In", new_user_session_path %>
-  <%= link_to "Forgot password", new_password_reset_path %>
-<% end %>
-		</div><!-- /rbcontent -->
-	<div class="rbbot-blue"><div></div></div>
-</div><!-- /rbroundbox -->
+      <div id="message">
+        <% if flash[:login] %>
+          <%= flash[:login] + current_user.name + "!" %>
+        <% end %>
+        <% if flash[:notice] %>
+          <%= flash[:notice] %>
+        <% end %>
+        <% if flash[:error] %>
+          <%= flash[:error] %>
+        <% end %>
+      </div>
 
-
-				</div>
-		</div>
+      <div id="hd_search">
+        <b><%= current_user.email %></b>
+        <%= link_to "Sair", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %>
+        <input id="search" type="text" >
+      </div>
+    <% else %>
+      <%= link_to "Register", new_account_path %>
+      <%= link_to "Log In", new_user_session_path %>
+      <%= link_to "Forgot password", new_password_reset_path %>
+    <% end %>
 
    </div>
    <div id="bd" role="main">
-
-<% if !current_user %>
-  <%= render :partial => 'layouts/services' %>
-<% end %>
-
-		<div class="yui-g" id="intermediario">
 
