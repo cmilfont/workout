@@ -14,23 +14,30 @@
       </p>
     <% end %>
     <p>
-      <b>Email:</b>
-      <%=h @user.email %>
-    </p>
-    <p>
       <b>Nome:</b>
       <%=h @user.name %>
     </p>
+    <p>
+      <b>Peso atual:</b>
+      <span id="last_weight"><%=h @user.last_weight %></span> kg
+    </p>
+
     <%= link_to 'Continue completando seu perfil.', edit_account_path %>
   </div>
 
-  <div class="ultimos_treinos">teste</div>
+  <div class="ultimos_treinos">
+    <a href="#workout">Registre seu treino</a><br/>
+    <a href="#weight">Registre seu peso atual</a>
+    <a href="#weights_graph">Acompanhe seu peso</a>
+  </div>
   <div class="ultimos_treinos">teste</div>
   <div class="ultimos_treinos">Teste</div>
 
 </div>
 
 
-<div id="workout_home"> Treinos</div>
+<div id="workout_home">
+  <div id="workout_form_div"></div>
+</div>
 <div id="friends_home"> Amigos</div>
 

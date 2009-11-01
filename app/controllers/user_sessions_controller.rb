@@ -8,12 +8,22 @@ class UserSessionsController < ApplicationController
 
   def create
     @user_session = UserSession.new(params[:user_session])
-    @user_session.save do |result|
-      if result
-        flash[:login] = "Seja bem-vindo[a] "
-        redirect_back_or_default account_url
-      else
-        render :action => :new
+
+    respond_to do |format|
+      @user_session.save do |result|
+        if result
+          format.json { render :json => { :persistence_token =>
+              @user_session #.attempted_record.persistence_token
+            }
+          }
+          format.html {
+            flash[:login] = "Seja bem-vindo[a] "
+            redirect_back_or_default account_url
+          }
+        else
+          format.html { render :action => :new }
+          format.json { render :json => @user_session.errors, :status => :unprocessable_entity}
+        end
       end
     end
   end

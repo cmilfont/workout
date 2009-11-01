@@ -39,10 +39,11 @@ margin-top:0;
 .ultimos_treinos {color:#D7B381; float:left; height:100px; background-color:#EFF7FF; margin:5px; width:200px;}
 
 
-#workout_home {color:#fff; height:300px; background-color:#D0D781; width:960px;
+#workout_home {color:#fff; height:300px; background-color:#D0D781; width:960px; float:left;
 margin:5px 0px 5px 0px; }
-#friends_home {color:#fff; height:300px; background-color:#EFF7FF/*D781A5*/; width:960px; margin-right:5px 0px 5px 0px;}
+#friends_home {color:#fff; height:300px; background-color:#EFF7FF/*D781A5*/; width:960px; margin-right:5px 0px 5px 0px; float:left;}
 
+#workout_form_div { float:left; width:900px;}
 
 #ft {}
 

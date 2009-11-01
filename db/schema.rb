@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091030203331) do
+ActiveRecord::Schema.define(:version => 20091101151053) do
 
   create_table "exercises", :force => true do |t|
     t.string   "name"
@@ -84,6 +84,13 @@ ActiveRecord::Schema.define(:version => 20091030203331) do
   add_index "users", ["login"], :name => "index_users_on_login"
   add_index "users", ["openid_identifier"], :name => "index_users_on_openid_identifier"
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
+
+  create_table "weights", :force => true do |t|
+    t.integer  "user_id"
+    t.decimal  "weight",     :precision => 3, :scale => 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "workouts", :force => true do |t|
     t.integer  "user_id"
