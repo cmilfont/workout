@@ -1201,3 +1201,767 @@ Rendered layouts/_header (29.7ms)
   [4;36;1mSQL (21.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-10-30 19:44:01') [0m
 Rendered layouts/_footer (26.5ms)
 Completed in 207ms (View: 78, DB: 60) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-02 16:08:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (27.3ms)
+Rendered layouts/_header (83.7ms)
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 18:58:53') [0m
+Rendered layouts/_footer (242.3ms)
+Completed in 485ms (View: 440, DB: 34) | 200 OK [http://localhost/account/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-02 16:09:07) [POST]
+  Parameters: {"commit"=>"Registrar", "action"=>"create", "controller"=>"users", "user"=>{"name"=>"Christiano Milfont", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"cmilfont", "email"=>"cmilfont@gmail.com"}}
+  [4;36;1mSQL (11.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '5614e1664700036660b2469502c3af83e816fcabd2f12bd8a4f7e26ba1a2a5daef6e7600c87792129e09dda3186df0cdbea8619a6fbf428b2ddaba67f7a03d6c') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:09:08', '2009-11-02 19:09:08', '8a808feb84438533a3ce2693e759243ebb9becbe99361be3fe53e5e2cb6c39bcae8838231863af841fbaf9bdfecf30b3dfe03f1fa58d3535e37c8cbe4c52fbfb', '2009-11-02 19:09:08', NULL, '127.0.0.1', 'BSIsPMSJ_pzAKb5prQoh', '2009-11-02 19:09:08', '5614e1664700036660b2469502c3af83e816fcabd2f12bd8a4f7e26ba1a2a5daef6e7600c87792129e09dda3186df0cdbea8619a6fbf428b2ddaba67f7a03d6c', 1, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 702ms (DB: 53) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:09:08) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (19.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5614e1664700036660b2469502c3af83e816fcabd2f12bd8a4f7e26ba1a2a5daef6e7600c87792129e09dda3186df0cdbea8619a6fbf428b2ddaba67f7a03d6c') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-02 19:09:08', `last_request_at` = '2009-11-02 19:09:08' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (20.9ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (13.4ms)
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 18:59:08') [0m
+Rendered layouts/_footer (4.2ms)
+Completed in 128ms (View: 51, DB: 46) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:09:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (34.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5614e1664700036660b2469502c3af83e816fcabd2f12bd8a4f7e26ba1a2a5daef6e7600c87792129e09dda3186df0cdbea8619a6fbf428b2ddaba67f7a03d6c') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (5.1ms)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 18:59:14') [0m
+Rendered layouts/_footer (4.2ms)
+Completed in 85ms (View: 32, DB: 54) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:09:21) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5614e1664700036660b2469502c3af83e816fcabd2f12bd8a4f7e26ba1a2a5daef6e7600c87792129e09dda3186df0cdbea8619a6fbf428b2ddaba67f7a03d6c') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:09:21', `current_login_at` = '2009-11-02 19:09:21', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:09:21' WHERE `id` = 1[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 69ms (DB: 265) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:09:21) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:09:21', `last_request_at` = '2009-11-02 19:09:21' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (10.4ms)
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 18:59:21') [0m
+Rendered layouts/_footer (8.6ms)
+Completed in 103ms (View: 78, DB: 13) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:09:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (11.9ms)
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 18:59:25') [0m
+Rendered layouts/_footer (6.9ms)
+Completed in 68ms (View: 48, DB: 31) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:09:32) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-02 19:09:32', `current_login_at` = '2009-11-02 19:09:32', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:09:32' WHERE `id` = 1[0m
+  [4;36;1mSQL (34.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 61ms (DB: 41) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:09:32) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (57.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Redirected to http://localhost:3001/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 82ms (DB: 89) | 302 Found [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:09:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (6.1ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 18:59:32') [0m
+Rendered layouts/_footer (3.3ms)
+Completed in 42ms (View: 22, DB: 13) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-02 16:17:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+Rendered layouts/_header (90.0ms)
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:07:39') [0m
+Rendered layouts/_footer (133.5ms)
+Completed in 263ms (View: 235, DB: 21) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:17:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (15.7ms)
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:07:51') [0m
+Rendered layouts/_footer (9.0ms)
+Completed in 76ms (View: 64, DB: 27) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:17:58) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-02 19:17:58', `current_login_at` = '2009-11-02 19:17:58', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:17:58' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 581ms (DB: 6) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:17:58) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (14.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-02 19:17:58', `last_request_at` = '2009-11-02 19:17:58' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.5ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (11.0ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:07:58') [0m
+Rendered layouts/_footer (2.9ms)
+Completed in 77ms (View: 38, DB: 19) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:18:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (5.0ms)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:08:02') [0m
+Rendered layouts/_footer (3.3ms)
+Completed in 30ms (View: 20, DB: 3) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:18:08) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:18:08', `current_login_at` = '2009-11-02 19:18:08', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:18:08' WHERE `id` = 1[0m
+  [4;35;1mSQL (15.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 46ms (DB: 22) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:18:09) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (30.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Redirected to http://localhost:3001/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 49ms (DB: 49) | 302 Found [http://localhost/account]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:18:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (6.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (4.9ms)
+  [4;36;1mSQL (29.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:08:09') [0m
+Rendered layouts/_footer (31.9ms)
+Completed in 94ms (View: 24, DB: 56) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:18:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (4.9ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:08:11') [0m
+Rendered layouts/_footer (3.2ms)
+Completed in 33ms (View: 24, DB: 2) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:18:17) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (7.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:18:17', `current_login_at` = '2009-11-02 19:18:17', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:18:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (36.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 120ms (DB: 47) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:18:17) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:18:17', `last_request_at` = '2009-11-02 19:18:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (1.0ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (21.4ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:08:17') [0m
+Rendered layouts/_footer (6.1ms)
+Completed in 73ms (View: 41, DB: 8) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:19:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (15.6ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:09:07') [0m
+Rendered layouts/_footer (72.5ms)
+Completed in 171ms (View: 122, DB: 32) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:19:13) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:19:14', `current_login_at` = '2009-11-02 19:19:14', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:19:14' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 782ms (DB: 4) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:19:14) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:19:14', `last_request_at` = '2009-11-02 19:19:14' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.7ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (13.2ms)
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:09:14') [0m
+Rendered layouts/_footer (3.2ms)
+Completed in 55ms (View: 30, DB: 5) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:20:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (24.3ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:10:25') [0m
+Rendered layouts/_footer (112.8ms)
+Completed in 256ms (View: 211, DB: 6) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:20:33) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:20:33', `current_login_at` = '2009-11-02 19:20:33', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:20:33' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 783ms (DB: 6) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:20:33) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:20:33', `last_request_at` = '2009-11-02 19:20:33' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.8ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (13.2ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:10:33') [0m
+Rendered layouts/_footer (3.2ms)
+Completed in 54ms (View: 29, DB: 19) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-02 16:20:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:20:35', `last_request_at` = '2009-11-02 19:20:35' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (52.7ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:10:35') [0m
+Rendered layouts/_footer (6.0ms)
+Completed in 68ms (View: 62, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:24:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (11.9ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:14:38') [0m
+Rendered layouts/_footer (52.2ms)
+Completed in 136ms (View: 108, DB: 3) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:24:45) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:24:46', `current_login_at` = '2009-11-02 19:24:46', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:24:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 745ms (DB: 4) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:24:46) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:24:46', `last_request_at` = '2009-11-02 19:24:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.6ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (11.3ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:14:46') [0m
+Rendered layouts/_footer (3.2ms)
+Completed in 52ms (View: 27, DB: 4) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-02 16:24:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:24:47', `last_request_at` = '2009-11-02 19:24:47' WHERE `id` = 1[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (57.9ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:14:47') [0m
+Rendered layouts/_footer (6.1ms)
+Completed in 73ms (View: 63, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:25:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (21.3ms)
+  [4;35;1mSQL (2.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:15:39') [0m
+Rendered layouts/_footer (131.4ms)
+Completed in 272ms (View: 225, DB: 8) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:25:46) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:25:46', `current_login_at` = '2009-11-02 19:25:46', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:25:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 655ms (DB: 5) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:25:46) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:25:46', `last_request_at` = '2009-11-02 19:25:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.7ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (11.4ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:15:46') [0m
+Rendered layouts/_footer (3.1ms)
+Completed in 53ms (View: 28, DB: 5) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:25:48) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (3.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:25:48', `last_request_at` = '2009-11-02 19:25:48' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (27.6ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:15:48') [0m
+Rendered layouts/_footer (6.1ms)
+Completed in 91ms (View: 49, DB: 9) | 200 OK [http://localhost/account]
+
+
+Processing WeightsController#new (for 127.0.0.1 at 2009-11-02 16:25:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weights"}
+  [4;36;1mWeight Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendering template within layouts/weights
+Rendering weights/new
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-02 19:25:51', `last_request_at` = '2009-11-02 19:25:51' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (33.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY created_at DESC LIMIT 10[0m
+Completed in 84ms (View: 33, DB: 44) | 200 OK [http://localhost/weights/new]
+
+
+Processing WeightsController#create to json (for 127.0.0.1 at 2009-11-02 16:25:55) [POST]
+  Parameters: {"format"=>"json", "action"=>"create", "weight"=>{"weight"=>"96.255", "user_id"=>"1"}, "controller"=>"weights"}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mWeight Create (32.7ms)[0m   [0mINSERT INTO `weights` (`created_at`, `updated_at`, `weight`, `user_id`) VALUES('2009-11-02 19:25:55', '2009-11-02 19:25:55', 96.255, 1)[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 59ms (View: 4, DB: 38) | 201 Created [http://localhost/weights.json]
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-02 16:25:55) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "user_id"=>"1", "controller"=>"weights"}
+  [4;35;1mWeight Load (3.9ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = '1') [0m
+Completed in 15ms (View: 5, DB: 6) | 200 OK [http://localhost/weights.json?user_id=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:27:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (12.1ms)
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:17:06') [0m
+Rendered layouts/_footer (54.8ms)
+Completed in 123ms (View: 102, DB: 3) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:27:13) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:27:13', `current_login_at` = '2009-11-02 19:27:13', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:27:13' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 734ms (DB: 5) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:27:13) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:27:13', `last_request_at` = '2009-11-02 19:27:13' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.8ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (11.3ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:17:13') [0m
+Rendered layouts/_footer (3.1ms)
+Completed in 52ms (View: 28, DB: 5) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:27:15) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:27:15', `last_request_at` = '2009-11-02 19:27:15' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (10.8ms)
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:17:15') [0m
+Rendered layouts/_footer (3.2ms)
+Completed in 38ms (View: 21, DB: 11) | 200 OK [http://localhost/account]
+
+
+Processing WeightsController#new (for 127.0.0.1 at 2009-11-02 16:27:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weights"}
+  [4;36;1mWeight Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendering template within layouts/weights
+Rendering weights/new
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (5.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-02 19:27:17', `last_request_at` = '2009-11-02 19:27:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.6ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY created_at DESC LIMIT 10[0m
+Completed in 98ms (View: 67, DB: 17) | 200 OK [http://localhost/weights/new]
+
+
+Processing WeightsController#create to json (for 127.0.0.1 at 2009-11-02 16:27:21) [POST]
+  Parameters: {"format"=>"json", "action"=>"create", "weight"=>{"weight"=>"96.255", "user_id"=>"1"}, "controller"=>"weights"}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mWeight Create (0.9ms)[0m   [0mINSERT INTO `weights` (`created_at`, `updated_at`, `weight`, `user_id`) VALUES('2009-11-02 19:27:21', '2009-11-02 19:27:21', 96.255, 1)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 23ms (View: 3, DB: 23) | 201 Created [http://localhost/weights.json]
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-02 16:27:21) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "user_id"=>"1", "controller"=>"weights"}
+  [4;35;1mWeight Load (6.5ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = '1') [0m
+Completed in 17ms (View: 5, DB: 27) | 200 OK [http://localhost/weights.json?user_id=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:34:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (14.2ms)
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:24:35') [0m
+Rendered layouts/_footer (53.4ms)
+Completed in 122ms (View: 101, DB: 4) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:34:42) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:34:42', `current_login_at` = '2009-11-02 19:34:42', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:34:42' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 719ms (DB: 6) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:34:42) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.8ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:34:42', `last_request_at` = '2009-11-02 19:34:42' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.8ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (11.2ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:24:42') [0m
+Rendered layouts/_footer (3.4ms)
+Completed in 75ms (View: 28, DB: 7) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:34:44) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:34:44', `last_request_at` = '2009-11-02 19:34:44' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (20.7ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:24:44') [0m
+Rendered layouts/_footer (6.0ms)
+Completed in 71ms (View: 40, DB: 9) | 200 OK [http://localhost/account]
+
+
+Processing WeightsController#new (for 127.0.0.1 at 2009-11-02 16:34:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weights"}
+  [4;36;1mWeight Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendering template within layouts/weights
+Rendering weights/new
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (5.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (2.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-02 19:34:46', `last_request_at` = '2009-11-02 19:34:46' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (1.0ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY created_at DESC LIMIT 10[0m
+Completed in 125ms (View: 62, DB: 30) | 200 OK [http://localhost/weights/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:40:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (22.9ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:30:48') [0m
+Rendered layouts/_footer (178.8ms)
+Completed in 349ms (View: 288, DB: 25) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:40:56) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:40:56', `current_login_at` = '2009-11-02 19:40:56', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:40:56' WHERE `id` = 1[0m
+  [4;35;1mSQL (36.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 720ms (DB: 41) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:40:56) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:40:56', `last_request_at` = '2009-11-02 19:40:56' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (69.0ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (11.0ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:30:56') [0m
+Rendered layouts/_footer (3.1ms)
+Completed in 166ms (View: 71, DB: 73) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:41:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (23.4ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:31:51') [0m
+Rendered layouts/_footer (106.5ms)
+Completed in 253ms (View: 208, DB: 7) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:41:58) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:41:59', `current_login_at` = '2009-11-02 19:41:59', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:41:59' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 692ms (DB: 7) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:41:59) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:41:59', `last_request_at` = '2009-11-02 19:41:59' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (11.8ms)
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:31:59') [0m
+Rendered layouts/_footer (3.4ms)
+Completed in 67ms (View: 27, DB: 7) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:43:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (15.0ms)
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:33:17') [0m
+Rendered layouts/_footer (59.5ms)
+Completed in 169ms (View: 149, DB: 3) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:43:24) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:43:25', `current_login_at` = '2009-11-02 19:43:25', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:43:25' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 798ms (DB: 8) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:43:25) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:43:25', `last_request_at` = '2009-11-02 19:43:25' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (12.6ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:33:25') [0m
+Rendered layouts/_footer (3.2ms)
+Completed in 61ms (View: 31, DB: 18) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-02 16:44:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (23.7ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:34:59') [0m
+Rendered layouts/_footer (105.8ms)
+Completed in 242ms (View: 199, DB: 6) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-02 16:45:06) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (27.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:45:07', `current_login_at` = '2009-11-02 19:45:07', `login_count` = 1, `current_login_ip` = '127.0.0.1', `last_request_at` = '2009-11-02 19:45:07' WHERE `id` = 1[0m
+  [4;35;1mSQL (9.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 644ms (DB: 42) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-02 16:45:07) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (11.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (11.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-02 19:45:07', `last_request_at` = '2009-11-02 19:45:07' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (23.8ms)
+  [4;35;1mSQL (7.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-02 19:35:07') [0m
+Rendered layouts/_footer (9.5ms)
+Completed in 109ms (View: 59, DB: 33) | 200 OK [http://localhost/account]

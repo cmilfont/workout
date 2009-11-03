@@ -1,10 +1,14 @@
-<h1>Edit My Account</h1>
+<div id="register">
+  <div id="register_interno">
+    <h2>Editar meu perfil</h2>
 
-<% form_for @user, :builder => WorkoutFormBuilder, :url => account_path do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => "form", :object => f %>
-  <%= f.submit "Update" %>
-<% end %>
+    <% form_for @user, :builder => WorkoutFormBuilder, :url => account_path do |f| %>
+      <%= f.error_messages %>
+      <%= render :partial => "form", :object => f %>
+      <%= f.submit "Atualizar" %>
+    <% end %>
 
-<br /><%= link_to "My Profile", account_path %>
+    <br /><%= link_to "Meu Perfil", account_path %>
+  </div>
+</div>
 

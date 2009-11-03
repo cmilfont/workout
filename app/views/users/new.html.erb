@@ -1,8 +1,11 @@
-<h1>Register</h1>
-
-<% form_for @user, :builder => WorkoutFormBuilder, :url => account_path do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => "form", :object => f %>
-  <%= f.submit "Registrar" %>
-<% end %>
+<div id="register">
+  <div id="register_interno">
+  <h2>Criar Perfil</h2>
+  <% form_for @user, :builder => WorkoutFormBuilder, :url => account_path do |f| %>
+    <%= f.error_messages %>
+    <%= render :partial => "form", :object => f %>
+    <%= f.submit "Registrar" %>
+  <% end %>
+  </div>
+</div>
 

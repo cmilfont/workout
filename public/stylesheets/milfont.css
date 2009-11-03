@@ -25,7 +25,7 @@ margin-top:0;
   font-size:12px; border-bottom:#1E6CBB 3px inset;
 }
 
-#hd a {color:#fff;}
+#hd a {color:#fff;font-weight:bold;}
 #hd_search {float:right; margin-right:5px;margin-top:5px;}
 #hd_menu {float:left; margin-left:5px;margin-top:5px;}
 #message {float:left; margin-left:50px;margin-top:5px;}
@@ -37,17 +37,36 @@ margin-top:0;
 #user_info_show {float:left; margin-right:10px; margin-left:10px;}
 
 .ultimos_treinos {color:#D7B381; float:left; height:100px; background-color:#EFF7FF; margin:5px; width:200px;}
+.marketing {color:#D7B381; float:left; height:100px; background-color:#EFF7FF; margin:5px; width:410px;}
 
+#workout_home {color:#000/*C40098*/; height:300px; background-color:#EFF7FF/*#D0D781*/; width:960px; float:left;margin:5px 0px 5px 0px; }
 
-#workout_home {color:#fff; height:300px; background-color:#D0D781; width:960px; float:left;
-margin:5px 0px 5px 0px; }
 #friends_home {color:#fff; height:300px; background-color:#EFF7FF/*D781A5*/; width:960px; margin-right:5px 0px 5px 0px; float:left;}
 
-#workout_form_div { float:left; width:900px;}
+#workout_form_div { float:left; width:900px;font-weight:bold; font-size:12px;}
 
-#ft {}
+#login {width:960px;height:600px;background-color:#EFF7FF;float:left; }
+#login_interno {width:300px;margin-left:auto; margin-right:auto;}
+#register {background-color:#EFF7FF;float:left; width:960px;height:600px;}
+#register_interno {width:300px; margin-left:auto; margin-right:auto; }
 
 #avatar {float:left;margin-left:5px; margin-top:5px; margin-right: 5px;}
+
+#errorExplanation {
+  font-size:12px;
+}
+#errors {color:red;font-size:11px;font-weight:bold;}
+
+.peso {
+  margin-right:80px;
+  width:100px;
+  text-align:right;
+  padding-right:10px;
+}
+#list_of_weights th {text-align:center;}
+#list_of_weights { color:#000/*b2bb1d*/;
+  width:450px; margin-left:auto; margin-right:auto;float:left;
+}
 
 #intermediario {background-color:#03899c/*7DC6F0*/;color:#FFF;margin-left:-10px; margin-right:-10px; height:600px;
 /*background:transparent url(http://tearoundapp.com/images/wood.jpg) repeat-x scroll center top;*/

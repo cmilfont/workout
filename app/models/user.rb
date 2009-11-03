@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   has_many :weights
 
   def last_weight
-    Weight.last.weight
+    @weight = Weight.last(:conditions => {:user_id => self.id})
+    @weight.weight if @weight
   end
 
   acts_as_authentic do |c|

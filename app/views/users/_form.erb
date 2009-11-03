@@ -1,18 +1,22 @@
+<p>Avatar é usado automaticamente do seu <a href="http://en.gravatar.com/">Gravatar</a></p>
+<p>
 <%= form.label :login %><br />
-<%= form.text_field :login %><br />
-<br />
+<%= form.text_field :login, :size => 15 %>
+</p>
+<p>
 <%= form.label :name %><br />
-<%= form.text_field :name %><br />
-<br />
+<%= form.text_field :name %>
+</p>
+<p>
 <%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
-<%= form.password_field :password %><br />
-<br />
+<%= form.password_field :password, :size => 20 %>
+</p>
+<p>
 <%= form.label :password_confirmation %><br />
-<%= form.password_field :password_confirmation %><br />
-<br />
+<%= form.password_field :password_confirmation, :size => 20 %><br />
+</p>
+<p>
 <%= form.label :email %><br />
-<%= form.text_field :email %><br />
-<br />
-<%= form.label :openid_identifier, "Or use OpenID instead of a standard login / password" %><br />
-<%= form.text_field :openid_identifier %><br />
+<%= form.text_field :email, :size => 25 %>
+</p>
 
