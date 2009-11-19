@@ -1,0 +1,713 @@
+# Logfile created on Thu Sep 10 13:04:58 -0300 2009  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (10.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (26.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (108.4ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (50.3ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (33.2ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (198.6ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (67.8ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (45.0ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (70.0ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (6.5ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (37.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (20.4ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (12.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (21.5ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (15.5ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (33.4ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (29.3ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (51.8ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (15.4ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (22.5ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (10.6ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (19.9ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (22.5ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (6.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.9ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (42.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (12.4ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (12.8ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (39.6ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (15.8ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (30.5ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (16.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (13.3ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (4.2ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (23.9ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (54.3ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (13.6ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (17.0ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (21.9ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (25.2ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (22.8ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (21.4ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (25.2ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (6.9ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (18.4ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (14.1ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (19.6ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (44.1ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (47.8ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (18.2ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (17.4ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (5.6ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (35.5ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (12.2ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (18.1ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (21.2ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (83.9ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (60.8ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (43.6ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (56.1ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '704efc370f22567e26f2d21cbb94f11540276d61a40a504cfbf527fcb7ac69c45ee32d9807a66bfb1de883b5dd87a7447d851e880ed324f7b68430e5f9bbcfcd') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-10-29 05:30:44', NULL, '5c01b69458f11e4bd21584a86558af49c330584c3b2de3cbe0a6e345d376e3a6e45df1106fefcb87b3e810b6228f11f2cdba00012ec933c1bdf18d0d4ea3e873', '2009-10-29 05:30:44', NULL, NULL, '8pXR1tWXp3WKWhD0vdiz', NULL, '704efc370f22567e26f2d21cbb94f11540276d61a40a504cfbf527fcb7ac69c45ee32d9807a66bfb1de883b5dd87a7447d851e880ed324f7b68430e5f9bbcfcd', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (14.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (14.0ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (30.1ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (16.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (23.9ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (33.7ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (16.4ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (26.4ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '024ba6a7893545332dec0b7930535d27c2197f091e68cef14fd6d8093de2d6855818d2f2a4bb84283d3be44d90af98003b09903f7572f5910002f236ba56e7e5') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-10-30 16:08:27', NULL, 'b1588630bf963e6fff853d19021244c44db6c135796341e414d7719e94b7ce06fa76a2329dd21130e56103af651ec7e9a99b43758191a23bcc5e9a0d8067692c', '2009-10-30 16:08:27', NULL, NULL, 'PHBGmPdITI2Oi5dqcGuY', NULL, '024ba6a7893545332dec0b7930535d27c2197f091e68cef14fd6d8093de2d6855818d2f2a4bb84283d3be44d90af98003b09903f7572f5910002f236ba56e7e5', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (74.6ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (38.3ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (6.6ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (22.5ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '5f0e22dd9d46476d215d56fc99195aa09381f3a08c419e51d5a2abe4e477625f9a4023846b41fbfa7d19051f772e240cb9bf0b5f5885cd052707cf1730944515') LIMIT 1[0m
+  [4;36;1mUser Create (2.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-10-30 16:08:40', NULL, 'e2ee6cb36a0571f0d7dd37a54c632d144522dbe73ae20108c2bbe14a71bb0837856692c1914cb08dddeccb74e0398e59e55500f213721884afa7e20adfc4d479', '2009-10-30 16:08:40', NULL, NULL, 'jRNA1mIKEurf4omdmDSs', NULL, '5f0e22dd9d46476d215d56fc99195aa09381f3a08c419e51d5a2abe4e477625f9a4023846b41fbfa7d19051f772e240cb9bf0b5f5885cd052707cf1730944515', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (35.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (19.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (34.3ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (3.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'fe3e5fb1144300db6eca475aec68e4f3cba38802c65c506eb6c728972c16cdabf08fa446b21eb7a982b18015dfe9c4715b538e7092d67c04ce4b55bd483c3129') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-10-30 16:08:50', NULL, 'c2d12defaa60eb535dd0f8a30483cd48dea473115baf493cd9522b4d97d57f4780ce14470f575a507892f788f5e2ff09e365d3b51347a5a0cda722bb5e773beb', '2009-10-30 16:08:50', NULL, NULL, 'Nkeeexq7oYG2CrB3JHkq', NULL, 'fe3e5fb1144300db6eca475aec68e4f3cba38802c65c506eb6c728972c16cdabf08fa446b21eb7a982b18015dfe9c4715b538e7092d67c04ce4b55bd483c3129', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '541471d74d90b8340a8fa06110d33ab7d09a2dfdd447fc2b30957754471e80cf31f34a0ce30aef71a841636a22da45249df2743b775aa73de6b3e79fb0c3cd44') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-10-30 16:09:01', NULL, '8a6e72e915e8b706844c31ce8946df96667f9464e4d65c745210cf537e868b4cb31b955edf8082c5b901941bf30f2864942910edf6826935d2ab039b177908b8', '2009-10-30 16:09:01', NULL, NULL, '3c7tYwl0pd5QkJImKvrb', NULL, '541471d74d90b8340a8fa06110d33ab7d09a2dfdd447fc2b30957754471e80cf31f34a0ce30aef71a841636a22da45249df2743b775aa73de6b3e79fb0c3cd44', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (24.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (12.1ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (19.9ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (35.0ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (119.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '86aa8ee4d4b0db5cad16a418d9bd8f89a67b8ced9818b70c56c9a0bb0b9b4f9e29c5f7a17a5b1bbf13e0fdd5fe718a5ef5c709603cd148420e2c928986291c06') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-10-30 19:41:18', NULL, '63a8c4c92372652c01cb90f4889fe78f627e79727c40a0dad75f32316e119cbcada3efac52819360f671b5db370c72c03ff51a5db7c32126876ec110274f404e', '2009-10-30 19:41:18', NULL, NULL, 'W7cssZVJPxvapxStWjfI', NULL, '86aa8ee4d4b0db5cad16a418d9bd8f89a67b8ced9818b70c56c9a0bb0b9b4f9e29c5f7a17a5b1bbf13e0fdd5fe718a5ef5c709603cd148420e2c928986291c06', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (14.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (67.3ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (96.1ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (96.4ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (49.9ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (71.9ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'cc85617e2901fd400de8efe6caf6433076cb430c62ab1e32860ddcf6538ee2b0e4280fd1e80ef2ab6c96cbd0db73f47d2d6add4aa408ab255776af66e9124279') LIMIT 1[0m
+  [4;35;1mUser Create (0.9ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-10-30 19:42:32', NULL, '31aecb8dc5a034da9a013f315222b782ffd0f285defd1049aeec0fd62f0c8ad436e27aaac00e1635def0dde33fbb6fbcb4ed8f9b977458845e81928e3be60d07', '2009-10-30 19:42:32', NULL, NULL, 'GJXs_-AOp-dGVh-EjtK4', NULL, 'cc85617e2901fd400de8efe6caf6433076cb430c62ab1e32860ddcf6538ee2b0e4280fd1e80ef2ab6c96cbd0db73f47d2d6add4aa408ab255776af66e9124279', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (14.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (9.3ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (20.2ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (12.8ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (36.6ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '6ab499a20e5d80d138a079118c33075fde045718e015fd379c3e34fbca81ce82be99498e1d1c81a342fa0a2ffc5b3936dc4460bc7d15289c4ecbaf24c842e7f0') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-10-30 19:43:35', NULL, '2c6f47b03ae3994319afaf1c3db2494eb6c309584bb61e8903abc9a67de33ff4e29159dddd0c7f9ebac0130b35389148c0929605c78b223cc6a4008b5cc09ad0', '2009-10-30 19:43:35', NULL, NULL, 'CRtOhu9Y8LxJGPjhXKsC', NULL, '6ab499a20e5d80d138a079118c33075fde045718e015fd379c3e34fbca81ce82be99498e1d1c81a342fa0a2ffc5b3936dc4460bc7d15289c4ecbaf24c842e7f0', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (18.0ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (25.9ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '39451dd13adca83a2757d6799073611b800acaaca2a6270b743e2c26f05de4eaffa703cc1de168f21dd2ce1ae0f78f1aaf2f3aeedcec96ec9c3852c80c558d9b') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-10-30 19:53:51', NULL, '4abee40c6f58f236dc9fbb037eec57e915cfa3199b901f83c2241e61efbeba2b7b36e2956ba032b419603635eea10c60e75bdac66c16356889bfa3033d8e9fd2', '2009-10-30 19:53:51', NULL, NULL, 'okvi19m48jhwqPwjKrPl', NULL, '39451dd13adca83a2757d6799073611b800acaaca2a6270b743e2c26f05de4eaffa703cc1de168f21dd2ce1ae0f78f1aaf2f3aeedcec96ec9c3852c80c558d9b', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (882.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (44.1ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (15.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (64.2ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (27.1ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (13.6ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (12.9ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (15.8ms)[0m   [0mTRUNCATE TABLE `trainings`;[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;35;1mSQL (18.0ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mTRUNCATE TABLE `weights`;[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mTRUNCATE TABLE `workouts`;[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '2e39570cbe052353d5fac7cb4a27d3ec759242c347f4ed8fcff2b554ed519e344d24abb6812b8c03e1d85e85168125c51933d33c0969ffcbbeed45c21c8bf7f5') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:09:12', NULL, '099f21062c2c511492bc60eee3518ea9b6c1358517d4600c594f350ded66b26303b4485ef1eb9cb97250535220684236835e5beb97f6736a9cdaa84895c5facc', '2009-11-02 19:09:12', NULL, NULL, 'MTPALSFPdmGbj0JfFs8d', NULL, '2e39570cbe052353d5fac7cb4a27d3ec759242c347f4ed8fcff2b554ed519e344d24abb6812b8c03e1d85e85168125c51933d33c0969ffcbbeed45c21c8bf7f5', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (9.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (26.2ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (18.4ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mTRUNCATE TABLE `trainings`;[0m
+  [4;36;1mSQL (24.9ms)[0m   [0;1mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;35;1mSQL (22.3ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mTRUNCATE TABLE `weights`;[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mTRUNCATE TABLE `workouts`;[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '30ed6d85d641ab16f72ceac6281f24b89280b89b81609272d3e3169929d8220498920fbfe1e8be054b6f1f8e75b802de40152bfe3c16d396c1be86e34fa87cef') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:09:23', NULL, '6f3b1c93aa84c81e78580a7dfbaf4dae6a626ae36813cb2f341e31fc752c7e03f62475353a4c820e31d357b310a49fa2b26733bafc01e2238c6f6cab7dde752a', '2009-11-02 19:09:23', NULL, NULL, 'KixO--TZHMG50bjNpycG', NULL, '30ed6d85d641ab16f72ceac6281f24b89280b89b81609272d3e3169929d8220498920fbfe1e8be054b6f1f8e75b802de40152bfe3c16d396c1be86e34fa87cef', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (27.2ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (26.6ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mTRUNCATE TABLE `trainings`;[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;35;1mSQL (59.9ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (37.2ms)[0m   [0;1mTRUNCATE TABLE `weights`;[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mTRUNCATE TABLE `workouts`;[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (53.3ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (44.4ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (31.4ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (7.7ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (43.9ms)[0m   [0mTRUNCATE TABLE `trainings`;[0m
+  [4;36;1mSQL (60.9ms)[0m   [0;1mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;35;1mSQL (80.7ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (66.1ms)[0m   [0;1mTRUNCATE TABLE `weights`;[0m
+  [4;35;1mSQL (30.1ms)[0m   [0mTRUNCATE TABLE `workouts`;[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'db9943c27a72a351694b780f16408c8e509e7d39688a0a14721b9dde68c7989051886e08915a4b76cc005df45310c3ca52e63296a0d78b200e366171afc30d88') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:17:49', NULL, 'cbb5740fbcb3fa72d473e4f78c2ca1764cbf65106e366183cfebb13e90518c8d13fdfbdbf83f00bdd1d3f6a99016caad457ba44a5107e5d753eda175946e8cb9', '2009-11-02 19:17:49', NULL, NULL, 'cn7_BHwl1BWzWU1OYhx7', NULL, 'db9943c27a72a351694b780f16408c8e509e7d39688a0a14721b9dde68c7989051886e08915a4b76cc005df45310c3ca52e63296a0d78b200e366171afc30d88', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (11.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (24.2ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (26.1ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mTRUNCATE TABLE `trainings`;[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;35;1mSQL (30.5ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mTRUNCATE TABLE `weights`;[0m
+  [4;35;1mSQL (7.7ms)[0m   [0mTRUNCATE TABLE `workouts`;[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '3988b324c683c53ce98a629787e954d88a26a27a966bd5dc9c4458bebdac6b05f860bc6729435b237293aa64f687d8756aca09dfca0ab15ed5a0bec52e509395') LIMIT 1[0m
+  [4;36;1mUser Create (1.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:18:00', NULL, '0922460d5987e1d21298a90220899b191fd06a6a5c8046e46907b66bccb6d1a4272da263a38aa7bd8fb639736b167a19004a73d3011a5e4c761b39382fed4156', '2009-11-02 19:18:00', NULL, NULL, 'MGGgc-hcPytLxefJAyGN', NULL, '3988b324c683c53ce98a629787e954d88a26a27a966bd5dc9c4458bebdac6b05f860bc6729435b237293aa64f687d8756aca09dfca0ab15ed5a0bec52e509395', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (17.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (16.8ms)[0m   [0mTRUNCATE TABLE `trainings`;[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;35;1mSQL (34.1ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mTRUNCATE TABLE `weights`;[0m
+  [4;35;1mSQL (14.2ms)[0m   [0mTRUNCATE TABLE `workouts`;[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (1.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c08e43dd7f722efa17a28b1e7e8388d86a7f5a7f37f8e9031225132f7405ef383afde8e2da9f3f57602d777ccb24db1b0f5f768b1309359b2a9a78f4b0a4abeb') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:18:09', NULL, '5058ac27429938b63263d4eef1cad67c9f34effe79855a30f7a5fbeeda488b7c4e3506f62a0606c6c61b7958b0844900e24260ada5d0136cd460dd5cc4dc097a', '2009-11-02 19:18:09', NULL, NULL, 'RcMIPXckVGCG4zqW_kex', NULL, 'c08e43dd7f722efa17a28b1e7e8388d86a7f5a7f37f8e9031225132f7405ef383afde8e2da9f3f57602d777ccb24db1b0f5f768b1309359b2a9a78f4b0a4abeb', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (10.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (21.5ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (30.3ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mTRUNCATE TABLE `trainings`;[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;35;1mSQL (20.6ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mTRUNCATE TABLE `weights`;[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mTRUNCATE TABLE `workouts`;[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '09889f152f603157bc7585ea0c6e7926235444f5f148be3c9060f61a39859e3fe699a5747bfd5a57a02f448681330dcb646fff18d2a0cbf345a80714d11e0f7e') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:19:04', NULL, 'bf9f9fecfb116e5918356529d2eb9ccdf568dd38019bb83fbc295b5d3ab72aa8bdb68e700b99229464b11fc1830ec6c337ac204145985b8202dea05d0b1e03c7', '2009-11-02 19:19:04', NULL, NULL, 'VqtadOOhXmyBCH7rsurk', NULL, '09889f152f603157bc7585ea0c6e7926235444f5f148be3c9060f61a39859e3fe699a5747bfd5a57a02f448681330dcb646fff18d2a0cbf345a80714d11e0f7e', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (13.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (12.3ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (16.9ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (34.2ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (39.4ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'ef7e77beaee0a8c0d33098cc2f22d6e32cda0ef4ce005b3dca15ba67e8e1efb5abf6eb4150cdba61106b8b7f5a54021f3347c74c49164c37cb1a2825e1d844ca') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:20:23', NULL, '819308ea8cadb141a74e9c40806f7238a570edfb3c0e2b339168511da7650fa661a3f4e19154072df746d893ea5e82283be8b23fb99e306641240c565f241ab2', '2009-11-02 19:20:23', NULL, NULL, 'z7Er3YlPPo2K4mwc2eV-', NULL, 'ef7e77beaee0a8c0d33098cc2f22d6e32cda0ef4ce005b3dca15ba67e8e1efb5abf6eb4150cdba61106b8b7f5a54021f3347c74c49164c37cb1a2825e1d844ca', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (5.1ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (26.7ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (28.9ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (14.5ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (15.4ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '1e278aa738a445dfb70fc2bd1e8d52ad662554602899872a64a36f18d912becfb6c12bfb51b9e6c0e3973f2cdaed83cfebf64c3512ffc9ea679d736419aca6e0') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:24:36', NULL, '2b45cff19a6c6a3b4ed0afab4deb5b03ae7af3e4662ffa84f74a04ba252a8237ca2e757e9fd13a837e094050040b0572a158146f58f469db18e1cc1cac657b77', '2009-11-02 19:24:36', NULL, NULL, '9HdxUqtleyEeSrxgU5es', NULL, '1e278aa738a445dfb70fc2bd1e8d52ad662554602899872a64a36f18d912becfb6c12bfb51b9e6c0e3973f2cdaed83cfebf64c3512ffc9ea679d736419aca6e0', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '3c7ec10240ba01f8497c37b6d6d92b2693db6fe4b9db803953cdb838c21afa2b9d5110adb6b3484b425a0dae0ffc45375b946b2d65c5fd5933f116181c2b183c') LIMIT 1[0m
+  [4;35;1mUser Create (0.7ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:25:36', NULL, '5fd809c655e92dd975d025a074c55fec29233e83f676561fe2092da4c17c62fee432d50c9da44ac65fa08c557c8bc31910720ee90d707e1081ec394fb78fe9e7', '2009-11-02 19:25:36', NULL, NULL, 'ATkM9NiZK1-0zyajCSQg', NULL, '3c7ec10240ba01f8497c37b6d6d92b2693db6fe4b9db803953cdb838c21afa2b9d5110adb6b3484b425a0dae0ffc45375b946b2d65c5fd5933f116181c2b183c', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (14.9ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (37.7ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (22.4ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '5fa665ea3e98c4059f8e29285258bbe266c31f57ec3b1afb58bc987014dc3be8f06b2a8cc45ce817e86c16ccb50afdb7c547de07a8343e4b8c6ae590b74b34f8') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:27:04', NULL, 'b9b3c21852a6f438f62161283d1448e6ebaa1b0500692590f9d5eb3567be0d5dfd8074416e993edbc69e7b0b59942ae5744d2fc3fcf8f88b43c5474b5bb02bf6', '2009-11-02 19:27:04', NULL, NULL, '0dFsBxGvmVlWDRdjueL9', NULL, '5fa665ea3e98c4059f8e29285258bbe266c31f57ec3b1afb58bc987014dc3be8f06b2a8cc45ce817e86c16ccb50afdb7c547de07a8343e4b8c6ae590b74b34f8', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (19.5ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (25.2ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (21.1ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '8f93de5a965064ff64a6cb6357185725505e50e4644a0d1fbcfe567b62ff77f65c14a9510c8ddeaea7ad3f25a511c795665abdd317d16b74e1160ab4e85a342b') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:34:32', NULL, '2d2dd6d0e9faea609cb932a69388bb24ba5a89d689317166cd3936f0258daa41291e9ab0d0d419d32cd130261f419f28c461d4d0d0e197db19c45e12bd2cb74e', '2009-11-02 19:34:32', NULL, NULL, 'Wq-SnGxmKXL2wfBWYYb6', NULL, '8f93de5a965064ff64a6cb6357185725505e50e4644a0d1fbcfe567b62ff77f65c14a9510c8ddeaea7ad3f25a511c795665abdd317d16b74e1160ab4e85a342b', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (8.9ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (26.9ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '80a38d9f7e64282962bd6c2d881198fbf87193c071b0df60a3cdf9b3d8d04b108744654db5c2d7f86586c3ae371ca9d98831cd2166d34150ca9af20439810985') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:40:46', NULL, 'e25a24edb384fe288c65357f07eef61f5762ca31368ae4fb9c7c028c8b6709d01ac84cf85b6cfabdcc02049f82b9168755f0270acbf0450a5ce6f7fa9d613d5c', '2009-11-02 19:40:46', NULL, NULL, 'JqWh_O-e3l3ee7hnEbLS', NULL, '80a38d9f7e64282962bd6c2d881198fbf87193c071b0df60a3cdf9b3d8d04b108744654db5c2d7f86586c3ae371ca9d98831cd2166d34150ca9af20439810985', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (19.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (95.0ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (66.4ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (37.6ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (56.3ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (25.2ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (43.0ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (30.7ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (55.1ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '51ce7f18157ae459ef27eb89f4d27daaded621ce17689affcd77f80df40e94b0b5965b63847131d501be5486659641f16d71d9462030701dd88403e6f1289f4d') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:41:48', NULL, 'f3d1e321d40173a92c68cfa02e5c883318df2df8be944af587e106fbe7d9ba578b5dfced29014127c5aa006e0302ff333b2d389a244eb97e14fd9d474eb17bef', '2009-11-02 19:41:48', NULL, NULL, 'rcV4j6ZUOmPCxEhgSjFE', NULL, '51ce7f18157ae459ef27eb89f4d27daaded621ce17689affcd77f80df40e94b0b5965b63847131d501be5486659641f16d71d9462030701dd88403e6f1289f4d', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (17.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mWeight Load (5.5ms)[0m   [0;1mSELECT * FROM `weights` [0m
+  [4;35;1mWeight Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (23.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (16.3ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'dfc393aa0c0d5841ad9fca6051a3f1abf50df33436e8e3f291a7fbca6ea63cc9b11cfef799eadd0068f295a801e79734080602af1e3f7abd67ed89cdadd63cdc') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:43:15', NULL, '5ccf3ff58f8b2f61aa914dca4b77b4b02d6df01ab3d09de5bd6765d9751c9cb6c9afc6ff4e6a130122fe353cc9bf07c7c48fcc46b979ef8f94fd7c2253394bbe', '2009-11-02 19:43:15', NULL, NULL, 'BIt3hwoIhbgpiuS8dZec', NULL, 'dfc393aa0c0d5841ad9fca6051a3f1abf50df33436e8e3f291a7fbca6ea63cc9b11cfef799eadd0068f295a801e79734080602af1e3f7abd67ed89cdadd63cdc', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mWeight Load (1.1ms)[0m   [0;1mSELECT * FROM `weights` [0m
+  [4;35;1mWeight Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '973f1f74e100383e130d6e9e48039cf80a4a010f901bacc244ea18d7cda573177c659262acdeacf249c5a15023f8b89fa219d0a61188a8fbcd723e392915481c') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`name`, `created_at`, `last_request_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2009-11-02 19:44:57', NULL, '676bdd2cd26c199add65527951ee832b260ec975ed7439aee1e87987847ea41e6d8b18883f3589450ea57985c06d1fb5591dcab4ab85fbcd6dbd5a46b1966162', '2009-11-02 19:44:57', NULL, NULL, 'bbe_lhNKbdeiTxiNHrIT', NULL, '973f1f74e100383e130d6e9e48039cf80a4a010f901bacc244ea18d7cda573177c659262acdeacf249c5a15023f8b89fa219d0a61188a8fbcd723e392915481c', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (15.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mWeight Load (0.6ms)[0m   [0;1mSELECT * FROM `weights` [0m
+  [4;35;1mWeight Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (24.0ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (28.2ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (32.3ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (15.8ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m

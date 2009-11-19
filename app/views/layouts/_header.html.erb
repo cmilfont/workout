@@ -4,7 +4,7 @@
 <head>
   <title><%= controller.controller_name %>: <%= controller.action_name %></title>
 
-  <%= stylesheet_link_tag 'milfont' %>
+  <%= stylesheet_link_tag 'style' %>
   <%= javascript_include_tag 'date-functions' %>
   <%= javascript_include_tag 'jquery' %>
   <%= javascript_include_tag 'jgcharts' %>
@@ -17,38 +17,30 @@
 
 </head>
 <body>
+
+
+<div id="topo">
+<div class="container">
+  <ul id="menu">
+   <% if current_user %>
+    <li><%= link_to_unless_current('Início', root_path) { link_to 'Início', root_path, :class => 'ativo' } %></li>
+    <li><%= link_to_unless_current('Perfil', account_path) { link_to 'Perfil', account_path, :class => 'ativo' } %></li>
+    <li><a href="/">Vídeos</a></li>
+    <li><%= link_to "Sair", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %></li>
+    <% else %>
+    <li><%= link_to_unless_current('Início', root_path) { link_to 'Início', root_path, :class => 'ativo' } %></li>
+    <li><a href="/">Vídeos</a></li>
+    <li><%= link_to_unless_current('Registrar', new_account_path) { link_to 'Registrar', new_account_path, :class => 'ativo' } %></li>
+    <li><%= link_to_unless_current('Login', new_user_session_path) { link_to 'Login', new_user_session_path, :class => 'ativo' } %></li>
+    <% end %>
+  </ul> <!-- /menu -->
+</div> <!-- /container -->
+</div> <!-- /topo -->
+
+
 <div id="home">
 
    <div id="hd">
-
-    <% if current_user %>
-      <div id="hd_menu">
-        <%= link_to "Início", root_path %>
-        <%= link_to "Perfil", account_path %>
-      </div>
-
-      <div id="message">
-        <% if flash[:login] %>
-          <%= flash[:login] + current_user.name + "!" %>
-        <% end %>
-        <% if flash[:notice] %>
-          <%= flash[:notice] %>
-        <% end %>
-        <% if flash[:error] %>
-          <%= flash[:error] %>
-        <% end %>
-      </div>
-
-      <div id="hd_search">
-        <b><%= current_user.email %></b>
-        <%= link_to "Sair", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %>
-        <input id="search" type="text" >
-      </div>
-    <% else %>
-      <%= link_to "Register", new_account_path %>
-      <%= link_to "Log In", new_user_session_path %>
-    <% end %>
-
    </div>
    <div id="bd" role="main">
 

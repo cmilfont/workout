@@ -1,0 +1,16 @@
+<h1>Editing workout</h1>
+
+<% form_for(@workout) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @workout %> |
+<%= link_to 'Back', workouts_path %>

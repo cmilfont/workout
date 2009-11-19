@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  exercise: 
+  workout: 
+  start: 2009-10-30 17:33:31
+  finish: 2009-10-30 17:33:31
+  health_frequency: 1
+  distance: 1
+  effort: 1
+
+two:
+  exercise: 
+  workout: 
+  start: 2009-10-30 17:33:31
+  finish: 2009-10-30 17:33:31
+  health_frequency: 1
+  distance: 1
+  effort: 1

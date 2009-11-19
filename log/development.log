@@ -41964,3 +41964,3083 @@ Processing TrainingsController#create to json (for 127.0.0.1 at 2009-11-03 13:20
   [4;36;1mTraining Create (0.8ms)[0m   [0;1mINSERT INTO `trainings` (`finish`, `created_at`, `health_frequency`, `effort`, `updated_at`, `exercise_id`, `start`, `workout_id`, `distance`) VALUES('2009-11-03 17:24:00', '2009-11-03 16:20:40', 155, 4, '2009-11-03 16:20:40', 2, '2009-11-03 17:19:00', 90, 0)[0m
   [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
 Completed in 171ms (View: 2, DB: 22) | 200 OK [http://localhost/trainings.json]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-03 18:12:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (4.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered layouts/_header (301.8ms)
+  [4;36;1mSQL (63.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:02:16') [0m
+Rendered layouts/_footer (444.1ms)
+Completed in 931ms (View: 779, DB: 143) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-03 18:12:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (4.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (7.9ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:02:22') [0m
+Rendered layouts/_footer (5.5ms)
+Completed in 331ms (View: 67, DB: 7) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-03 18:12:28) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (5.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (35.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-03 21:12:29', `last_login_at` = '2009-11-03 15:44:34', `current_login_at` = '2009-11-03 21:12:29', `login_count` = 68, `last_request_at` = '2009-11-03 21:12:29' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 644ms (DB: 42) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:12:29) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-03 21:12:29', `last_request_at` = '2009-11-03 21:12:29' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (8.4ms)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:02:29') [0m
+Rendered layouts/_footer (3.0ms)
+Completed in 161ms (View: 109, DB: 7) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:15:55) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (4.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.6ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-03 21:15:55', `last_request_at` = '2009-11-03 21:15:55' WHERE `id` = 1[0m
+  [4;36;1mSQL (18.6ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.4ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.1ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:05:55') [0m
+Rendered layouts/_footer (4.8ms)
+Completed in 193ms (View: 55, DB: 31) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:16:12) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-03 21:16:13', `last_request_at` = '2009-11-03 21:16:13' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.7ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:06:13') [0m
+Rendered layouts/_footer (5.1ms)
+Completed in 167ms (View: 57, DB: 14) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:16:13) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-03 21:16:13', `last_request_at` = '2009-11-03 21:16:13' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.1ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:06:13') [0m
+Rendered layouts/_footer (4.3ms)
+Completed in 162ms (View: 56, DB: 13) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:16:31) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (5.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-03 21:16:32', `last_request_at` = '2009-11-03 21:16:32' WHERE `id` = 1[0m
+  [4;35;1mSQL (13.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.2ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:06:32') [0m
+Rendered layouts/_footer (5.6ms)
+Completed in 444ms (View: 62, DB: 26) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:17:41) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.1ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-03 21:17:41', `last_request_at` = '2009-11-03 21:17:41' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.9ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:07:41') [0m
+Rendered layouts/_footer (4.7ms)
+Completed in 177ms (View: 59, DB: 12) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:18:59) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-03 21:18:59', `last_request_at` = '2009-11-03 21:18:59' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (15.6ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:08:59') [0m
+Rendered layouts/_footer (4.9ms)
+Completed in 152ms (View: 52, DB: 13) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:19:19) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-03 21:19:19', `last_request_at` = '2009-11-03 21:19:19' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.6ms)
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:09:19') [0m
+Rendered layouts/_footer (5.7ms)
+Completed in 172ms (View: 59, DB: 15) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:23:36) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (6.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-03 21:23:36', `last_request_at` = '2009-11-03 21:23:36' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.5ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:13:36') [0m
+Rendered layouts/_footer (4.8ms)
+Completed in 167ms (View: 57, DB: 16) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-03 18:23:41) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-03 21:23:41', `last_request_at` = '2009-11-03 21:23:41' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.7ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+  [4;36;1mWeight Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Completed in 284ms (View: 100, DB: 7) | 200 OK [http://localhost/weights.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:28:04) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-03 21:28:04', `last_request_at` = '2009-11-03 21:28:04' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (10.3ms)
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:18:04') [0m
+Rendered layouts/_footer (4.1ms)
+Completed in 95ms (View: 32, DB: 7) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-03 18:28:10) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-03 21:28:10', `last_request_at` = '2009-11-03 21:28:10' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (10.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+  [4;35;1mWeight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Completed in 605ms (View: 179, DB: 44) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:28:33) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (5.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-03 21:28:33', `last_request_at` = '2009-11-03 21:28:33' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.0ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:18:33') [0m
+Rendered layouts/_footer (5.2ms)
+Completed in 168ms (View: 56, DB: 15) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-03 18:28:38) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;36;1mUser Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-03 21:28:38', `last_request_at` = '2009-11-03 21:28:38' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.5ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Completed in 263ms (View: 148, DB: 12) | 200 OK [http://localhost/weights.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:29:31) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.1ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-03 21:29:31', `last_request_at` = '2009-11-03 21:29:31' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.4ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.0ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:19:31') [0m
+Rendered layouts/_footer (4.7ms)
+Completed in 164ms (View: 53, DB: 14) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-03 18:29:34) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;35;1mUser Columns (4.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-03 21:29:34', `last_request_at` = '2009-11-03 21:29:34' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (0.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+  [4;35;1mWeight Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Completed in 274ms (View: 155, DB: 13) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:44:21) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (5.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-03 21:44:21', `last_request_at` = '2009-11-03 21:44:21' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (23.1ms)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:34:21') [0m
+Rendered layouts/_footer (6.5ms)
+Completed in 500ms (View: 132, DB: 18) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-03 18:44:33) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-03 21:44:33', `last_request_at` = '2009-11-03 21:44:33' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (8.4ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-03 21:34:33') [0m
+Rendered layouts/_footer (2.5ms)
+Completed in 200ms (View: 36, DB: 7) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-03 18:44:36) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;35;1mUser Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-03 21:44:36', `last_request_at` = '2009-11-03 21:44:36' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+  [4;35;1mWeight Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Completed in 286ms (View: 158, DB: 13) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-04 11:22:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered layouts/_header (256.7ms)
+  [4;36;1mSQL (64.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:12:34') [0m
+Rendered layouts/_footer (469.0ms)
+Completed in 947ms (View: 824, DB: 115) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-04 11:22:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (4.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (8.0ms)
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:12:38') [0m
+Rendered layouts/_footer (5.8ms)
+Completed in 310ms (View: 58, DB: 8) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-04 11:22:43) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:22:44', `last_login_at` = '2009-11-03 21:12:29', `current_login_at` = '2009-11-04 14:22:44', `login_count` = 69, `last_request_at` = '2009-11-04 14:22:44' WHERE `id` = 1[0m
+  [4;35;1mSQL (20.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 728ms (DB: 27) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 11:22:44) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:22:44', `last_request_at` = '2009-11-04 14:22:44' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.6ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (8.1ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:12:44') [0m
+Rendered layouts/_footer (2.5ms)
+Completed in 170ms (View: 118, DB: 7) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#new (for 127.0.0.1 at 2009-11-04 11:22:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weights"}
+  [4;36;1mWeight Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendering template within layouts/weights
+Rendering weights/new
+  [4;35;1mUser Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:22:47', `last_request_at` = '2009-11-04 14:22:47' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (1.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY created_at DESC LIMIT 10[0m
+Completed in 208ms (View: 171, DB: 14) | 200 OK [http://localhost/weights/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#create to json (for 127.0.0.1 at 2009-11-04 11:22:57) [POST]
+  Parameters: {"format"=>"json", "action"=>"create", "weight"=>{"weight"=>"99.600", "user_id"=>"1"}, "controller"=>"weights"}
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mWeight Create (15.5ms)[0m   [0;1mINSERT INTO `weights` (`created_at`, `updated_at`, `weight`, `user_id`) VALUES('2009-11-04 14:22:58', '2009-11-04 14:22:58', 99.6, 1)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Completed in 62ms (View: 4, DB: 21) | 201 Created [http://localhost/weights.json]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:22:58) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "user_id"=>"1", "controller"=>"weights"}
+  [4;35;1mWeight Load (0.7ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = '1') [0m
+  [4;36;1mWeight Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Completed in 94ms (View: 78, DB: 3) | 200 OK [http://localhost/weights.json?user_id=1]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:23:01) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;36;1mUser Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:23:01', `last_request_at` = '2009-11-04 14:23:01' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (1.4ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Completed in 285ms (View: 164, DB: 13) | 200 OK [http://localhost/weights.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WorkoutsController#create to json (for 127.0.0.1 at 2009-11-04 11:23:16) [POST]
+  Parameters: {"format"=>"json", "action"=>"create", "controller"=>"workouts"}
+  [4;36;1mWorkout Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `workouts`[0m
+  [4;35;1mUser Columns (4.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:23:16', `last_request_at` = '2009-11-04 14:23:16' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mWorkout Create (0.7ms)[0m   [0;1mINSERT INTO `workouts` (`created_at`, `updated_at`, `user_id`) VALUES('2009-11-04 14:23:16', '2009-11-04 14:23:16', 1)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Completed in 204ms (View: 21, DB: 14) | 200 OK [http://localhost/workouts.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrainingsController#new (for 127.0.0.1 at 2009-11-04 11:23:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"trainings"}
+  [4;35;1mTraining Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `trainings`[0m
+Rendering template within layouts/trainings
+Rendering trainings/new
+  [4;36;1mExercise Load (0.8ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mExercise Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+Completed in 244ms (View: 207, DB: 7) | 200 OK [http://localhost/trainings/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrainingsController#create to json (for 127.0.0.1 at 2009-11-04 11:23:21) [POST]
+  Parameters: {"format"=>"json", "action"=>"create", "training"=>{"finish(5i)"=>"23", "effort"=>"1", "health_frequency"=>"155", "start(1i)"=>"2009", "exercise_id"=>"1", "start(2i)"=>"11", "finish(1i)"=>"2009", "start(3i)"=>"4", "finish(2i)"=>"11", "start(4i)"=>"14", "workout_id"=>"91", "finish(3i)"=>"4", "start(5i)"=>"23", "finish(4i)"=>"14", "distance"=>""}, "controller"=>"trainings"}
+  [4;35;1mTraining Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `trainings`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mExercise Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mExercise Load (0.8ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mWorkout Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `workouts`[0m
+  [4;36;1mWorkout Load (0.8ms)[0m   [0;1mSELECT * FROM `workouts` WHERE (`workouts`.`id` = 91) [0m
+  [4;35;1mTraining Create (0.8ms)[0m   [0mINSERT INTO `trainings` (`finish`, `created_at`, `health_frequency`, `effort`, `updated_at`, `exercise_id`, `start`, `workout_id`, `distance`) VALUES('2009-11-04 14:23:00', '2009-11-04 14:23:21', 155, 1, '2009-11-04 14:23:21', 1, '2009-11-04 14:23:00', 91, NULL)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 338ms (View: 2, DB: 14) | 200 OK [http://localhost/trainings.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrainingsController#create to json (for 127.0.0.1 at 2009-11-04 11:23:32) [POST]
+  Parameters: {"format"=>"json", "action"=>"create", "training"=>{"finish(5i)"=>"23", "effort"=>"1", "health_frequency"=>"155", "start(1i)"=>"2009", "exercise_id"=>"2", "start(2i)"=>"11", "finish(1i)"=>"2009", "start(3i)"=>"4", "finish(2i)"=>"11", "start(4i)"=>"14", "workout_id"=>"91", "finish(3i)"=>"4", "start(5i)"=>"23", "finish(4i)"=>"14", "distance"=>""}, "controller"=>"trainings"}
+  [4;36;1mTraining Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `trainings`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mExercise Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.8ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 2) [0m
+  [4;36;1mWorkout Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `workouts`[0m
+  [4;35;1mWorkout Load (0.3ms)[0m   [0mSELECT * FROM `workouts` WHERE (`workouts`.`id` = 91) [0m
+  [4;36;1mTraining Create (0.9ms)[0m   [0;1mINSERT INTO `trainings` (`finish`, `created_at`, `health_frequency`, `effort`, `updated_at`, `exercise_id`, `start`, `workout_id`, `distance`) VALUES('2009-11-04 14:23:00', '2009-11-04 14:23:32', 155, 1, '2009-11-04 14:23:32', 2, '2009-11-04 14:23:00', 91, NULL)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Completed in 114ms (View: 2, DB: 14) | 200 OK [http://localhost/trainings.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:33:31) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;35;1mUser Columns (4.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:33:31', `last_request_at` = '2009-11-04 14:33:31' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (0.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+  [4;35;1mWeight Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Completed in 263ms (View: 143, DB: 12) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#new (for 127.0.0.1 at 2009-11-04 11:34:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weights"}
+  [4;35;1mWeight Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendering template within layouts/weights
+Rendering weights/new
+  [4;36;1mUser Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:34:17', `last_request_at` = '2009-11-04 14:34:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (11.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (1.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY created_at DESC LIMIT 10[0m
+Completed in 157ms (View: 109, DB: 23) | 200 OK [http://localhost/weights/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#create to json (for 127.0.0.1 at 2009-11-04 11:34:21) [POST]
+  Parameters: {"format"=>"json", "action"=>"create", "weight"=>{"weight"=>"0", "user_id"=>"1"}, "controller"=>"weights"}
+  [4;35;1mWeight Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mWeight Create (0.8ms)[0m   [0mINSERT INTO `weights` (`created_at`, `updated_at`, `weight`, `user_id`) VALUES('2009-11-04 14:34:21', '2009-11-04 14:34:21', 0.0, 1)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Completed in 46ms (View: 4, DB: 6) | 201 Created [http://localhost/weights.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:34:21) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "user_id"=>"1", "controller"=>"weights"}
+  [4;36;1mWeight Load (1.6ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = '1') [0m
+  [4;35;1mWeight Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Completed in 176ms (View: 145, DB: 5) | 200 OK [http://localhost/weights.json?user_id=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#create to json (for 127.0.0.1 at 2009-11-04 11:34:31) [POST]
+  Parameters: {"format"=>"json", "action"=>"create", "weight"=>{"weight"=>"98", "user_id"=>"1"}, "controller"=>"weights"}
+  [4;35;1mWeight Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mWeight Create (0.7ms)[0m   [0mINSERT INTO `weights` (`created_at`, `updated_at`, `weight`, `user_id`) VALUES('2009-11-04 14:34:31', '2009-11-04 14:34:31', 98.0, 1)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 49ms (View: 5, DB: 6) | 201 Created [http://localhost/weights.json]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:34:31) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "user_id"=>"1", "controller"=>"weights"}
+  [4;36;1mWeight Load (1.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = '1') [0m
+  [4;35;1mWeight Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Completed in 193ms (View: 159, DB: 5) | 200 OK [http://localhost/weights.json?user_id=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:34:43) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;35;1mUser Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:34:43', `last_request_at` = '2009-11-04 14:34:43' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (1.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+  [4;35;1mWeight Columns (6.6ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Completed in 293ms (View: 150, DB: 18) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#new (for 127.0.0.1 at 2009-11-04 11:35:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weights"}
+  [4;35;1mWeight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendering template within layouts/weights
+Rendering weights/new
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:35:20', `last_request_at` = '2009-11-04 14:35:20' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.6ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY created_at DESC LIMIT 10[0m
+Completed in 74ms (View: 55, DB: 7) | 200 OK [http://localhost/weights/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WorkoutsController#create to json (for 127.0.0.1 at 2009-11-04 11:35:46) [POST]
+  Parameters: {"format"=>"json", "action"=>"create", "controller"=>"workouts"}
+  [4;35;1mWorkout Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `workouts`[0m
+  [4;36;1mUser Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:35:47', `last_request_at` = '2009-11-04 14:35:47' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mWorkout Create (0.7ms)[0m   [0mINSERT INTO `workouts` (`created_at`, `updated_at`, `user_id`) VALUES('2009-11-04 14:35:47', '2009-11-04 14:35:47', 1)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Completed in 140ms (View: 5, DB: 14) | 200 OK [http://localhost/workouts.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrainingsController#new (for 127.0.0.1 at 2009-11-04 11:35:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"trainings"}
+  [4;36;1mTraining Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `trainings`[0m
+Rendering template within layouts/trainings
+Rendering trainings/new
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mExercise Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 143ms (View: 113, DB: 7) | 200 OK [http://localhost/trainings/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-04 11:36:29) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:36:29', `last_request_at` = '2009-11-04 14:36:29' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:36:29', `persistence_token` = '399c93d8d85a4d271f4d3c87c6db0508a29852ec3320f8b489d7d7fdfa31d8a68f4b4f7bbc7ad34bb41230ecc4ed4f04f81035a95c034884f63826add70ba41a' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 103ms (DB: 10) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-04 11:36:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (4.0ms)
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:26:29') [0m
+Rendered layouts/_footer (2.7ms)
+Completed in 61ms (View: 16, DB: 4) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-04 11:36:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (4.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (16.9ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendered layouts/_header (271.2ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:26:40') [0m
+Rendered layouts/_footer (4.8ms)
+Completed in 402ms (View: 347, DB: 8) | 200 OK [http://localhost/account/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-04 11:45:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (12.6ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:35:53') [0m
+Rendered layouts/_footer (5.4ms)
+Completed in 131ms (View: 41, DB: 6) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-04 11:45:59) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:45:59', `last_login_at` = '2009-11-04 14:22:44', `current_login_at` = '2009-11-04 14:45:59', `login_count` = 70, `last_request_at` = '2009-11-04 14:45:59' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 111ms (DB: 8) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 11:45:59) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:45:59', `last_request_at` = '2009-11-04 14:45:59' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.5ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (8.6ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:35:59') [0m
+Rendered layouts/_footer (2.4ms)
+Completed in 202ms (View: 27, DB: 29) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:46:02) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (5.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:46:02', `last_request_at` = '2009-11-04 14:46:02' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (0.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;35;1mWeight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 139ms (View: 23, DB: 25) | 200 OK [http://localhost/weights.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 11:49:58) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (15.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:49:58', `last_request_at` = '2009-11-04 14:49:58' WHERE `id` = 1[0m
+  [4;36;1mSQL (17.9ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (15.3ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:39:59') [0m
+Rendered layouts/_footer (4.6ms)
+Completed in 201ms (View: 50, DB: 42) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 11:49:59) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:49:59', `last_request_at` = '2009-11-04 14:49:59' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (8.3ms)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:39:59') [0m
+Rendered layouts/_footer (2.7ms)
+Completed in 82ms (View: 28, DB: 7) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:50:01) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:50:01', `last_request_at` = '2009-11-04 14:50:01' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;36;1mWeight Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 72ms (View: 13, DB: 6) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:50:07) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;35;1mUser Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (19.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:50:07', `last_request_at` = '2009-11-04 14:50:07' WHERE `id` = 1[0m
+  [4;35;1mSQL (8.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;35;1mWeight Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 138ms (View: 13, DB: 46) | 200 OK [http://localhost/weights.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 11:52:05) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:52:05', `last_request_at` = '2009-11-04 14:52:05' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (23.3ms)
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:42:05') [0m
+Rendered layouts/_footer (2.8ms)
+Completed in 151ms (View: 53, DB: 8) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:52:59) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;35;1mUser Columns (4.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:52:59', `last_request_at` = '2009-11-04 14:52:59' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;35;1mWeight Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 125ms (View: 13, DB: 12) | 200 OK [http://localhost/weights.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 11:54:17) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:54:17', `last_request_at` = '2009-11-04 14:54:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.4ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:44:18') [0m
+Rendered layouts/_footer (4.7ms)
+Completed in 396ms (View: 55, DB: 14) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:55:21) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;35;1mUser Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:55:21', `last_request_at` = '2009-11-04 14:55:21' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;35;1mWeight Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 150ms (View: 27, DB: 13) | 200 OK [http://localhost/weights.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 11:55:42) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (22.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 14:55:43', `last_request_at` = '2009-11-04 14:55:43' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.4ms)
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 14:45:43') [0m
+Rendered layouts/_footer (4.9ms)
+Completed in 176ms (View: 54, DB: 32) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 11:55:50) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;35;1mUser Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 14:55:50', `last_request_at` = '2009-11-04 14:55:50' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;35;1mWeight Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 146ms (View: 26, DB: 12) | 200 OK [http://localhost/weights.json]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 12:36:16) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (4.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 15:36:16', `last_request_at` = '2009-11-04 15:36:16' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (15.5ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 15:26:16') [0m
+Rendered layouts/_footer (4.5ms)
+Completed in 161ms (View: 51, DB: 13) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 12:37:23) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 15:37:24', `last_request_at` = '2009-11-04 15:37:24' WHERE `id` = 1[0m
+  [4;35;1mSQL (18.0ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.4ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 15:27:24') [0m
+Rendered layouts/_footer (5.2ms)
+Completed in 427ms (View: 56, DB: 31) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 12:37:27) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;36;1mUser Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 15:37:27', `last_request_at` = '2009-11-04 15:37:27' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.4ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;36;1mWeight Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 150ms (View: 27, DB: 13) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 12:54:50) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 15:54:50', `last_request_at` = '2009-11-04 15:54:50' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (15.5ms)
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 15:44:50') [0m
+Rendered layouts/_footer (5.3ms)
+Completed in 155ms (View: 54, DB: 14) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 12:54:53) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;36;1mUser Columns (4.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 15:54:53', `last_request_at` = '2009-11-04 15:54:53' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 156ms (View: 26, DB: 13) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 12:55:19) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 15:55:19', `last_request_at` = '2009-11-04 15:55:19' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.0ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 15:45:19') [0m
+Rendered layouts/_footer (5.0ms)
+Completed in 171ms (View: 57, DB: 14) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 12:55:22) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;36;1mUser Columns (5.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 15:55:23', `last_request_at` = '2009-11-04 15:55:23' WHERE `id` = 1[0m
+  [4;36;1mSQL (13.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;36;1mWeight Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 399ms (View: 15, DB: 25) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 12:58:59) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 15:58:59', `last_request_at` = '2009-11-04 15:58:59' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (22.1ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 15:49:00') [0m
+Rendered layouts/_footer (5.2ms)
+Completed in 210ms (View: 69, DB: 15) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 12:59:00) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 15:59:00', `last_request_at` = '2009-11-04 15:59:00' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.5ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 15:49:00') [0m
+Rendered layouts/_footer (5.2ms)
+Completed in 164ms (View: 56, DB: 15) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 12:59:00) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (5.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 15:59:00', `last_request_at` = '2009-11-04 15:59:00' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (8.7ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 15:49:00') [0m
+Rendered layouts/_footer (2.4ms)
+Completed in 100ms (View: 29, DB: 10) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 12:59:04) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;36;1mUser Columns (8.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 15:59:05', `last_request_at` = '2009-11-04 15:59:05' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;36;1mWeight Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 115ms (View: 13, DB: 13) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 14:19:06) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 17:19:06', `last_request_at` = '2009-11-04 17:19:06' WHERE `id` = 1[0m
+  [4;35;1mSQL (25.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (28.1ms)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 17:09:07') [0m
+Rendered layouts/_footer (2.7ms)
+Completed in 678ms (View: 376, DB: 39) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 14:19:10) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;36;1mUser Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 17:19:10', `last_request_at` = '2009-11-04 17:19:10' WHERE `id` = 1[0m
+  [4;36;1mSQL (16.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;36;1mWeight Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 131ms (View: 15, DB: 24) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-04 14:26:24) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (46.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-04 17:26:24', `last_request_at` = '2009-11-04 17:26:24' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (15.5ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-04 17:16:24') [0m
+Rendered layouts/_footer (5.1ms)
+Completed in 203ms (View: 52, DB: 60) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-04 15:38:07) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 18:38:07', `last_request_at` = '2009-11-04 18:38:07' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;36;1mWeight Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 76ms (View: 14, DB: 6) | 200 OK [http://localhost/weights.json]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#new (for 127.0.0.1 at 2009-11-04 15:38:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weights"}
+  [4;35;1mWeight Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendering template within layouts/weights
+Rendering weights/new
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 18:38:13', `last_request_at` = '2009-11-04 18:38:13' WHERE `id` = 1[0m
+  [4;36;1mSQL (13.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY created_at DESC LIMIT 10[0m
+Completed in 170ms (View: 121, DB: 25) | 200 OK [http://localhost/weights/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WorkoutsController#create to json (for 127.0.0.1 at 2009-11-04 15:38:19) [POST]
+  Parameters: {"format"=>"json", "action"=>"create", "controller"=>"workouts"}
+  [4;35;1mWorkout Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `workouts`[0m
+  [4;36;1mUser Columns (4.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.1ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-04 18:38:19', `last_request_at` = '2009-11-04 18:38:19' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mWorkout Create (32.6ms)[0m   [0mINSERT INTO `workouts` (`created_at`, `updated_at`, `user_id`) VALUES('2009-11-04 18:38:20', '2009-11-04 18:38:20', 1)[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 469ms (View: 21, DB: 48) | 200 OK [http://localhost/workouts.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrainingsController#new (for 127.0.0.1 at 2009-11-04 15:38:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"trainings"}
+  [4;36;1mTraining Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `trainings`[0m
+Rendering template within layouts/trainings
+Rendering trainings/new
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mExercise Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 126ms (View: 95, DB: 4) | 200 OK [http://localhost/trainings/new]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 12:15:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (153.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered layouts/_header (967.8ms)
+  [4;36;1mSQL (147.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 15:05:16') [0m
+Rendered layouts/_footer (399.9ms)
+Completed in 1593ms (View: 589, DB: 994) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:15:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:15:38) [GET]
+
+ActionController::RoutingError (No route matches "/interna.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-19 12:15:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (4.2ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 15:05:44') [0m
+Rendered layouts/_footer (2.9ms)
+Completed in 106ms (View: 39, DB: 32) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:15:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-19 12:15:52) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (6.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (35.2ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (53.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 15:15:53', `last_login_at` = '2009-11-04 14:45:59', `current_login_at` = '2009-11-19 15:15:53', `login_count` = 71, `last_request_at` = '2009-11-19 15:15:53' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 566ms (DB: 96) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 12:15:53) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (18.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (36.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (8.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 15:15:53', `last_request_at` = '2009-11-19 15:15:53' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (65.8ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (16.1ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (9.6ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 15:05:53') [0m
+Rendered layouts/_footer (2.5ms)
+Completed in 334ms (View: 109, DB: 164) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:15:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:16:10) [GET]
+
+ActionController::RoutingError (No route matches "/interna.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 12:16:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (11.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (6.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 15:16:15', `last_request_at` = '2009-11-19 15:16:15' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (211.6ms)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 15:06:15') [0m
+Rendered layouts/_footer (3.6ms)
+Completed in 223ms (View: 187, DB: 31) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 12:16:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:29:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (27.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (208.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (9.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (65.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:29:50', `last_request_at` = '2009-11-19 16:29:50' WHERE `id` = 1[0m
+  [4;35;1mSQL (34.4ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (979.1ms)
+  [4;36;1mSQL (27.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:19:50') [0m
+Rendered layouts/_footer (38.0ms)
+Completed in 1387ms (View: 969, DB: 410) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:29:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:33:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:33:02', `last_request_at` = '2009-11-19 16:33:02' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (107.4ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:23:02') [0m
+Rendered layouts/_footer (2.8ms)
+Completed in 133ms (View: 98, DB: 25) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:33:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2009-11-19 13:33:17) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:33:17', `last_request_at` = '2009-11-19 16:33:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (12.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 16:33:17', `persistence_token` = 'be80ac35f8674fc6b364a2e66d13cd5578a07915a919d36fc1c03c11c96a7c18a8373bfff256f2698920c9d825abcecad6632d74a4eacae42bc7f2de800c4eb7' WHERE `id` = 1[0m
+  [4;36;1mSQL (19.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 141ms (DB: 41) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-19 13:33:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (17.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (7.8ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:23:18') [0m
+Rendered layouts/_footer (2.3ms)
+Completed in 163ms (View: 64, DB: 21) | 200 OK [http://localhost/user_session/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:33:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-19 13:37:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (43.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (15.1ms)
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:27:17') [0m
+Rendered layouts/_footer (5.7ms)
+Completed in 361ms (View: 53, DB: 57) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:37:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-19 13:37:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (17.3ms)
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendered layouts/_header (34.3ms)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:27:21') [0m
+Rendered layouts/_footer (5.1ms)
+Completed in 217ms (View: 160, DB: 7) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:37:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:37:25) [GET]
+
+ActionController::RoutingError (No route matches "/account/interna.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-19 13:37:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (8.6ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:27:29') [0m
+Rendered layouts/_footer (4.9ms)
+Completed in 138ms (View: 31, DB: 7) | 200 OK [http://localhost/user_session/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:37:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-19 13:37:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (4.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (14.0ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendered layouts/_header (36.9ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:27:32') [0m
+Rendered layouts/_footer (4.7ms)
+Completed in 132ms (View: 75, DB: 7) | 200 OK [http://localhost/account/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:37:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:42:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;36;1mUser Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendered layouts/_header (103.4ms)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:32:56') [0m
+Rendered layouts/_footer (5.8ms)
+Completed in 138ms (View: 122, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:42:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-19 13:43:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (9.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (6.2ms)
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:33:02') [0m
+Rendered layouts/_footer (3.2ms)
+Completed in 371ms (View: 27, DB: 11) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:43:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-19 13:43:10) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mUser Load (38.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:43:10', `last_login_at` = '2009-11-19 15:15:53', `current_login_at` = '2009-11-19 16:43:10', `login_count` = 72, `last_request_at` = '2009-11-19 16:43:10' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 654ms (DB: 44) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 13:43:10) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:43:10', `last_request_at` = '2009-11-19 16:43:10' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (8.2ms)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:33:10') [0m
+Rendered layouts/_footer (2.9ms)
+Completed in 181ms (View: 114, DB: 22) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:43:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:44:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (16.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:44:20', `last_request_at` = '2009-11-19 16:44:20' WHERE `id` = 1[0m
+  [4;35;1mSQL (14.9ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (153.8ms)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:34:20') [0m
+Rendered layouts/_footer (4.6ms)
+Completed in 186ms (View: 141, DB: 36) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:44:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 13:44:26) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (5.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:44:27', `last_request_at` = '2009-11-19 16:44:27' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.5ms)
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:34:27') [0m
+Rendered layouts/_footer (6.5ms)
+Completed in 173ms (View: 67, DB: 15) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:44:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:44:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (4.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:44:31', `last_request_at` = '2009-11-19 16:44:31' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (120.4ms)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:34:31') [0m
+Rendered layouts/_footer (4.9ms)
+Completed in 142ms (View: 121, DB: 10) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:44:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:44:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (5.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:44:34', `last_request_at` = '2009-11-19 16:44:34' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (346.0ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:34:34') [0m
+Rendered layouts/_footer (5.2ms)
+Completed in 367ms (View: 346, DB: 12) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:44:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:44:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (77.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:44:53', `last_request_at` = '2009-11-19 16:44:53' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (134.5ms)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:34:53') [0m
+Rendered layouts/_footer (2.9ms)
+Completed in 150ms (View: 64, DB: 82) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:44:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:45:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:45:11', `last_request_at` = '2009-11-19 16:45:11' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (63.3ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:35:11') [0m
+Rendered layouts/_footer (2.5ms)
+Completed in 80ms (View: 69, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:45:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 13:45:12) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (23.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:45:13', `last_request_at` = '2009-11-19 16:45:13' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.4ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:35:13') [0m
+Rendered layouts/_footer (4.7ms)
+Completed in 178ms (View: 52, DB: 37) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:45:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:45:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:45:14', `last_request_at` = '2009-11-19 16:45:14' WHERE `id` = 1[0m
+  [4;35;1mSQL (17.3ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (77.9ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:35:14') [0m
+Rendered layouts/_footer (2.5ms)
+Completed in 88ms (View: 61, DB: 22) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:45:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:45:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (33.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:45:50', `last_request_at` = '2009-11-19 16:45:50' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (207.7ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:35:50') [0m
+Rendered layouts/_footer (2.4ms)
+Completed in 224ms (View: 182, DB: 38) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:45:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:46:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:46:38', `last_request_at` = '2009-11-19 16:46:38' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (111.8ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:36:38') [0m
+Rendered layouts/_footer (6.6ms)
+Completed in 165ms (View: 146, DB: 10) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:46:39) [GET]
+
+ActionController::RoutingError (No route matches "/img/icoFutebol.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:46:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:46:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/conteudoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:46:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/colunaFundo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:46:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/img/baseFundo.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:48:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (32.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:48:02', `last_request_at` = '2009-11-19 16:48:02' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (133.1ms)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:38:02') [0m
+Rendered layouts/_footer (4.1ms)
+Completed in 146ms (View: 102, DB: 39) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:02) [GET]
+
+ActionController::RoutingError (No route matches "/img/icoFutebol.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/conteudoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/colunaFundo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/baseFundo.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:48:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (17.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (14.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:48:05', `last_request_at` = '2009-11-19 16:48:05' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (132.7ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:38:05') [0m
+Rendered layouts/_footer (2.4ms)
+Completed in 177ms (View: 105, DB: 33) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:48:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 16:48:06', `last_request_at` = '2009-11-19 16:48:06' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_header (299.5ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:38:06') [0m
+Rendered layouts/_footer (2.9ms)
+Completed in 310ms (View: 284, DB: 21) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:48:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:48:06', `last_request_at` = '2009-11-19 16:48:06' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (69.5ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:38:06') [0m
+Rendered layouts/_footer (2.1ms)
+Completed in 80ms (View: 70, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:48:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 16:48:06', `last_request_at` = '2009-11-19 16:48:06' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_header (66.6ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:38:06') [0m
+Rendered layouts/_footer (2.1ms)
+Completed in 81ms (View: 67, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:07) [GET]
+
+ActionController::RoutingError (No route matches "/img/icoFutebol.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/conteudoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/colunaFundo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/baseFundo.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:48:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;36;1mUser Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 16:48:40', `last_request_at` = '2009-11-19 16:48:40' WHERE `id` = 1[0m
+  [4;36;1mSQL (12.7ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_header (131.9ms)
+  [4;35;1mSQL (1.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:38:40') [0m
+Rendered layouts/_footer (5.9ms)
+Completed in 154ms (View: 122, DB: 22) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:48:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (4.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:48:41', `last_request_at` = '2009-11-19 16:48:41' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (86.5ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:38:41') [0m
+Rendered layouts/_footer (2.5ms)
+Completed in 104ms (View: 82, DB: 13) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:41) [GET]
+
+ActionController::RoutingError (No route matches "/img/icoFutebol.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/topoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/conteudoFundo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/colunaFundo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:48:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/baseFundo.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:49:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (4.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:49:49', `last_request_at` = '2009-11-19 16:49:49' WHERE `id` = 1[0m
+  [4;35;1mSQL (23.6ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (399.8ms)
+  [4;36;1mSQL (13.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:39:49') [0m
+Rendered layouts/_footer (17.9ms)
+Completed in 433ms (View: 378, DB: 47) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:49:50) [GET]
+
+ActionController::RoutingError (No route matches "/img/icoFutebol.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-19 13:51:09) [GET]
+
+ActionController::RoutingError (No route matches "/f2rh.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:51:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;36;1mUser Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 16:51:11', `last_request_at` = '2009-11-19 16:51:11' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_header (112.7ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:41:11') [0m
+Rendered layouts/_footer (4.7ms)
+Completed in 152ms (View: 133, DB: 11) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 13:51:21) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (5.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:51:21', `last_request_at` = '2009-11-19 16:51:21' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.8ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:41:22') [0m
+Rendered layouts/_footer (4.9ms)
+Completed in 177ms (View: 58, DB: 15) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:51:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 16:51:24', `last_request_at` = '2009-11-19 16:51:24' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_header (68.1ms)
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:41:24') [0m
+Rendered layouts/_footer (3.2ms)
+Completed in 85ms (View: 71, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 13:52:08) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (18.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (9.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:52:08', `last_request_at` = '2009-11-19 16:52:08' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (18.5ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:42:08') [0m
+Rendered layouts/_footer (2.7ms)
+Completed in 139ms (View: 39, DB: 32) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 13:53:32) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 16:53:32', `last_request_at` = '2009-11-19 16:53:32' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (7.9ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:43:32') [0m
+Rendered layouts/_footer (3.8ms)
+Completed in 92ms (View: 39, DB: 7) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 13:55:30) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:55:30', `last_request_at` = '2009-11-19 16:55:30' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.6ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (18.3ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:45:30') [0m
+Rendered layouts/_footer (8.1ms)
+Completed in 447ms (View: 99, DB: 13) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-19 13:55:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;36;1mUser Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.1ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 16:55:40', `last_request_at` = '2009-11-19 16:55:40' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Rendered layouts/_header (112.6ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:45:40') [0m
+Rendered layouts/_footer (4.5ms)
+Completed in 158ms (View: 135, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 13:56:24) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:56:24', `last_request_at` = '2009-11-19 16:56:24' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (18.7ms)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:46:24') [0m
+Rendered layouts/_footer (5.4ms)
+Completed in 410ms (View: 59, DB: 14) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 13:59:10) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 16:59:10', `last_request_at` = '2009-11-19 16:59:10' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (11.0ms)
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:49:10') [0m
+Rendered layouts/_footer (2.8ms)
+Completed in 88ms (View: 30, DB: 8) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 13:59:15) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (5.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 16:59:15', `last_request_at` = '2009-11-19 16:59:15' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (16.6ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:49:15') [0m
+Rendered layouts/_footer (5.4ms)
+Completed in 174ms (View: 62, DB: 16) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 13:59:58) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (4.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 16:59:58', `last_request_at` = '2009-11-19 16:59:58' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.3ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:49:58') [0m
+Rendered layouts/_footer (4.5ms)
+Completed in 202ms (View: 84, DB: 13) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:01:00) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (5.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.7ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:01:00', `last_request_at` = '2009-11-19 17:01:00' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.1ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:51:01') [0m
+Rendered layouts/_footer (4.8ms)
+Completed in 195ms (View: 83, DB: 16) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:03:05) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:03:05', `last_request_at` = '2009-11-19 17:03:05' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (8.5ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:53:05') [0m
+Rendered layouts/_footer (2.8ms)
+Completed in 128ms (View: 55, DB: 7) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:03:28) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (4.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:03:28', `last_request_at` = '2009-11-19 17:03:28' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.6ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (16.5ms)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:53:28') [0m
+Rendered layouts/_footer (4.6ms)
+Completed in 188ms (View: 83, DB: 15) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:04:05) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (7.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:04:05', `last_request_at` = '2009-11-19 17:04:05' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (17.4ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:54:05') [0m
+Rendered layouts/_footer (2.5ms)
+Completed in 330ms (View: 63, DB: 12) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:04:08) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:04:08', `last_request_at` = '2009-11-19 17:04:08' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (16.1ms)
+Rendered layouts/_header (8.6ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:54:08') [0m
+Rendered layouts/_footer (2.5ms)
+Completed in 118ms (View: 59, DB: 5) | 200 OK [http://localhost/account/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:04:17) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:04:17', `last_request_at` = '2009-11-19 17:04:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+Rendered layouts/_header (16.3ms)
+  [4;35;1mSQL (1.4ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:54:17') [0m
+Rendered layouts/_footer (5.8ms)
+Completed in 166ms (View: 64, DB: 14) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:06:09) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:06:09', `last_request_at` = '2009-11-19 17:06:09' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (9.2ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:56:10') [0m
+Rendered layouts/_footer (11.4ms)
+Completed in 133ms (View: 59, DB: 15) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:06:35) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (4.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:06:35', `last_request_at` = '2009-11-19 17:06:35' WHERE `id` = 1[0m
+  [4;36;1mSQL (17.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.5ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.0ms)
+  [4;35;1mSQL (1.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:56:35') [0m
+Rendered layouts/_footer (6.2ms)
+Completed in 201ms (View: 76, DB: 31) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#new (for 127.0.0.1 at 2009-11-19 14:06:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weights"}
+  [4;35;1mWeight Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendering template within layouts/weights
+Rendering weights/new
+  [4;36;1mUser Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:06:38', `last_request_at` = '2009-11-19 17:06:38' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (99.0ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY created_at DESC LIMIT 10[0m
+Completed in 315ms (View: 177, DB: 110) | 200 OK [http://localhost/weights/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-11-19 14:06:50) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"weights"}
+  [4;35;1mUser Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (15.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:06:50', `last_request_at` = '2009-11-19 17:06:50' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (0.9ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) LIMIT 0, 10[0m
+  [4;35;1mWeight Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = 1) [0m
+Completed in 158ms (View: 26, DB: 27) | 200 OK [http://localhost/weights.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:07:42) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.1ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:07:42', `last_request_at` = '2009-11-19 17:07:42' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (14.9ms)
+Rendered layouts/_header (17.8ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:57:42') [0m
+Rendered layouts/_footer (4.8ms)
+Completed in 401ms (View: 50, DB: 10) | 200 OK [http://localhost/account/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:07:48) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:07:48', `last_request_at` = '2009-11-19 17:07:48' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.3ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:57:48') [0m
+Rendered layouts/_footer (4.6ms)
+Completed in 159ms (View: 53, DB: 13) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:08:29) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Columns (5.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:08:29', `last_request_at` = '2009-11-19 17:08:29' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (14.0ms)
+Rendered layouts/_header (16.5ms)
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:58:29') [0m
+Rendered layouts/_footer (4.9ms)
+Completed in 146ms (View: 46, DB: 12) | 200 OK [http://localhost/account/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:08:44) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Columns (4.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:08:45', `last_request_at` = '2009-11-19 17:08:45' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.5ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (15.7ms)
+Rendered layouts/_header (19.8ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 16:58:45') [0m
+Rendered layouts/_footer (5.9ms)
+Completed in 465ms (View: 106, DB: 14) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:10:40) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.1ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:10:40', `last_request_at` = '2009-11-19 17:10:40' WHERE `id` = 1[0m
+  [4;36;1mSQL (11.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mWeight Load (0.4ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (13.8ms)
+Rendered layouts/_header (16.2ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:00:40') [0m
+Rendered layouts/_footer (4.6ms)
+Completed in 209ms (View: 91, DB: 25) | 200 OK [http://localhost/account/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:11:55) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Columns (4.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:11:55', `last_request_at` = '2009-11-19 17:11:55' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (19.2ms)
+Rendered layouts/_header (17.6ms)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:01:55') [0m
+Rendered layouts/_footer (5.2ms)
+Completed in 453ms (View: 95, DB: 13) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:13:41) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Columns (5.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:13:41', `last_request_at` = '2009-11-19 17:13:41' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (14.6ms)
+Rendered layouts/_header (16.2ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:03:41') [0m
+Rendered layouts/_footer (4.6ms)
+Completed in 196ms (View: 92, DB: 15) | 200 OK [http://localhost/account/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:14:34) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Columns (4.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:14:34', `last_request_at` = '2009-11-19 17:14:34' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (15.4ms)
+Rendered layouts/_header (18.4ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:04:34') [0m
+Rendered layouts/_footer (4.9ms)
+Completed in 464ms (View: 101, DB: 12) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:14:40) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Columns (4.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:14:40', `last_request_at` = '2009-11-19 17:14:40' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (15.1ms)
+Rendered layouts/_header (15.7ms)
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:04:40') [0m
+Rendered layouts/_footer (5.9ms)
+Completed in 177ms (View: 75, DB: 13) | 200 OK [http://localhost/account/edit]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:16:36) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:16:36', `last_request_at` = '2009-11-19 17:16:36' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (18.0ms)
+Rendered layouts/_header (18.2ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:06:36') [0m
+Rendered layouts/_footer (5.4ms)
+Completed in 459ms (View: 105, DB: 13) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:16:54) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Columns (5.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (15.8ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:16:54', `last_request_at` = '2009-11-19 17:16:54' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (13.7ms)
+Rendered layouts/_header (17.4ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:06:54') [0m
+Rendered layouts/_footer (4.7ms)
+Completed in 243ms (View: 116, DB: 30) | 200 OK [http://localhost/account/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:17:06) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:17:06', `last_request_at` = '2009-11-19 17:17:06' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (7.8ms)
+Rendered layouts/_header (9.0ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:07:06') [0m
+Rendered layouts/_footer (2.6ms)
+Completed in 365ms (View: 55, DB: 8) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:17:43) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Columns (5.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:17:43', `last_request_at` = '2009-11-19 17:17:43' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (14.6ms)
+Rendered layouts/_header (8.1ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:07:43') [0m
+Rendered layouts/_footer (2.3ms)
+Completed in 187ms (View: 80, DB: 14) | 200 OK [http://localhost/account/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:18:03) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Columns (11.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:18:03', `last_request_at` = '2009-11-19 17:18:03' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (7.5ms)
+Rendered layouts/_header (8.8ms)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:08:03') [0m
+Rendered layouts/_footer (8.9ms)
+Completed in 280ms (View: 59, DB: 17) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-11-19 14:18:48) [PUT]
+  Parameters: {"commit"=>"Atualizar", "action"=>"update", "_method"=>"put", "controller"=>"users", "user"=>{"name"=>"Christiano Milfont", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"cmilfont", "email"=>""}}
+  [4;36;1mUser Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:18:48', `last_request_at` = '2009-11-19 17:18:48' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (48.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY '' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (5.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'face9e1437d9b51bb9beaf420ae8ed9cac3314fe72ff9fb7955f8e92d96c899305c01885cc8cbd34c9d52122fdec6bf471f2875b3cda69b5c33912f6b5b0a871' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (14.4ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (37.9ms)
+Rendered layouts/_header (16.7ms)
+  [4;35;1mSQL (1.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:08:48') [0m
+Rendered layouts/_footer (6.3ms)
+Completed in 325ms (View: 136, DB: 82) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-11-19 14:19:36) [PUT]
+  Parameters: {"commit"=>"Atualizar", "action"=>"update", "_method"=>"put", "controller"=>"users", "user"=>{"name"=>"Christiano Milfont", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"cmilfont", "email"=>"cmilfont@gmail.com"}}
+  [4;35;1mUser Columns (5.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:19:37', `last_request_at` = '2009-11-19 17:19:37' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 358ms (DB: 10) | 302 Found [http://localhost/account]
+  [4;36;1mSQL (6.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:19:37) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:19:37', `last_request_at` = '2009-11-19 17:19:37' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.9ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:09:37') [0m
+Rendered layouts/_footer (4.6ms)
+Completed in 170ms (View: 58, DB: 20) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:19:44) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Columns (4.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:19:45', `last_request_at` = '2009-11-19 17:19:45' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mWeight Load (0.5ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (15.7ms)
+Rendered layouts/_header (16.6ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:09:45') [0m
+Rendered layouts/_footer (4.6ms)
+Completed in 201ms (View: 97, DB: 13) | 200 OK [http://localhost/account/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:20:25) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Columns (4.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.9ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:20:25', `last_request_at` = '2009-11-19 17:20:25' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (15.9ms)
+Rendered layouts/_header (17.6ms)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:10:25') [0m
+Rendered layouts/_footer (5.4ms)
+Completed in 210ms (View: 102, DB: 13) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:21:18) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;36;1mUser Columns (4.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:21:18', `last_request_at` = '2009-11-19 17:21:18' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;35;1mWeight Load (0.4ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (14.0ms)
+Rendered layouts/_header (16.3ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:11:18') [0m
+Rendered layouts/_footer (4.9ms)
+Completed in 202ms (View: 95, DB: 15) | 200 OK [http://localhost/account/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:22:19) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Columns (5.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:22:19', `last_request_at` = '2009-11-19 17:22:19' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (16.1ms)
+Rendered layouts/_header (18.0ms)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:12:19') [0m
+Rendered layouts/_footer (4.9ms)
+Completed in 459ms (View: 100, DB: 14) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-11-19 14:23:13) [PUT]
+  Parameters: {"commit"=>"Atualizar", "action"=>"update", "_method"=>"put", "controller"=>"users", "user"=>{"name"=>"Christiano Martins", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"cmilfont", "email"=>"cmilfont@gmail.com"}}
+  [4;36;1mUser Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:23:13', `last_request_at` = '2009-11-19 17:23:13' WHERE `id` = 1[0m
+  [4;36;1mSQL (18.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '76928203a92475d116a978d650aa91cd559d58adfcc86393b47316b4a988489be3dfc500993c6464a8d27a873cc3301f0824693cb5851297ed70929535ba1dae' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (25.9ms)
+Rendered layouts/_header (16.4ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:13:14') [0m
+Rendered layouts/_footer (5.2ms)
+Completed in 241ms (View: 103, DB: 34) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-11-19 14:23:14) [PUT]
+  Parameters: {"commit"=>"Atualizar", "action"=>"update", "_method"=>"put", "controller"=>"users", "user"=>{"name"=>"Christiano Martins", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"cmilfont", "email"=>"cmilfont@gmail.com"}}
+  [4;36;1mUser Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:23:14', `last_request_at` = '2009-11-19 17:23:14' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'e5358cc02a1c08be4e15d49f1b5ab4bb42f7ed62237f5e874cd2be48b1d9a51be4967f288c8345c1d2b2962a2cc41fff9034f3688e4f7d3026bbf6d0e953fbcd' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (13.6ms)
+Rendered layouts/_header (8.9ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:13:14') [0m
+Rendered layouts/_footer (2.6ms)
+Completed in 367ms (View: 54, DB: 10) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-11-19 14:23:38) [PUT]
+  Parameters: {"commit"=>"Atualizar", "action"=>"update", "_method"=>"put", "controller"=>"users", "user"=>{"name"=>"Christiano Milfont", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"cmilfont", "email"=>"cmilfont@gmail.com"}}
+  [4;36;1mUser Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:23:38', `last_request_at` = '2009-11-19 17:23:38' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '6a8c5056651a133e8466b84ef293075126adb2838de631e9e9c96cf45217dd9eb80aa79008f37bee82d8b86257fb966722a12104897f52a38a53863b84689750' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (24.4ms)
+Rendered layouts/_header (16.1ms)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:13:38') [0m
+Rendered layouts/_footer (4.5ms)
+Completed in 206ms (View: 96, DB: 14) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2009-11-19 14:23:49) [PUT]
+  Parameters: {"commit"=>"Atualizar", "action"=>"update", "_method"=>"put", "controller"=>"users", "user"=>{"name"=>"Christiano Milfont", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"cmilfont", "email"=>"cmilfont@gmail.com"}}
+  [4;36;1mUser Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:23:49', `last_request_at` = '2009-11-19 17:23:49' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 103ms (DB: 9) | 302 Found [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:23:50) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (4.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:23:50', `last_request_at` = '2009-11-19 17:23:50' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.7ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:13:50') [0m
+Rendered layouts/_footer (2.4ms)
+Completed in 153ms (View: 51, DB: 12) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WorkoutsController#create to json (for 127.0.0.1 at 2009-11-19 14:23:58) [POST]
+  Parameters: {"format"=>"json", "action"=>"create", "controller"=>"workouts"}
+  [4;35;1mWorkout Columns (38.3ms)[0m   [0mSHOW FIELDS FROM `workouts`[0m
+  [4;36;1mUser Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:23:58', `last_request_at` = '2009-11-19 17:23:58' WHERE `id` = 1[0m
+  [4;36;1mSQL (8.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mWorkout Create (89.4ms)[0m   [0mINSERT INTO `workouts` (`created_at`, `updated_at`, `user_id`) VALUES('2009-11-19 17:23:58', '2009-11-19 17:23:58', 1)[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 307ms (View: 7, DB: 147) | 200 OK [http://localhost/workouts.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TrainingsController#new (for 127.0.0.1 at 2009-11-19 14:23:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"trainings"}
+  [4;36;1mTraining Columns (21.5ms)[0m   [0;1mSHOW FIELDS FROM `trainings`[0m
+Rendering template within layouts/trainings
+Rendering trainings/new
+  [4;35;1mExercise Load (42.6ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mExercise Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 537ms (View: 435, DB: 68) | 200 OK [http://localhost/trainings/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:26:56) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (4.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:26:56', `last_request_at` = '2009-11-19 17:26:56' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (17.6ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:16:56') [0m
+Rendered layouts/_footer (4.8ms)
+Completed in 159ms (View: 55, DB: 14) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-11-19 14:26:59) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-11-19 17:26:59', `last_request_at` = '2009-11-19 17:26:59' WHERE `id` = 1[0m
+  [4;35;1mSQL (14.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendered users/_form (7.0ms)
+Rendered layouts/_header (8.1ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:16:59') [0m
+Rendered layouts/_footer (2.4ms)
+Completed in 126ms (View: 45, DB: 38) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-19 14:27:23) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (5.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-11-19 17:27:23', `last_request_at` = '2009-11-19 17:27:23' WHERE `id` = 1[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendered layouts/_header (38.2ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-11-19 17:17:23') [0m
+Rendered layouts/_footer (5.4ms)
+Completed in 205ms (View: 79, DB: 17) | 200 OK [http://localhost/account]

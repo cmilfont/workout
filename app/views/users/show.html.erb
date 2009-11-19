@@ -1,41 +1,77 @@
-<div id="user_profile">
 
-  <div id="avatar"><%=gravatar_photo %></div>
-  <div id="user_info_show">
-    <% if @user.openid_identifier.blank? %>
-      <p>
-        <b>Login:</b>
-        <%=h @user.login %>
-      </p>
-    <% else %>
-      <p>
-        <b>OpenID:</b>
-        <%=h @user.openid_identifier %>
-      </p>
-    <% end %>
-    <p>
-      <b>Nome:</b>
-      <%=h @user.name %>
-    </p>
-    <p>
-      <b>Peso atual:</b>
-      <span id="last_weight"><%=h @user.last_weight %></span> kg
-    </p>
+<div id="meio" class="interno">
+<div class="container">
 
-    <%= link_to 'Continue completando seu perfil.', edit_account_path %>
-  </div>
-
-  <div class="ultimos_treinos">
+  <div id="menurapido">
     <a href="#workout">Registre seu treino</a><br/>
-    <a href="#weight">Registre seu peso atual</a>
+    <a href="#weight">Registre seu peso</a>
     <a href="#weights_graph">Acompanhe seu peso</a>
-  </div>
-  <div class="marketing">
+  </div> <!-- /menurapido -->
 
-  </div>
+  <%=gravatar_photo %>
+  <span id="miniperfil">
+    <h1><span> <%=h @user.name %></span></h1>
+    <br />
+    <b>Altura:</b> 1,82m<br />
+    <b>Peso atual: </b><span id="last_weight"><%=h @user.last_weight %></span> kg<br />
+    <b>Meta de peso:</b> 75kg<br />
+    <b>Massa corpórea:</b> 75kg<br />
+    <br />
+    <%= link_to 'Continue completando seu perfil.', edit_account_path %>
+  </span>
+  <div class="matafloat"></div>
 
+</div> <!-- /container -->
+</div> <!-- /meio -->
 
-</div>
+<div id="conteudo">
+<div class="container">
+
+  <h1><span>Formulário</span> de cadastro</h1>
+  <p>E então segue o conteúdo. E então segue o conteúdo. E então segue o conteúdo.</p>
+
+  <form style="width: 700px">
+    <style>#conteudo form label { width: 140px; }</style>
+
+    <h1>1. Dados pessoais</h1>
+    <label for="nome">Nome completo</label>
+    <input id="nome" type="text" /><br />
+    <label for="endereco">Endereço</label>
+    <input id="endereco" type="text" size="40" /><br />
+    <label for="cidade">Cidade</label>
+    <select id="cidade">
+      <option>CE</option>
+    </select>
+    <select>
+      <option>Fortaleza</option>
+    </select>
+    <br />
+
+    <h1>2. Informações secretas</h1>
+    <label for="pergunta" class="normal">Qual a cor do cavalo branco de napoleão?</label>
+    <textarea id="pergunta" style="width: 500px; height: 100px"></textarea><br />
+    <label for="pergunta2" class="normal">Por que você acha isso?</label>
+    <textarea id="pergunta2" style="width: 500px; height: 100px"></textarea><br />
+
+    <h1>3. Só para os paparazzi</h1>
+    <label for="nome">Pensa rápido, cara</label>
+    <input id="nome" type="text" size="40" /><br />
+    <label for="endereco">CEP</label>
+    <input id="endereco" type="text" /><br />
+
+    <input type="submit" value="Enviadados" style="float: right" />
+
+    <div class="matafloat"></div>
+  </form>
+
+  <p>E mais e mais e mais informações. E mais e mais e mais informações. E mais e mais e mais informações.E mais e mais e mais informações. E mais e mais e mais informações. E mais e mais e mais informações. </p>
+  <p>E mais e mais e mais informações. E mais e mais e mais informações. E mais e mais e mais informações. </p>
+
+  <h2>Seus dados</h2>
+  <p>E então segue o conteúdo. E então segue o conteúdo. E então segue o conteúdo.</p>
+
+</div> <!-- /container -->
+</div> <!-- /conteudo -->
 
 
 <div id="workout_home">

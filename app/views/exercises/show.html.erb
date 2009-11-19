@@ -1,0 +1,14 @@
+<p>
+  <b>Name:</b>
+  <%=h @exercise.name %>
+</p>
+
+<p>
+  <b>Types of exercise:</b>
+  <%=h @exercise.types_of_exercise.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Back', exercises_path %>
+
