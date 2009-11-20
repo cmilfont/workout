@@ -24,7 +24,7 @@
   <ul id="menu">
    <% if current_user %>
     <li><%= link_to_unless_current('Início', root_path) { link_to 'Início', root_path, :class => 'ativo' } %></li>
-    <li><%= link_to_unless_current('Perfil', account_path) { link_to 'Perfil', account_path, :class => 'ativo' } %></li>
+    <li><%= link_to_unless_current('Perfil', account_path, {:class => current_page?(edit_account_path) ? "ativo" : "" } ) { link_to 'Perfil', account_path, :class => 'ativo' } %></li>
     <li><a href="/">Vídeos</a></li>
     <li><%= link_to "Sair", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %></li>
     <% else %>
