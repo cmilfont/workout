@@ -10,15 +10,6 @@ Cucumber::Rails::World.use_transactional_fixtures = false
 require 'factory_girl'
 Dir.glob(File.join(File.dirname(__FILE__), '../../spec/factories/*.rb')).each {|f| require f }
 
-=begin
-require 'webrat'
-require 'cucumber/webrat/table_locator'
-
-Webrat.configure do |config|
-  config.mode = :rails
-end
-=end
-
 require 'cucumber/rails/rspec'
 #require 'webrat/core/matchers'
 

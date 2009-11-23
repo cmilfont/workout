@@ -1,11 +1,24 @@
-<div id="register">
-  <div id="register_interno">
-  <h2>Criar Perfil</h2>
+<style>
+  #meio.interno {padding: .5px;}
+  #conteudo .container {position: relative;margin: 0 auto;width: 600px;}
+  #conteudo form { width: 550px }
+</style>
+
+<div id="meio" class="interno">
+<div class="container">
+
+</div> <!-- /container -->
+</div> <!-- /meio -->
+
+<div id="conteudo">
+<div class="container">
+  <h1><span>Registrar</span></h1>
   <% form_for @user, :builder => WorkoutFormBuilder, :url => account_path do |f| %>
     <%= f.error_messages %>
     <%= render :partial => "form", :object => f %>
-    <%= f.submit "Registrar" %>
+    <%= f.submit "Registrar", :style => "float: right" %><br />
+    <div class="matafloat"></div>
   <% end %>
-  </div>
-</div>
+</div> <!-- /container -->
+</div> <!-- /conteudo -->
 

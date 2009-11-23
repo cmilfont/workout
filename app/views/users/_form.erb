@@ -1,11 +1,11 @@
 <p>Avatar é usado automaticamente do seu <a href="http://en.gravatar.com/">Gravatar</a></p>
 <p>
 <%= form.label :login %>
-<%= form.text_field :login, :size => 15 %>
+<%= form.text_field :login, :size => 15 %> <a href="#verify">Verificar disponibilidade</a>
 </p>
 <p>
 <%= form.label :name %>
-<%= form.text_field :name %>
+<%= form.text_field :name, :size => 25 %>
 </p>
 <p>
 <%= form.label :password, form.object.new_record? ? nil : "Change password" %>

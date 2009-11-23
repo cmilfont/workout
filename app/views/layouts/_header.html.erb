@@ -18,10 +18,27 @@
 </head>
 <body>
 
-
+<% if current_page? root_path %>
 <div id="topo">
+<% else %>
+<div id="topo" class="interno">
+<% end %>
+
 <div class="container">
+
+  <% if current_page? root_path %>
+  <img src="/images/logo.gif" alt="TREENING" border="0" style="margin-top: 15px" />
+  <% else %>
+  <img src="/images/logoPeq.gif" alt="TREENING" border="0" style="margin-top: 15px" />
+  <% end %>
+
+
+  <% if current_page? root_path %>
   <ul id="menu">
+  <% else %>
+  <ul id="menu" class="interno">
+  <% end %>
+
    <% if current_user %>
     <li><%= link_to_unless_current('Início', root_path) { link_to 'Início', root_path, :class => 'ativo' } %></li>
     <li><%= link_to_unless_current('Perfil', account_path, {:class => current_page?(edit_account_path) ? "ativo" : "" } ) { link_to 'Perfil', account_path, :class => 'ativo' } %></li>
@@ -36,11 +53,4 @@
   </ul> <!-- /menu -->
 </div> <!-- /container -->
 </div> <!-- /topo -->
-
-
-<div id="home">
-
-   <div id="hd">
-   </div>
-   <div id="bd" role="main">
 

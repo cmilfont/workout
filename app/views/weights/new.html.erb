@@ -1,29 +1,40 @@
-<div style="float:left;width:400px;margin-left:5px;">
+<style>
+  #conteudo .container {position: relative; margin: 0 auto;}
+  #conteudo form { width: 120px }
+  #conteudo form label { width: 30px; }
+  #list_of_weights table th {background: #ddd; width:160px; text-align: center; margin:0;  font-weight: bold; color: #0E70CB;}
+  #list_of_weights table td { width:160px; text-align: center;font-weight: bold;}
+  .weight_div_form { float:left;width:200px;margin-left:5px; }
+  .zebra-blue {background: #eee;}
+  .zebra-white {background: #fff;}
+</style>
+<div class="weight_div_form">
 <% form_for @weight, :builder => WorkoutFormBuilder do |f| %>
   <%= hidden_field :weight, :user_id, :value => current_user.id %>
   <p>
     <%= f.label :weight %>
-    <%= f.text_field :weight, :size => 3, :maxlength => 6 %> kg
-    <span>Ex.: 78.649</span>
+    <%= f.text_field :weight, :size => 3, :maxlength => 6 %> kg<br/>
+    <span>Exemplo: 78.649</span>
   </p>
   <div id="errors"></div>
   <p>
-  <input id="weight_submit" type="button" value="Registrar" />
+  <input id="weight_submit" type="button" value="Registrar" class="submit_right" />
   </p>
+    <div class="matafloat"></div>
 <% end %>
 </div>
 <div id="list_of_weights">
+<h1><span>Últimos</span> 10 registros de seu peso</h1>
   <table>
-    <caption>Últimos 10 registros</caption>
     <tr>
       <th>Peso</th>
       <th>Data</th>
     </tr>
 
-  <% Weight.find(:all, :conditions => { :user_id => current_user.id }, :order => "created_at DESC", :limit => 10).each{|weight|
+  <% Weight.find(:all, :conditions => { :user_id => current_user.id }, :order => "created_at DESC", :limit => 10).to_enum.with_index{|weight, index|
   %>
-    <tr>
-      <td class='peso'><%= format_weight(weight.weight) %> </td>
+    <tr class="<%= index.odd? ? 'zebra-blue' : 'zebra-white' %>">
+      <td><%= format_weight(weight.weight) %> </td>
       <td><%=  weight.created_at.strftime("%m/%d/%Y %H:%M") %> </td>
     </tr>
   <%
@@ -33,4 +44,5 @@
 
   </table>
 </div>
+<div class="matafloat"></div>
 

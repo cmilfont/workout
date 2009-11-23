@@ -5,8 +5,9 @@ class WeightsController < ApplicationController
     @user_id = params[:user_id] || current_user.id
     @page = params[:page] || 1
     @per_page = params[:limit] || 10
+    @order_by = params[:order] || "created_at DESC"
     @weights = Weight.paginate(:conditions => {:user_id => @user_id},
-      :page => @page,:per_page => @per_page)
+      :page => @page,:per_page => @per_page, :order => @order_by)
 
     respond_to do |format|
       format.html # index.html.erb

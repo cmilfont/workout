@@ -1,3 +1,11 @@
+var isEven = function(someNumber){
+  return (someNumber%2 == 0) ? true : false;
+};
+
+var retorna_zebra = function(i) {
+  return isEven(i)? "zebra-white" : "zebra-blue";
+};
+
 var workout = {id:0};
 
 var training = {};
@@ -100,9 +108,9 @@ var cadastrar_weight = function() {
         $("#list_of_weights > table > tr").remove();
         $.getJSON("/weights.json?user_id=" + json['weight[user_id]'],
         function(data){
-          $.each(data.reverse(), function(i,item){
+          $.each(data, function(i,item){
             if(i < 10) {
-              $("<tr><td class='peso'>" + format_weight(item.weight.weight) +
+              $("<tr class='" + retorna_zebra(i) + "'><td>" + format_weight(item.weight.weight) +
                 "</td><td>" + Date.parseDate(item.weight.created_at, 'Y-m-d\\TH:i:s\\Z').dateFormat('d/m/Y H:i:s') + "</td></tr>")
                 .appendTo("#list_of_weights > table > tbody");
             }
@@ -190,7 +198,7 @@ $(function(){
 
 
   $("a[href='#weight']").click(function(){
-    $("#workout_form_div").load("/weights/new", "", function(){
+    $("#conteudo .container").load("/weights/new", "", function(){
         $("#weight_submit").click(cadastrar_weight);
     });
   });

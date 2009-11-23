@@ -1,51 +1,30 @@
-
-<div id="meio" class="interno">
-
-</div> <!-- /meio -->
-
 <style>
-  #meio.interno {
-    padding: .5px;
-  }
-  #conteudo .container {
-	  position: relative;
-	  margin: 0 auto;
-    width: 400px;
-  }
-  #conteudo form { width: 340px }
-  #conteudo form label { width: 50px; }
-  #conteudo form div label {
-    width: 180px;
-    float: right;
-    text-align: left;
-  }
-  #conteudo form div input {
-    /*width: 180px;*/
-    margin-left: 80px;
-    float: left;
-  }
-  #conteudo form div {
-  width: 300px;
-  }
+#meio.interno {padding: .5px;}
+#conteudo .container {position: relative;margin: 0 auto;width: 400px;}
+#conteudo form { width: 340px }
+#conteudo form label { width: 50px; }
+#conteudo form div label {width: 180px;float: right;text-align: left;}
+#conteudo form div input {margin-left: 80px;float: left;}
+#conteudo form div {width: 300px;}
 </style>
-
+<div id="meio" class="interno"></div>
 <div id="conteudo">
 <div class="container">
   <h1><span>Formulário</span> de Login</h1>
-    <% form_for @user_session, :builder => WorkoutFormBuilder, :url => user_session_path do |f| %>
-      <%= f.error_messages %>
-      <p>
-      <%= f.label :login %>
-      <%= f.text_field :login %>
-      </p>
-      <p>
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-      </p>
-      <div><p> <%= f.check_box :remember_me %><%= f.label :remember_me %> </p></div>
-      <%= f.submit "Login", :style => "float: right; margin-right: 15px;" %>
-      <div class="matafloat"></div>
-    <% end %>
+  <% form_for @user_session, :builder => WorkoutFormBuilder, :url => user_session_path do |f| %>
+    <%= f.error_messages %>
+    <p>
+    <%= f.label :login %>
+    <%= f.text_field :login %>
+    </p>
+    <p>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    </p>
+    <div><p> <%= f.check_box :remember_me %><%= f.label :remember_me %> </p></div>
+    <%= f.submit "Login", :class => "submit_right" %>
+    <div class="matafloat"></div>
+  <% end %>
 </div> <!-- /container -->
 </div> <!-- /conteudo -->
 
