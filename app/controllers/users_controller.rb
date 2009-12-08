@@ -18,8 +18,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    redirect_back_or_default root_url
+  end
+
   def show
-    @user = current_user
+    if params[:id]
+      @user = User.find_by_login params[:id]
+      render :status => 404 unless @user
+    end
+    @user = current_user unless @user
+    redirect_back_or_default root_url unless @user
   end
 
   def edit

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091101151053) do
+ActiveRecord::Schema.define(:version => 20091126203805) do
 
   create_table "exercises", :force => true do |t|
     t.string   "name"
@@ -68,15 +68,16 @@ ActiveRecord::Schema.define(:version => 20091101151053) do
     t.string   "login"
     t.string   "crypted_password"
     t.string   "password_salt"
-    t.string   "email",                            :null => false
+    t.string   "email",                                                                       :null => false
     t.string   "openid_identifier"
-    t.string   "persistence_token",                :null => false
-    t.integer  "login_count",       :default => 0, :null => false
+    t.string   "persistence_token",                                                           :null => false
+    t.integer  "login_count",                                                  :default => 0, :null => false
     t.datetime "last_request_at"
     t.datetime "last_login_at"
     t.datetime "current_login_at"
     t.string   "last_login_ip"
     t.string   "current_login_ip"
+    t.integer  "height",            :limit => 3, :precision => 3, :scale => 0
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
@@ -85,9 +86,17 @@ ActiveRecord::Schema.define(:version => 20091101151053) do
   add_index "users", ["openid_identifier"], :name => "index_users_on_openid_identifier"
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
 
+  create_table "weight_goals", :force => true do |t|
+    t.datetime "goal"
+    t.decimal  "weight",     :precision => 6, :scale => 3
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "weights", :force => true do |t|
     t.integer  "user_id"
-    t.decimal  "weight",     :precision => 3, :scale => 2
+    t.decimal  "weight",     :precision => 6, :scale => 3
     t.datetime "created_at"
     t.datetime "updated_at"
   end

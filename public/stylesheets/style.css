@@ -304,5 +304,10 @@ a {
 
 /* Feito por Milfont */
 .submit_right {float: right; margin-right: 15px;}
+#list_of_weights table th {background: #ddd; width:160px; text-align: center; margin:0;  font-weight: bold; color: #0E70CB;}
+#list_of_weights table td { width:160px; text-align: center;font-weight: bold;}
+.weight_div_form { float:left;width:200px;margin-left:5px; }
+.zebra-blue {background: #eee;}
+.zebra-white {background: #fff;}
 /* /Feito por Milfont */
 
