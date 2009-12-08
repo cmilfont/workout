@@ -1,0 +1,24 @@
+<h1>Listing weight_goals</h1>
+
+<table>
+  <tr>
+    <th>Goal</th>
+    <th>Weight</th>
+    <th>User</th>
+  </tr>
+
+<% @weight_goals.each do |weight_goal| %>
+  <tr>
+    <td><%=h weight_goal.goal %></td>
+    <td><%=h weight_goal.weight %></td>
+    <td><%=h weight_goal.user %></td>
+    <td><%= link_to 'Show', weight_goal %></td>
+    <td><%= link_to 'Edit', edit_weight_goal_path(weight_goal) %></td>
+    <td><%= link_to 'Destroy', weight_goal, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New weight_goal', new_weight_goal_path %>

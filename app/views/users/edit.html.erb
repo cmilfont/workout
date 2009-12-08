@@ -1,26 +1,9 @@
-
+<style>
+#meio.interno {padding: .5px;}
+</style>
 <div id="meio" class="interno">
 <div class="container">
-
-  <div id="menurapido">
-    <a href="#workout">Registre seu treino</a><br/>
-    <a href="#weight">Registre seu peso</a>
-    <a href="#weights_graph">Acompanhe seu peso</a>
-  </div> <!-- /menurapido -->
-
-  <%=gravatar_photo %>
-  <span id="miniperfil">
-    <h1><span> <%=h @user.name %></span></h1>
-    <br />
-    <b>Altura:</b> 1,82m<br />
-    <b>Peso atual: </b><span id="last_weight"><%=h @user.last_weight %></span> kg<br />
-    <b>Meta de peso:</b> 75kg<br />
-    <b>Massa corpórea:</b> 75kg<br />
-    <br />
-    <%= link_to 'Continue completando seu perfil.', edit_account_path %>
-  </span>
   <div class="matafloat"></div>
-
 </div> <!-- /container -->
 </div> <!-- /meio -->
 

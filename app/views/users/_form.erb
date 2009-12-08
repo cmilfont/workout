@@ -1,6 +1,6 @@
 <p>Avatar é usado automaticamente do seu <a href="http://en.gravatar.com/">Gravatar</a></p>
 
-<% if current_page? new_account_path %>
+<% #if current_page? new_account_path %>
 <p>
 <%= form.label :email %>
 <%= form.text_field :email, :size => 25 %>
@@ -17,9 +17,9 @@
 <%= form.label :password_confirmation %>
 <%= form.password_field :password_confirmation, :size => 20 %><br />
 </p>
-<% end %>
+<% #end %>
 
-<% if controller.action_name == "update" || controller.action_name == "edit" %>
+<% #if controller.action_name == "update" || controller.action_name == "edit" %>
 <p>
 <%= form.label :name %>
 <%= form.text_field :name, :size => 25 %>
@@ -29,5 +29,5 @@
 <%= form.label :height %>
 <%= form.text_field :height, :size => 10 %> em centímetros.
 </p>
-<% end %>
+<% #end %>
 

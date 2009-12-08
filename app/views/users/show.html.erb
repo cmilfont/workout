@@ -1,6 +1,46 @@
+<input type="hidden" id="user_id" value="<%= @user.id if @user %>">
+
+<div id="meio" class="interno">
+<div class="container">
+
 <% if @user == current_user %>
-  <%= render :partial => "owner", :locals => { :user => @user }  %>
-<% else %>
-  <%= render :partial => "viewer", :locals => { :user => @user }  %>
+  <div id="menurapido">
+    <a href="#workout">Registre seu treino</a><br/>
+    <a href="#weight">Registre seu peso</a>
+    <a href="#weights_graph">Acompanhe seu peso</a>
+    <a href="#weight_goal">Meta de peso</a>
+  </div> <!-- /menurapido -->
 <% end %>
+
+  <%=gravatar_photo %>
+  <span id="miniperfil">
+    <h1><span> <%=h @user.name %></span></h1>
+    <br />
+    <% if @user.height %>
+      <b>Altura:</b><%=h @user.height.to_f/100 if @user.height %> m<br />
+    <% else %>
+      <% if @user == current_user %>
+        <b>Altura:</b> <%= link_to 'Ainda não tem altura cadastrada.', edit_account_path %> <br />
+      <% else %>
+        <b>Altura:</b> Ainda não tem altura cadastrada. <br />
+      <% end %>
+    <% end %>
+    <b>Peso atual: </b><span id="last_weight"><%=h @user.last_weight %></span> kg<br />
+    <b>Meta de peso: </b><span id="last_goal_weight"> <%=h @user.last_weight_goal.weight if @user.last_weight_goal %></span> kg<br />
+    <b>Massa corpórea:</b> 75kg<br />
+    <br />
+
+    <% if @user == current_user %>
+      <%= link_to 'Continue completando seu perfil.', edit_account_path %>
+    <% end %>
+  </span>
+  <div class="matafloat"></div>
+
+</div> <!-- /container -->
+</div> <!-- /meio -->
+
+<div id="conteudo">
+<div class="container">
+</div> <!-- /container -->
+</div> <!-- /conteudo -->
 

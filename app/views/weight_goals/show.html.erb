@@ -1,0 +1,18 @@
+<p>
+  <b>Goal:</b>
+  <%=h @weight_goal.goal %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%=h @weight_goal.weight %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @weight_goal.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_weight_goal_path(@weight_goal) %> |
+<%= link_to 'Back', weight_goals_path %>
