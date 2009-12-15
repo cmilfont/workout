@@ -1,0 +1,54 @@
+<h1>Listing nokia_workouts</h1>
+
+<table>
+  <tr>
+    <th>Oid</th>
+    <th>Version</th>
+    <th>Starttime</th>
+    <th>Stoptime</th>
+    <th>Realtime</th>
+    <th>Totaltime</th>
+    <th>Distance</th>
+    <th>Speed average</th>
+    <th>Speed max</th>
+    <th>Pace average</th>
+    <th>Pace max</th>
+    <th>Features</th>
+    <th>Verticalmovement minaltitude</th>
+    <th>Verticalmovement maxaltitude</th>
+    <th>Verticalmovement ascent</th>
+    <th>Verticalmovement descent</th>
+    <th>Activity oid</th>
+    <th>Activity name</th>
+  </tr>
+
+<% @nokia_workouts.each do |nokia_workout| %>
+  <tr>
+    <td><%=h nokia_workout.oid %></td>
+    <td><%=h nokia_workout.version %></td>
+    <td><%=h nokia_workout.starttime %></td>
+    <td><%=h nokia_workout.stoptime %></td>
+    <td><%=h nokia_workout.realtime %></td>
+    <td><%=h nokia_workout.totaltime %></td>
+    <td><%=h nokia_workout.distance %></td>
+    <td><%=h nokia_workout.speed_average %></td>
+    <td><%=h nokia_workout.speed_max %></td>
+    <td><%=h nokia_workout.pace_average %></td>
+    <td><%=h nokia_workout.pace_max %></td>
+    <td><%=h nokia_workout.features %></td>
+    <td><%=h nokia_workout.verticalmovement_minaltitude %></td>
+    <td><%=h nokia_workout.verticalmovement_maxaltitude %></td>
+    <td><%=h nokia_workout.verticalmovement_ascent %></td>
+    <td><%=h nokia_workout.verticalmovement_descent %></td>
+    <td><%=h nokia_workout.activity_oid %></td>
+    <td><%=h nokia_workout.activity_name %></td>
+    <td><%= link_to 'Show', nokia_workout %></td>
+    <td><%= link_to 'Edit', edit_nokia_workout_path(nokia_workout) %></td>
+    <td><%= link_to 'Destroy', nokia_workout, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New nokia_workout', new_nokia_workout_path %>

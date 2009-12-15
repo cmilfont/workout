@@ -59998,3 +59998,885 @@ Rendered layouts/_header (65.0ms)
   [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-12-08 20:27:54') [0m
 Rendered layouts/_footer (2.5ms)
 Completed in 85ms (View: 74, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-12-08 22:47:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (66.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered layouts/_header (959.6ms)
+  [4;36;1mSQL (104.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-12-09 01:37:19') [0m
+Rendered layouts/_footer (780.2ms)
+Completed in 2010ms (View: 1218, DB: 782) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-12-08 22:47:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (12.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered layouts/_header (19.2ms)
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-12-09 01:37:49') [0m
+Rendered layouts/_footer (5.5ms)
+Completed in 218ms (View: 80, DB: 58) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-12-08 22:48:00) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "login"=>"cmilfont"}, "action"=>"create", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (29.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'cmilfont') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (28.8ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-12-09 01:48:01', `last_login_at` = '2009-12-08 20:29:02', `current_login_at` = '2009-12-09 01:48:01', `login_count` = 90, `last_request_at` = '2009-12-09 01:48:01' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 648ms (DB: 64) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-12-08 22:48:01) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-12-09 01:48:01', `last_request_at` = '2009-12-09 01:48:01' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (20.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (17.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mWeightGoal Load (40.5ms)[0m   [0;1mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+  [4;36;1mWeightGoal Columns (20.0ms)[0m   [0;1mSHOW FIELDS FROM `weight_goals`[0m
+Rendered layouts/_header (15.1ms)
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-12-09 01:38:02') [0m
+Rendered layouts/_footer (3.0ms)
+Completed in 560ms (View: 352, DB: 149) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#new (for 127.0.0.1 at 2009-12-08 22:48:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weights"}
+  [4;35;1mWeight Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+Rendering template within layouts/weights
+Rendering weights/new
+  [4;36;1mUser Columns (5.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (4.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (6.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-12-09 01:48:12', `last_request_at` = '2009-12-09 01:48:12' WHERE `id` = 1[0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mWeight Load (44.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY created_at DESC LIMIT 10[0m
+Completed in 287ms (View: 146, DB: 107) | 200 OK [http://localhost/weights/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-12-08 22:48:21) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "user_id"=>"1", "controller"=>"weights"}
+  [4;35;1mWeight Load (30.6ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = '1') ORDER BY created_at DESC LIMIT 0, 10[0m
+  [4;36;1mWeight Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = '1') [0m
+Completed in 114ms (View: 42, DB: 36) | 200 OK [http://localhost/weights.json?user_id=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightGoalsController#new (for 127.0.0.1 at 2009-12-08 22:48:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weight_goals"}
+  [4;35;1mWeightGoal Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `weight_goals`[0m
+Rendering template within layouts/weight_goals
+Rendering weight_goals/new
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.1ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-12-09 01:48:31', `last_request_at` = '2009-12-09 01:48:31' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Completed in 245ms (View: 204, DB: 14) | 200 OK [http://localhost/weight_goals/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#new (for 127.0.0.1 at 2009-12-08 22:48:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weights"}
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendering template within layouts/weights
+Rendering weights/new
+  [4;35;1mUser Columns (5.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-12-09 01:48:38', `last_request_at` = '2009-12-09 01:48:38' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (4.0ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY created_at DESC LIMIT 10[0m
+Completed in 198ms (View: 142, DB: 31) | 200 OK [http://localhost/weights/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-12-08 22:48:40) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "user_id"=>"1", "controller"=>"weights"}
+  [4;36;1mWeight Load (0.4ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = '1') ORDER BY created_at DESC LIMIT 0, 10[0m
+  [4;35;1mWeight Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = '1') [0m
+Completed in 64ms (View: 29, DB: 4) | 200 OK [http://localhost/weights.json?user_id=1]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightGoalsController#new (for 127.0.0.1 at 2009-12-08 22:48:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weight_goals"}
+  [4;36;1mWeightGoal Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `weight_goals`[0m
+Rendering template within layouts/weight_goals
+Rendering weight_goals/new
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.8ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-12-09 01:48:49', `last_request_at` = '2009-12-09 01:48:49' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+Completed in 196ms (View: 149, DB: 14) | 200 OK [http://localhost/weight_goals/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-12-08 22:49:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (16.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-12-09 01:49:26', `last_request_at` = '2009-12-09 01:49:26' WHERE `id` = 1[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (200.7ms)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-12-09 01:39:26') [0m
+Rendered layouts/_footer (5.4ms)
+Completed in 222ms (View: 174, DB: 38) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-12-08 22:49:30) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-12-09 01:49:31', `last_request_at` = '2009-12-09 01:49:31' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.3ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mWeightGoal Load (0.2ms)[0m   [0mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+  [4;35;1mWeightGoal Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `weight_goals`[0m
+Rendered layouts/_header (12.7ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-12-09 01:39:31') [0m
+Rendered layouts/_footer (2.5ms)
+Completed in 117ms (View: 42, DB: 9) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-12-08 22:49:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"cmartins", "controller"=>"users"}
+  [4;36;1mUser Columns (5.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.1ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-12-09 01:49:46', `last_request_at` = '2009-12-09 01:49:46' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'cmartins') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (1.0ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 3) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mWeightGoal Load (1.5ms)[0m   [0;1mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 3) ORDER BY weight_goals.id DESC LIMIT 1[0m
+Rendered layouts/_header (26.3ms)
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-12-09 01:39:46') [0m
+Rendered layouts/_footer (5.0ms)
+Completed in 216ms (View: 82, DB: 19) | 200 OK [http://localhost/users/cmartins]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-12-08 22:50:39) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Columns (5.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-12-09 01:50:39', `last_request_at` = '2009-12-09 01:50:39' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeight Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mWeightGoal Load (0.5ms)[0m   [0;1mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+  [4;36;1mWeightGoal Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `weight_goals`[0m
+Rendered layouts/_header (27.0ms)
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-12-09 01:40:39') [0m
+Rendered layouts/_footer (5.0ms)
+Completed in 227ms (View: 95, DB: 19) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-12-08 22:51:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-12-09 01:51:00', `last_request_at` = '2009-12-09 01:51:00' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (64.2ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-12-09 01:41:00') [0m
+Rendered layouts/_footer (2.5ms)
+Completed in 75ms (View: 65, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-12-08 22:51:03) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-12-09 01:51:03', `last_request_at` = '2009-12-09 01:51:03' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mWeight Load (0.2ms)[0m   [0mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;36;1mWeight Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mWeightGoal Load (0.3ms)[0m   [0mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+  [4;35;1mWeightGoal Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `weight_goals`[0m
+Rendered layouts/_header (13.0ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-12-09 01:41:03') [0m
+Rendered layouts/_footer (2.5ms)
+Completed in 346ms (View: 50, DB: 9) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightGoalsController#new (for 127.0.0.1 at 2009-12-08 22:51:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weight_goals"}
+  [4;36;1mWeightGoal Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `weight_goals`[0m
+Rendering template within layouts/weight_goals
+Rendering weight_goals/new
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (8.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-12-09 01:51:06', `last_request_at` = '2009-12-09 01:51:06' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Completed in 155ms (View: 105, DB: 16) | 200 OK [http://localhost/weight_goals/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightGoalsController#new (for 127.0.0.1 at 2009-12-09 08:01:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weight_goals"}
+  [4;35;1mWeightGoal Columns (34.7ms)[0m   [0mSHOW FIELDS FROM `weight_goals`[0m
+Rendering template within layouts/weight_goals
+Rendering weight_goals/new
+  [4;36;1mUser Columns (220.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (396.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (10.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (217.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-12-09 11:01:05', `last_request_at` = '2009-12-09 11:01:05' WHERE `id` = 1[0m
+  [4;36;1mSQL (165.5ms)[0m   [0;1mCOMMIT[0m
+Completed in 3866ms (View: 2239, DB: 1219) | 200 OK [http://localhost/weight_goals/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#index to json (for 127.0.0.1 at 2009-12-09 08:01:06) [GET]
+  Parameters: {"format"=>"json", "action"=>"index", "user_id"=>"1", "controller"=>"weights"}
+  [4;36;1mWeight Load (0.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = '1') ORDER BY created_at DESC LIMIT 0, 10[0m
+  [4;35;1mWeight Columns (130.9ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `weights` WHERE (`weights`.`user_id` = '1') [0m
+Completed in 209ms (View: 18, DB: 132) | 200 OK [http://localhost/weights.json?user_id=1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WeightsController#new (for 127.0.0.1 at 2009-12-09 08:01:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"weights"}
+  [4;36;1mWeight Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+Rendering template within layouts/weights
+Rendering weights/new
+  [4;35;1mUser Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-12-09 11:01:41', `last_request_at` = '2009-12-09 11:01:41' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mWeight Load (0.3ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY created_at DESC LIMIT 10[0m
+Completed in 284ms (View: 120, DB: 122) | 200 OK [http://localhost/weights/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (83.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (279.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081103171327)
+Migrating to CreateSessions (20081106072031)
+Migrating to CreateOpenidTables (20081120163933)
+Migrating to CreateWorkouts (20091030200223)
+Migrating to CreateTypesOfExercises (20091030201642)
+Migrating to CreateExercises (20091030201758)
+Migrating to CreateTrainings (20091030203331)
+Migrating to CreateWeights (20091101151053)
+Migrating to AddHeightToUser (20091126194956)
+Migrating to CreateWeightGoals (20091126203805)
+Migrating to CreateNokiaWorkouts (20091209143332)
+  [4;35;1mSQL (291.7ms)[0m   [0mCREATE TABLE `nokia_workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `oid` int(11), `version` int(11), `starttime` datetime, `stoptime` datetime, `realtime` datetime, `totaltime` datetime, `distance` decimal, `speed_average` decimal, `speed_max` decimal, `pace_average` time, `pace_max` time, `features` int(11), `verticalmovement_minaltitude` int(11), `verticalmovement_maxaltitude` int(11), `verticalmovement_ascent` int(11), `verticalmovement_descent` int(11), `activity_oid` int(11), `activity_name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (65.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091209143332')[0m
+Migrating to CreateNokiaEventlaps (20091209143848)
+  [4;35;1mSQL (20.8ms)[0m   [0mCREATE TABLE `nokia_eventlaps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nokia_workout_id` int(11), `lapdistance` decimal, `laptime` datetime, `totaltime` datetime, `realtime` datetime, `distance` decimal, `totaldistance` decimal, `latitude` decimal, `longitude` decimal, `altitude` int(11), `speed` decimal, `pace` time, `fixquality` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091209143848')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (16.6ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mdescribe `exercises`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `exercises`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `nokia_eventlaps`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `nokia_eventlaps`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `nokia_eventlaps`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSHOW FIELDS FROM `nokia_workouts`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `nokia_workouts`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `nokia_workouts`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `open_id_authentication_associations`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `open_id_authentication_associations`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `open_id_authentication_associations`[0m
+  [4;36;1mSQL (20.0ms)[0m   [0;1mSHOW FIELDS FROM `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `trainings`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `trainings`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `trainings`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `types_of_exercises`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `types_of_exercises`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `types_of_exercises`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `weight_goals`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `weight_goals`[0m
+  [4;35;1mSQL (18.7ms)[0m   [0mSHOW KEYS FROM `weight_goals`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `weights`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `weights`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `workouts`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `workouts`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `workouts`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (99.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081103171327)
+Migrating to CreateSessions (20081106072031)
+Migrating to CreateOpenidTables (20081120163933)
+Migrating to CreateWorkouts (20091030200223)
+Migrating to CreateTypesOfExercises (20091030201642)
+Migrating to CreateExercises (20091030201758)
+Migrating to CreateTrainings (20091030203331)
+Migrating to CreateWeights (20091101151053)
+Migrating to AddHeightToUser (20091126194956)
+Migrating to CreateWeightGoals (20091126203805)
+Migrating to CreateNokiaWorkouts (20091209143332)
+Migrating to CreateNokiaEventlaps (20091209143848)
+Migrating to AddAttachmentsFileToNokiaWorkout (20091209180207)
+  [4;35;1mSQL (798.8ms)[0m   [0mALTER TABLE `nokia_workouts` ADD `file_file_name` varchar(255)[0m
+  [4;36;1mSQL (59.5ms)[0m   [0;1mALTER TABLE `nokia_workouts` ADD `file_content_type` varchar(255)[0m
+  [4;35;1mSQL (41.1ms)[0m   [0mALTER TABLE `nokia_workouts` ADD `file_file_size` int(11)[0m
+  [4;36;1mSQL (88.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091209180207')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (30.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mdescribe `exercises`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `exercises`[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mSHOW FIELDS FROM `nokia_eventlaps`[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mdescribe `nokia_eventlaps`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `nokia_eventlaps`[0m
+  [4;36;1mSQL (5.6ms)[0m   [0;1mSHOW FIELDS FROM `nokia_workouts`[0m
+  [4;35;1mSQL (4.7ms)[0m   [0mdescribe `nokia_workouts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `nokia_workouts`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `open_id_authentication_associations`[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mdescribe `open_id_authentication_associations`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `open_id_authentication_associations`[0m
+  [4;36;1mSQL (26.9ms)[0m   [0;1mSHOW FIELDS FROM `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mdescribe `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (25.7ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mSHOW FIELDS FROM `trainings`[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mdescribe `trainings`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `trainings`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mSHOW FIELDS FROM `types_of_exercises`[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mdescribe `types_of_exercises`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW KEYS FROM `types_of_exercises`[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mSHOW FIELDS FROM `weight_goals`[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mdescribe `weight_goals`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `weight_goals`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mdescribe `weights`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW KEYS FROM `weights`[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mSHOW FIELDS FROM `workouts`[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mdescribe `workouts`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW KEYS FROM `workouts`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-12-09 15:06:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/index
+  [4;35;1mUser Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (100.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (27.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2009-12-09 18:06:37', `last_request_at` = '2009-12-09 18:06:37' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendered layouts/_header (876.6ms)
+  [4;36;1mSQL (16.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2009-12-09 17:56:37') [0m
+Rendered layouts/_footer (47.1ms)
+Completed in 1115ms (View: 897, DB: 207) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NokiaWorkoutsController#index (for 127.0.0.1 at 2009-12-09 15:06:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"nokia_workouts"}
+  [4;36;1mNokiaWorkout Load (1.1ms)[0m   [0;1mSELECT * FROM `nokia_workouts` [0m
+Rendering template within layouts/nokia_workouts
+Rendering nokia_workouts/index
+Completed in 351ms (View: 320, DB: 3) | 200 OK [http://localhost/nokia_workouts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NokiaWorkoutsController#new (for 127.0.0.1 at 2009-12-09 15:06:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"nokia_workouts"}
+  [4;36;1mNokiaWorkout Columns (5.2ms)[0m   [0;1mSHOW FIELDS FROM `nokia_workouts`[0m
+Rendering template within layouts/nokia_workouts
+Rendering nokia_workouts/new
+Completed in 329ms (View: 294, DB: 6) | 200 OK [http://localhost/nokia_workouts/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NokiaWorkoutsController#create (for 127.0.0.1 at 2009-12-09 15:07:35) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "nokia_workout"=>{"verticalmovement_maxaltitude"=>"", "realtime(1i)"=>"2009", "speed_max"=>"", "realtime(2i)"=>"12", "activity_oid"=>"", "verticalmovement_descent"=>"", "pace_average(1i)"=>"2009", "realtime(3i)"=>"9", "starttime(1i)"=>"2009", "pace_max(1i)"=>"2009", "pace_average(2i)"=>"12", "speed_average"=>"", "realtime(4i)"=>"18", "starttime(2i)"=>"12", "verticalmovement_minaltitude"=>"", "pace_max(2i)"=>"12", "pace_average(3i)"=>"9", "totaltime(1i)"=>"2009", "realtime(5i)"=>"06", "stoptime(1i)"=>"2009", "starttime(3i)"=>"9", "version"=>"", "features"=>"", "pace_max(3i)"=>"9", "pace_average(4i)"=>"18", "totaltime(2i)"=>"12", "stoptime(2i)"=>"12", "starttime(4i)"=>"18", "pace_max(4i)"=>"18", "pace_average(5i)"=>"06", "totaltime(3i)"=>"9", "stoptime(3i)"=>"9", "starttime(5i)"=>"06", "file"=>#<File:/tmp/RackMultipart20091209-10677-xfj05f-0>, "activity_name"=>"", "verticalmovement_ascent"=>"", "pace_max(5i)"=>"06", "totaltime(4i)"=>"18", "stoptime(4i)"=>"18", "distance"=>"", "totaltime(5i)"=>"06", "stoptime(5i)"=>"06", "oid"=>""}, "controller"=>"nokia_workouts"}
+  [4;36;1mNokiaWorkout Columns (6.1ms)[0m   [0;1mSHOW FIELDS FROM `nokia_workouts`[0m
+DEPRECATION WARNING: ActiveRecord::Errors.default_error_messages has been deprecated. Please use I18n.translate('activerecord.errors.messages').. (called from default_error_messages at /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/validations.rb:131)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/nokia_workouts
+Rendering nokia_workouts/new
+Completed in 244ms (View: 129, DB: 7) | 200 OK [http://localhost/nokia_workouts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NokiaWorkoutsController#create (for 127.0.0.1 at 2009-12-09 15:08:00) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "nokia_workout"=>{"verticalmovement_maxaltitude"=>"", "realtime(1i)"=>"2009", "speed_max"=>"", "realtime(2i)"=>"12", "activity_oid"=>"", "verticalmovement_descent"=>"", "pace_average(1i)"=>"2009", "realtime(3i)"=>"9", "starttime(1i)"=>"2009", "pace_max(1i)"=>"2009", "pace_average(2i)"=>"12", "speed_average"=>"", "realtime(4i)"=>"18", "starttime(2i)"=>"12", "verticalmovement_minaltitude"=>"", "pace_max(2i)"=>"12", "pace_average(3i)"=>"9", "totaltime(1i)"=>"2009", "realtime(5i)"=>"06", "stoptime(1i)"=>"2009", "starttime(3i)"=>"9", "version"=>"", "features"=>"", "pace_max(3i)"=>"9", "pace_average(4i)"=>"18", "totaltime(2i)"=>"12", "stoptime(2i)"=>"12", "starttime(4i)"=>"18", "pace_max(4i)"=>"18", "pace_average(5i)"=>"06", "totaltime(3i)"=>"9", "stoptime(3i)"=>"9", "starttime(5i)"=>"06", "file"=>#<File:/tmp/RackMultipart20091209-10677-kxvmnc-0>, "activity_name"=>"", "verticalmovement_ascent"=>"", "pace_max(5i)"=>"06", "totaltime(4i)"=>"18", "stoptime(4i)"=>"18", "distance"=>"", "totaltime(5i)"=>"06", "stoptime(5i)"=>"06", "oid"=>""}, "controller"=>"nokia_workouts"}
+  [4;36;1mNokiaWorkout Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `nokia_workouts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mNokiaWorkout Create (19.9ms)[0m   [0;1mINSERT INTO `nokia_workouts` (`verticalmovement_maxaltitude`, `created_at`, `realtime`, `speed_max`, `updated_at`, `file_content_type`, `file_file_size`, `pace_max`, `verticalmovement_descent`, `activity_oid`, `file_file_name`, `speed_average`, `version`, `pace_average`, `verticalmovement_minaltitude`, `features`, `starttime`, `stoptime`, `totaltime`, `verticalmovement_ascent`, `activity_name`, `oid`, `distance`) VALUES(NULL, '2009-12-09 18:08:00', '2009-12-09 18:06:00', NULL, '2009-12-09 18:08:00', 'text/xml', 965993, '2009-12-09 18:06:00', NULL, NULL, 'W20091119195152.xml', NULL, NULL, '2009-12-09 18:06:00', NULL, NULL, '2009-12-09 18:06:00', '2009-12-09 18:06:00', '2009-12-09 18:06:00', NULL, '', NULL, NULL)[0m
+  [4;35;1mSQL (376.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/nokia_workouts/1
+Completed in 899ms (DB: 402) | 302 Found [http://localhost/nokia_workouts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NokiaWorkoutsController#show (for 127.0.0.1 at 2009-12-09 15:08:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"nokia_workouts"}
+  [4;35;1mNokiaWorkout Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `nokia_workouts`[0m
+  [4;36;1mNokiaWorkout Load (61.8ms)[0m   [0;1mSELECT * FROM `nokia_workouts` WHERE (`nokia_workouts`.`id` = 1) [0m
+Rendering template within layouts/nokia_workouts
+Rendering nokia_workouts/show
+Completed in 137ms (View: 53, DB: 67) | 200 OK [http://localhost/nokia_workouts/1]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NokiaWorkoutsController#index (for 127.0.0.1 at 2009-12-09 15:08:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"nokia_workouts"}
+  [4;36;1mNokiaWorkout Load (1.6ms)[0m   [0;1mSELECT * FROM `nokia_workouts` [0m
+Rendering template within layouts/nokia_workouts
+Rendering nokia_workouts/index
+  [4;35;1mNokiaWorkout Columns (5.2ms)[0m   [0mSHOW FIELDS FROM `nokia_workouts`[0m
+Completed in 75ms (View: 41, DB: 9) | 200 OK [http://localhost/nokia_workouts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mNokiaWorkout Load (108.0ms)[0m   [0mSELECT * FROM `nokia_workouts` LIMIT 1[0m
+  [4;36;1mNokiaWorkout Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `nokia_workouts`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (120.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddAttachmentsFileToNokiaWorkout (20091209180207)
+  [4;35;1mSQL (1065.2ms)[0m   [0mALTER TABLE `nokia_workouts` DROP `file_file_name`[0m
+  [4;36;1mSQL (49.8ms)[0m   [0;1mALTER TABLE `nokia_workouts` DROP `file_content_type`[0m
+  [4;35;1mSQL (67.7ms)[0m   [0mALTER TABLE `nokia_workouts` DROP `file_file_size`[0m
+  [4;36;1mSQL (121.5ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091209180207'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (25.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (11.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mdescribe `exercises`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `exercises`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `nokia_eventlaps`[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mdescribe `nokia_eventlaps`[0m
+  [4;35;1mSQL (7.3ms)[0m   [0mSHOW KEYS FROM `nokia_eventlaps`[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mSHOW FIELDS FROM `nokia_workouts`[0m
+  [4;35;1mSQL (4.7ms)[0m   [0mdescribe `nokia_workouts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `nokia_workouts`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mSHOW FIELDS FROM `open_id_authentication_associations`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `open_id_authentication_associations`[0m
+  [4;35;1mSQL (29.3ms)[0m   [0mSHOW KEYS FROM `open_id_authentication_associations`[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mSHOW FIELDS FROM `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mdescribe `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (21.3ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (9.1ms)[0m   [0;1mSHOW FIELDS FROM `trainings`[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mdescribe `trainings`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mSHOW KEYS FROM `trainings`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mSHOW FIELDS FROM `types_of_exercises`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mdescribe `types_of_exercises`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `types_of_exercises`[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSHOW FIELDS FROM `weight_goals`[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mdescribe `weight_goals`[0m
+  [4;35;1mSQL (27.1ms)[0m   [0mSHOW KEYS FROM `weight_goals`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mdescribe `weights`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW KEYS FROM `weights`[0m
+  [4;35;1mSQL (8.1ms)[0m   [0mSHOW FIELDS FROM `workouts`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mdescribe `workouts`[0m
+  [4;35;1mSQL (7.6ms)[0m   [0mSHOW KEYS FROM `workouts`[0m
+  [4;36;1mSQL (5.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081103171327)
+Migrating to CreateSessions (20081106072031)
+Migrating to CreateOpenidTables (20081120163933)
+Migrating to CreateWorkouts (20091030200223)
+Migrating to CreateTypesOfExercises (20091030201642)
+Migrating to CreateExercises (20091030201758)
+Migrating to CreateTrainings (20091030203331)
+Migrating to CreateWeights (20091101151053)
+Migrating to AddHeightToUser (20091126194956)
+Migrating to CreateWeightGoals (20091126203805)
+Migrating to CreateNokiaWorkouts (20091209143332)
+Migrating to CreateNokiaEventlaps (20091209143848)
+Migrating to AddAttachmentsFileToNokiaWorkout (20091209180207)
+  [4;36;1mSQL (52.9ms)[0m   [0;1mALTER TABLE `nokia_workouts` ADD `file_file_name` varchar(255)[0m
+  [4;35;1mSQL (113.7ms)[0m   [0mALTER TABLE `nokia_workouts` ADD `file_content_type` varchar(255)[0m
+  [4;36;1mSQL (154.6ms)[0m   [0;1mALTER TABLE `nokia_workouts` ADD `file_file_size` int(11)[0m
+  [4;35;1mSQL (30.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091209180207')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mSHOW FIELDS FROM `nokia_eventlaps`[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mdescribe `nokia_eventlaps`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW KEYS FROM `nokia_eventlaps`[0m
+  [4;35;1mSQL (4.4ms)[0m   [0mSHOW FIELDS FROM `nokia_workouts`[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mdescribe `nokia_workouts`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW KEYS FROM `nokia_workouts`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW FIELDS FROM `open_id_authentication_associations`[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mdescribe `open_id_authentication_associations`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `open_id_authentication_associations`[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mSHOW FIELDS FROM `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mdescribe `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW KEYS FROM `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mSHOW FIELDS FROM `trainings`[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mdescribe `trainings`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW KEYS FROM `trainings`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW FIELDS FROM `types_of_exercises`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mdescribe `types_of_exercises`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW KEYS FROM `types_of_exercises`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mSHOW FIELDS FROM `weight_goals`[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mdescribe `weight_goals`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `weight_goals`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mdescribe `weights`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW KEYS FROM `weights`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSHOW FIELDS FROM `workouts`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `workouts`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW KEYS FROM `workouts`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddAttachmentsFileToNokiaWorkout (20091209180207)
+  [4;35;1mSQL (70.4ms)[0m   [0mALTER TABLE `nokia_workouts` DROP `file_file_name`[0m
+  [4;36;1mSQL (28.8ms)[0m   [0;1mALTER TABLE `nokia_workouts` DROP `file_content_type`[0m
+  [4;35;1mSQL (27.4ms)[0m   [0mALTER TABLE `nokia_workouts` DROP `file_file_size`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091209180207'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `exercises`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `exercises`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW FIELDS FROM `nokia_eventlaps`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mdescribe `nokia_eventlaps`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `nokia_eventlaps`[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mSHOW FIELDS FROM `nokia_workouts`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mdescribe `nokia_workouts`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `nokia_workouts`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `open_id_authentication_associations`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `open_id_authentication_associations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `open_id_authentication_associations`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `trainings`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `trainings`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `trainings`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `types_of_exercises`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `types_of_exercises`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `types_of_exercises`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `weight_goals`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `weight_goals`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `weight_goals`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `weights`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `weights`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `workouts`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `workouts`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `workouts`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081103171327)
+Migrating to CreateSessions (20081106072031)
+Migrating to CreateOpenidTables (20081120163933)
+Migrating to CreateWorkouts (20091030200223)
+Migrating to CreateTypesOfExercises (20091030201642)
+Migrating to CreateExercises (20091030201758)
+Migrating to CreateTrainings (20091030203331)
+Migrating to CreateWeights (20091101151053)
+Migrating to AddHeightToUser (20091126194956)
+Migrating to CreateWeightGoals (20091126203805)
+Migrating to CreateNokiaWorkouts (20091209143332)
+Migrating to CreateNokiaEventlaps (20091209143848)
+Migrating to AddAttachmentsFileToNokiaWorkout (20091209180207)
+  [4;36;1mSQL (36.9ms)[0m   [0;1mALTER TABLE `nokia_workouts` ADD `file_file_name` varchar(255)[0m
+  [4;35;1mSQL (22.6ms)[0m   [0mALTER TABLE `nokia_workouts` ADD `file_content_type` varchar(255)[0m
+  [4;36;1mSQL (22.0ms)[0m   [0;1mALTER TABLE `nokia_workouts` ADD `file_file_size` int(11)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091209180207')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW FIELDS FROM `nokia_eventlaps`[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mdescribe `nokia_eventlaps`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `nokia_eventlaps`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mSHOW FIELDS FROM `nokia_workouts`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mdescribe `nokia_workouts`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `nokia_workouts`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `open_id_authentication_associations`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `open_id_authentication_associations`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `open_id_authentication_associations`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (16.3ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `trainings`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `trainings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `trainings`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `types_of_exercises`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `types_of_exercises`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `types_of_exercises`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `weight_goals`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `weight_goals`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `weight_goals`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `weights`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `weights`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `workouts`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `workouts`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `workouts`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081103171327)
+Migrating to CreateSessions (20081106072031)
+Migrating to CreateOpenidTables (20081120163933)
+Migrating to CreateWorkouts (20091030200223)
+Migrating to CreateTypesOfExercises (20091030201642)
+Migrating to CreateExercises (20091030201758)
+Migrating to CreateTrainings (20091030203331)
+Migrating to CreateWeights (20091101151053)
+Migrating to AddHeightToUser (20091126194956)
+Migrating to CreateWeightGoals (20091126203805)
+Migrating to CreateNokiaWorkouts (20091209143332)
+Migrating to CreateNokiaEventlaps (20091209143848)
+Migrating to AddAttachmentsFileToNokiaWorkout (20091209180207)
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `exercises`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `exercises`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `open_id_authentication_associations`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `open_id_authentication_associations`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `open_id_authentication_associations`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `trainings`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `trainings`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `trainings`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `types_of_exercises`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `types_of_exercises`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `types_of_exercises`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `weight_goals`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `weight_goals`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `weight_goals`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `weights`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `weights`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `workouts`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `workouts`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `workouts`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddAttachmentsFileToNokiaWorkout (20091209180207)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'workout_development.nokia_workouts' doesn't exist: ALTER TABLE `nokia_workouts` DROP `file_file_name`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Unknown table 'nokia_workouts': DROP TABLE `nokia_workouts`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Unknown table 'nokia_workouts': DROP TABLE `nokia_workouts`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (12.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddAttachmentsFileToNokiaWorkout (20091209180207)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'workout_development.nokia_workouts' doesn't exist: ALTER TABLE `nokia_workouts` DROP `file_file_name`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddAttachmentsFileToNokiaWorkout (20091209180207)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'workout_development.nokia_workouts' doesn't exist: ALTER TABLE `nokia_workouts` DROP `file_file_name`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddAttachmentsFileToNokiaWorkout (20091209180207)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'workout_development.nokia_workouts' doesn't exist: ALTER TABLE `nokia_workouts` DROP `file_file_name`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.8ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (9.4ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081103171327)
+  [4;35;1mSQL (28.9ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime, `name` varchar(255), `login` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `email` varchar(255) NOT NULL, `openid_identifier` varchar(255), `persistence_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `last_login_at` datetime, `current_login_at` datetime, `last_login_ip` varchar(255), `current_login_ip` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (10.6ms)[0m   [0;1mCREATE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [4;35;1mSQL (56.5ms)[0m   [0mCREATE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;36;1mSQL (20.6ms)[0m   [0;1mCREATE INDEX `index_users_on_openid_identifier` ON `users` (`openid_identifier`)[0m
+  [4;35;1mSQL (25.3ms)[0m   [0mCREATE INDEX `index_users_on_persistence_token` ON `users` (`persistence_token`)[0m
+  [4;36;1mSQL (20.4ms)[0m   [0;1mCREATE INDEX `index_users_on_last_request_at` ON `users` (`last_request_at`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081103171327')[0m
+Migrating to CreateSessions (20081106072031)
+  [4;36;1mSQL (6.5ms)[0m   [0;1mCREATE TABLE `sessions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `session_id` varchar(255) NOT NULL, `data` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (36.1ms)[0m   [0mCREATE INDEX `index_sessions_on_session_id` ON `sessions` (`session_id`)[0m
+  [4;36;1mSQL (21.3ms)[0m   [0;1mCREATE INDEX `index_sessions_on_updated_at` ON `sessions` (`updated_at`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081106072031')[0m
+Migrating to CreateOpenidTables (20081120163933)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE `open_id_authentication_associations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `issued` int(11), `lifetime` int(11), `handle` varchar(255), `assoc_type` varchar(255), `server_url` blob, `secret` blob) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mCREATE TABLE `open_id_authentication_nonces` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `timestamp` int(11) NOT NULL, `server_url` varchar(255), `salt` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081120163933')[0m
+Migrating to CreateWorkouts (20091030200223)
+  [4;35;1mSQL (7.0ms)[0m   [0mCREATE TABLE `workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091030200223')[0m
+Migrating to CreateTypesOfExercises (20091030201642)
+  [4;35;1mSQL (7.9ms)[0m   [0mCREATE TABLE `types_of_exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091030201642')[0m
+Migrating to CreateExercises (20091030201758)
+  [4;35;1mSQL (15.3ms)[0m   [0mCREATE TABLE `exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `types_of_exercise_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091030201758')[0m
+Migrating to CreateTrainings (20091030203331)
+  [4;35;1mSQL (6.6ms)[0m   [0mCREATE TABLE `trainings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `exercise_id` int(11), `workout_id` int(11), `start` datetime, `finish` datetime, `health_frequency` int(11), `distance` int(11), `effort` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091030203331')[0m
+Migrating to CreateWeights (20091101151053)
+  [4;35;1mSQL (4.8ms)[0m   [0mCREATE TABLE `weights` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `weight` decimal(6,3), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091101151053')[0m
+Migrating to AddHeightToUser (20091126194956)
+  [4;35;1mSQL (29.5ms)[0m   [0mALTER TABLE `users` ADD `height` decimal(3,0)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126194956')[0m
+Migrating to CreateWeightGoals (20091126203805)
+  [4;35;1mSQL (33.9ms)[0m   [0mCREATE TABLE `weight_goals` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `goal` datetime, `weight` decimal(6,3), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091126203805')[0m
+Migrating to CreateNokiaWorkouts (20091209143332)
+  [4;35;1mSQL (7.9ms)[0m   [0mCREATE TABLE `nokia_workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `oid` varchar(255), `version` varchar(255), `starttime` varchar(255), `stoptime` varchar(255), `realtime` varchar(255), `totaltime` varchar(255), `distance` varchar(255), `speed_average` varchar(255), `speed_max` varchar(255), `pace_average` varchar(255), `pace_max` varchar(255), `features` varchar(255), `verticalmovement_minaltitude` varchar(255), `verticalmovement_maxaltitude` varchar(255), `verticalmovement_ascent` varchar(255), `verticalmovement_descent` varchar(255), `activity_oid` varchar(255), `activity_name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091209143332')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (20.6ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `exercises`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `exercises`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mSHOW FIELDS FROM `nokia_workouts`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mdescribe `nokia_workouts`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `nokia_workouts`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `open_id_authentication_associations`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `open_id_authentication_associations`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `open_id_authentication_associations`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (16.5ms)[0m   [0mSHOW KEYS FROM `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `trainings`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `trainings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `trainings`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `types_of_exercises`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `types_of_exercises`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `types_of_exercises`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `weight_goals`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `weight_goals`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `weight_goals`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSHOW FIELDS FROM `weights`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `weights`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `weights`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `workouts`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `workouts`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `workouts`[0m

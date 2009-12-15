@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  oid: 1
+  version: 1
+  starttime: 2009-12-09 11:33:32
+  stoptime: 2009-12-09 11:33:32
+  realtime: 2009-12-09 11:33:32
+  totaltime: 2009-12-09 11:33:32
+  distance: 9.99
+  speed_average: 9.99
+  speed_max: 9.99
+  pace_average: 2009-12-09 11:33:32
+  pace_max: 2009-12-09 11:33:32
+  features: 1
+  verticalmovement_minaltitude: 1
+  verticalmovement_maxaltitude: 1
+  verticalmovement_ascent: 1
+  verticalmovement_descent: 1
+  activity_oid: 1
+  activity_name: MyString
+
+two:
+  oid: 1
+  version: 1
+  starttime: 2009-12-09 11:33:32
+  stoptime: 2009-12-09 11:33:32
+  realtime: 2009-12-09 11:33:32
+  totaltime: 2009-12-09 11:33:32
+  distance: 9.99
+  speed_average: 9.99
+  speed_max: 9.99
+  pace_average: 2009-12-09 11:33:32
+  pace_max: 2009-12-09 11:33:32
+  features: 1
+  verticalmovement_minaltitude: 1
+  verticalmovement_maxaltitude: 1
+  verticalmovement_ascent: 1
+  verticalmovement_descent: 1
+  activity_oid: 1
+  activity_name: MyString

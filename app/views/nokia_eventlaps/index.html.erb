@@ -1,0 +1,44 @@
+<h1>Listing nokia_eventlaps</h1>
+
+<table>
+  <tr>
+    <th>Nokia workout</th>
+    <th>Lapdistance</th>
+    <th>Laptime</th>
+    <th>Totaltime</th>
+    <th>Realtime</th>
+    <th>Distance</th>
+    <th>Totaldistance</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Altitude</th>
+    <th>Speed</th>
+    <th>Pace</th>
+    <th>Fixquality</th>
+  </tr>
+
+<% @nokia_eventlaps.each do |nokia_eventlap| %>
+  <tr>
+    <td><%=h nokia_eventlap.nokia_workout %></td>
+    <td><%=h nokia_eventlap.lapdistance %></td>
+    <td><%=h nokia_eventlap.laptime %></td>
+    <td><%=h nokia_eventlap.totaltime %></td>
+    <td><%=h nokia_eventlap.realtime %></td>
+    <td><%=h nokia_eventlap.distance %></td>
+    <td><%=h nokia_eventlap.totaldistance %></td>
+    <td><%=h nokia_eventlap.latitude %></td>
+    <td><%=h nokia_eventlap.longitude %></td>
+    <td><%=h nokia_eventlap.altitude %></td>
+    <td><%=h nokia_eventlap.speed %></td>
+    <td><%=h nokia_eventlap.pace %></td>
+    <td><%=h nokia_eventlap.fixquality %></td>
+    <td><%= link_to 'Show', nokia_eventlap %></td>
+    <td><%= link_to 'Edit', edit_nokia_eventlap_path(nokia_eventlap) %></td>
+    <td><%= link_to 'Destroy', nokia_eventlap, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New nokia_eventlap', new_nokia_eventlap_path %>

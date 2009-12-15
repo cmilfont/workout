@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nokia_workout: 
+  lapdistance: 9.99
+  laptime: 2009-12-09 11:38:48
+  totaltime: 2009-12-09 11:38:48
+  realtime: 2009-12-09 11:38:48
+  distance: 9.99
+  totaldistance: 9.99
+  latitude: 9.99
+  longitude: 9.99
+  altitude: 1
+  speed: 9.99
+  pace: 2009-12-09 11:38:48
+  fixquality: 1
+
+two:
+  nokia_workout: 
+  lapdistance: 9.99
+  laptime: 2009-12-09 11:38:48
+  totaltime: 2009-12-09 11:38:48
+  realtime: 2009-12-09 11:38:48
+  distance: 9.99
+  totaldistance: 9.99
+  latitude: 9.99
+  longitude: 9.99
+  altitude: 1
+  speed: 9.99
+  pace: 2009-12-09 11:38:48
+  fixquality: 1

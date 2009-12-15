@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :nokia_eventlaps
+
+  map.resources :nokia_workouts
+
   map.resources :weight_goals
 
   map.resources :weights
