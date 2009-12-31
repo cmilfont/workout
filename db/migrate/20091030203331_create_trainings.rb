@@ -6,8 +6,24 @@ class CreateTrainings < ActiveRecord::Migration
       t.datetime :start
       t.datetime :finish
       t.integer :health_frequency
-      t.integer :distance
+      #t.integer :distance
       t.integer :effort
+
+      t.string :lapdistance
+      t.timestamp :laptime
+      t.timestamp :totaltime
+      t.string :distance
+      t.string :totaldistance
+      t.string :latitude
+      t.string :longitude
+      t.string :altitude
+      t.string :speed
+      t.string :pace
+
+      # para exercicios de força
+      t.decimal :weight, :precision => 7, :scale => 3
+      #repetition em ingles ligado a workout
+      t.integer :reps
 
       t.timestamps
     end
@@ -17,3 +33,4 @@ class CreateTrainings < ActiveRecord::Migration
     drop_table :trainings
   end
 end
+

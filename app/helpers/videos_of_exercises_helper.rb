@@ -1,0 +1,2 @@
+module VideosOfExercisesHelper
+end

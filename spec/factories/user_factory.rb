@@ -1,4 +1,5 @@
 Factory.define :user do |u|
+  u.height 180
   u.name "Christiano Milfont"
   u.login 'cmilfont'
   u.email 'cmilfont@gmail.com'

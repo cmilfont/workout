@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :comments_of_exercises
+
+  map.resources :videos_of_exercises
+
+  map.resources :tags_of_exercises
+
+  map.resources :sports
+
   map.resources :nokia_eventlaps
 
   map.resources :nokia_workouts

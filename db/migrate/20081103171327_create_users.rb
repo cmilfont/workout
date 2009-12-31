@@ -1,7 +1,7 @@
 class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
-      t.timestamps
+      t.decimal :height, :precision => 3, :scale => 0
       t.string :name
       t.string :login
       t.string :crypted_password
@@ -15,6 +15,7 @@ class CreateUsers < ActiveRecord::Migration
       t.datetime :current_login_at
       t.string :last_login_ip
       t.string :current_login_ip
+      t.timestamps
     end
 
     add_index :users, :login

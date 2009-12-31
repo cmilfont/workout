@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   #before_filter :require_no_user, :only => [:new, :create]
-  before_filter :require_user, :only => [:show, :edit, :update]
+  before_filter :require_user, :only => [:edit, :update]
 
   def new
     @user = User.new
@@ -23,12 +23,23 @@ class UsersController < ApplicationController
   end
 
   def show
+
     if params[:id]
       @user = User.find_by_login params[:id]
-      render :status => 404 unless @user
+    else
+      @user = current_user
     end
-    @user = current_user unless @user
-    redirect_back_or_default root_url unless @user
+
+    respond_to do |format|
+      if @user
+        format.html
+        format.json { render :json => @user }
+      else
+        format.json { render :text => "Not found", :status => 404}
+        format.html { redirect_back_or_default root_url}
+      end
+    end
+
   end
 
   def edit

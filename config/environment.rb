@@ -14,16 +14,25 @@ Rails::Initializer.run do |config|
   config.action_controller.session_store = :active_record_store
 
   if [ 'test', 'cucumber' ].include?( RAILS_ENV )
+    config.gem "relevance-rcov",  :lib => false
+    config.gem "reek",  :lib => false
+    config.gem "ruby-debug",  :lib => false
+    config.gem 'cucumber',    :lib => false,        :version => '>=0.4.2'
+    config.gem 'webrat',      :lib => false,        :version => '>=0.4.4'
     config.gem 'rspec',       :lib => false,        :version => '>=1.2.6'
     config.gem 'rspec-rails', :lib => 'spec/rails', :version => '>=1.2.6'
-    config.gem 'cucumber',    :lib => false,        :version => '>=0.4.2'
     config.gem 'selenium-client', :lib => false
     config.gem 'bmabey-database_cleaner', :lib => false
+    config.gem 'remarkable_rails', :lib => false
     config.gem 'thoughtbot-factory_girl', :lib => false
+    config.gem "lawrencepit-remarkable_paperclip", :lib => false, :source => "http://gems.github.com"
+    config.gem "giraffesoft-resource_controller", :lib => "resource_controller",  :version => ">= 0.6.1", :source => "git://github.com/giraffesoft/resource_controller.git"
   end
 
   config.i18n.default_locale = :"pt-BR"
   config.time_zone = 'UTC'
 
 end
+
+ActionView::Base.field_error_proc = Proc.new { |html_tag, instance| "#{html_tag}" }
 

@@ -3,7 +3,8 @@ class CreateExercises < ActiveRecord::Migration
     create_table :exercises do |t|
       t.string :name
       t.belongs_to :types_of_exercise
-
+      t.belongs_to :sport
+      t.belongs_to :user
       t.timestamps
     end
   end
@@ -12,3 +13,4 @@ class CreateExercises < ActiveRecord::Migration
     drop_table :exercises
   end
 end
+

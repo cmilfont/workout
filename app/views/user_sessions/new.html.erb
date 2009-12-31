@@ -6,13 +6,50 @@
 #conteudo form div label {width: 180px;float: right;text-align: left;}
 #conteudo form div input {margin-left: 80px;float: left;}
 #conteudo form div {width: 300px;}
+.formError {
+  margin: 20px;
+  padding: 5px;
+  display: block;
+  font-size: 12px;
+  color: #E00000;
+  border: red 1px solid;
+}
 </style>
+<script>
+
+  var tooltip_error = function(id, message) {
+    $(id).qtip({
+    show: { ready: true },
+       hide: false,
+       content: message,
+       style: {
+          tip: 'leftMiddle',
+          name: 'red'
+       },
+       position: {
+          corner: {
+             target: 'rightMiddle',
+             tooltip: 'leftMiddle'
+          }
+       }
+    });
+  };
+
+  var errors = <%= @user_session.errors.to_json %>;
+
+$(function(){
+  for(var i in errors) {
+    var obj = errors[i];
+    tooltip_error("#user_session_"+obj[0], obj[1]);
+  }
+});
+
+</script>
 <div id="meio" class="interno"></div>
 <div id="conteudo">
 <div class="container">
   <h1><span>Formulário</span> de Login</h1>
   <% form_for @user_session, :builder => WorkoutFormBuilder, :url => user_session_path do |f| %>
-    <%= f.error_messages %>
     <p>
     <%= f.label :login %>
     <%= f.text_field :login %>

@@ -2,7 +2,7 @@
 
 <% form_for(@exercise) do |f| %>
   <%= f.error_messages %>
-
+  <%= hidden_field :exercise, :user_id, :value => current_user.id %>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -10,7 +10,10 @@
   <p>
     <%= f.label :types_of_exercise %><br />
     <%= f.select :types_of_exercise_id, TypesOfExercise.all.collect {|p| [p.name, p.id]}, :include_blank => false %>
-
+  </p>
+  <p>
+    <%= f.label :sport %><br />
+    <%= f.select :sport_id, Sport.all.collect {|p| [p.name, p.id]}, :include_blank => false %>
   </p>
   <p>
     <%= f.submit 'Create' %>

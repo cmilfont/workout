@@ -1,6 +1,7 @@
 class CreateNokiaWorkouts < ActiveRecord::Migration
   def self.up
     create_table :nokia_workouts do |t|
+      t.belongs_to :user
       t.string :oid
       t.string :version
       t.string :starttime

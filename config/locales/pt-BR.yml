@@ -164,6 +164,9 @@ pt-BR:
         name: "Nome"
       weight:
         weight: "Peso"
+      weight_goal:
+        goal: "Meta"
+        weight: "Peso"
       password_resets:
         password: "Nova senha"
         password_confirmation: "Digite a senha novamente"
@@ -172,6 +175,7 @@ pt-BR:
         name: "Nome"
         password_confirmation: "Confirmação de senha"
         email: "E-mail"
+        height: "Altura"
   authlogic:
     error_messages:
       login_blank: "deve ser preenchido"

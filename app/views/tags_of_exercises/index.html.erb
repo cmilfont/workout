@@ -1,0 +1,24 @@
+<h1>Listing tags_of_exercises</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>User</th>
+    <th>Exercise</th>
+  </tr>
+
+<% @tags_of_exercises.each do |tags_of_exercise| %>
+  <tr>
+    <td><%=h tags_of_exercise.name %></td>
+    <td><%=h tags_of_exercise.user %></td>
+    <td><%=h tags_of_exercise.exercise %></td>
+    <td><%= link_to 'Show', tags_of_exercise %></td>
+    <td><%= link_to 'Edit', edit_tags_of_exercise_path(tags_of_exercise) %></td>
+    <td><%= link_to 'Destroy', tags_of_exercise, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tags_of_exercise', new_tags_of_exercise_path %>
