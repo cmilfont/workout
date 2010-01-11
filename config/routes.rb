@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :synonymous_of_exercises
+
   map.resources :comments_of_exercises
 
   map.resources :videos_of_exercises

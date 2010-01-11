@@ -19,7 +19,7 @@ module NavigationHelpers
      host_server '/account'
     when /Log in/
      host_server '/user_session/new'
-    when /Criar Perfil/
+    when /REGISTRAR/
      host_server '/account/new'
 
     else

@@ -21,6 +21,18 @@ Dado /^selecione a hora com "([^\"]*)" de "([^\"]*)" de "([^\"]*)" as "([^\"]*)"
   @browser.type xpath_1 + input + xpath_2 + 5.to_s + xpath_3, minuto
 end
 
+Dado /^selecione a data com "([^\"]*)" de "([^\"]*)" de "([^\"]*)" em "([^\"]*)"$/ do |dia, mes, ano, input|
+
+  xpath_1 = "//select[starts-with(@id, concat(//label[text()='"
+  xpath_2 = "']/@for, '_"
+  xpath_3 = "i') )]"
+  @browser.set_speed(2000)
+  @browser.type xpath_1 + input + xpath_2 + 3.to_s + xpath_3, dia
+  @browser.type xpath_1 + input + xpath_2 + 2.to_s + xpath_3, mes
+  @browser.type xpath_1 + input + xpath_2 + 1.to_s + xpath_3, ano
+end
+
+
 Dado /^que eu clico no link "([^\"]*)"$/ do |link|
   @browser.set_speed(2000)
   @browser.click '//a[text()="' + link + '"]'

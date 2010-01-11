@@ -13,8 +13,9 @@
   </div> <!-- /menurapido -->
 <% end %>
 
-  <%=gravatar_photo %>
+  <%=gravatar_photo(@user) %>
   <span id="miniperfil">
+<% if @user == current_user %>Seja bem-vindo[a]<% end %>
     <h1><span> <%=h @user.name %></span></h1>
     <br />
     <% if @user.height %>
@@ -26,8 +27,8 @@
         <b>Altura:</b> Ainda não tem altura cadastrada. <br />
       <% end %>
     <% end %>
-    <b>Peso atual: </b><span id="last_weight"><%=h @user.last_weight %></span> kg<br />
-    <b>Meta de peso: </b><span id="last_goal_weight"> <%=h @user.last_weight_goal.weight if @user.last_weight_goal %></span> kg<br />
+    <b>Peso atual: </b><span id="last_weight"><%=h @user.last_weight.weight if @user.last_weight %></span> kg<br />
+    <b>Meta de peso: </b><span id="last_goal_weight"><%=h @user.last_weight_goal.weight if @user.last_weight_goal %></span> kg<br />
     <b>Massa corpórea:</b> 75kg<br />
     <br />
 

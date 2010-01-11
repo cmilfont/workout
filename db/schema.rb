@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091229194809) do
+ActiveRecord::Schema.define(:version => 20100111191755) do
 
   create_table "comments_of_exercises", :force => true do |t|
     t.text     "comment"
@@ -100,6 +100,14 @@ ActiveRecord::Schema.define(:version => 20091229194809) do
 
   create_table "sports", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "synonymous_of_exercises", :force => true do |t|
+    t.string   "synonym"
+    t.integer  "user_id"
+    t.integer  "exercise_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

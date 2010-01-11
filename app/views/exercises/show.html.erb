@@ -1,14 +1,88 @@
-<p>
-  <b>Name:</b>
-  <%=h @exercise.name %>
-</p>
+<style>
+  #meio.interno {padding: .5px;}
+</style>
 
-<p>
-  <b>Types of exercise:</b>
-  <%=h @exercise.types_of_exercise.name %>
-</p>
+<div id="meio" class="interno">
+<div class="container">
+  <input type="hidden" id="user_id" value="<%= current_user.id if current_user %>">
+  <input type="hidden" id="exercise_id" value="<%= @exercise.id if @exercise %>">
+</div> <!-- /container -->
+</div> <!-- /meio -->
 
+<div id="conteudo">
+<div class="container">
 
-<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
-<%= link_to 'Back', exercises_path %>
+  <h1><span><%=h @exercise.name %></span> do esporte <%=h @exercise.sport.name %></h1>
+
+  <p> Tipo de exercício: <%=h @exercise.types_of_exercise.name %>, incluído por <%= link_to @exercise.user.name, user_path(@exercise.user.login) %>. <% if current_user == @exercise.user %>
+  <%= link_to 'Editar esse exercício', edit_exercise_path(@exercise) %>
+<% end %></p>
+
+  <div class="esq">
+    <div class="quadro" style="width: 565px">
+      <h1><%=h @exercise.name %></h1>
+
+      <% @exercise.videos_of_exercises.each{|video| %>
+        <object width="565" height="344">
+         <param name="movie" value="<%= video.url %>"></param>
+         <param name="allowFullScreen" value="true"></param>
+         <param name="allowscriptaccess" value="always"></param>
+         <embed src="<%= video.url %>" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="565" height="344"></embed>
+        </object>
+      <% } %>
+
+      <br />
+      <label for="add" class="normal">Incluir url do vídeo</label>
+      <input id="add" type="text" size="40" /><br />
+      <small><a href="#videos">Incluir outro vídeo</a></small><br />
+    </div> <!-- /quadro -->
+  </div><!-- /esq -->
+
+  <div class="dir">
+    <div class="quadro" style="width: 280px">
+      <h1><span>Sinônimos</span></h1>
+      <div id="synonymous">
+        <% @exercise.synonymous_of_exercises.each{|syn| %>
+          <p><%= syn.synonym %>
+            <% if syn.user == current_user %>
+              <a onclick='remove_syn(<%= syn.id %>, this)' href='#'>
+                Excluir Sinônimo
+              </a>
+            <% end %>
+          </p>
+        <% } %>
+      </div>
+      <a href="#add_synonymous">Incluir Sinônimo</a>
+    </div> <!-- /quadro sinonimos -->
+    <br />
+    <div class="quadro" style="width: 280px">
+      <h1><span>Nuvem de TAGs</span></h1>
+      <p style="font-size: 18px"><small>Gogs</small> Gogó <big>Workout</big> Exercício Milfont <big>Ruby</big> PHP Design Gogs Gogó Workout <big>Exercício</big> Milfont Ruby <small>PHP</small> Design</p>
+      <a href="#add_tag">Incluir tag</a>
+    </div> <!-- /quadro tags -->
+    <br />
+    <div class="quadro transparente" style="width: 280px">
+      <h1><img src="/images/favorito.png" style="vertical-align: middle" /> <a href="#">Favorito</a></h1>
+    </div> <!-- /quadro favorito -->
+  </div><!-- /dir -->
+
+  <div class="matafloat"></div>
+
+  <h2>Comentários</h2>
+  <ul class="quadro transparente" style="width: 565px">
+    <li>
+      <img width="48" height="48" style="border: 1px solid #999;" align="right" src="http://1.gravatar.com/avatar/943753a9af1bd4a2f6466875ac5efccd?s=48&amp;d=identicon&amp;r=G" alt=""/>
+      <big><b>Daiane gatinha</b> comentou: </big><br />
+      <p>Eu gostei muito do layout. Quem fez? Quero contratar! Eu gostei muito do layout. Quem fez? Quero contratar! Eu gostei muito do layout. Quem fez? Quero contratar! Eu gostei muito do layout. Quem fez? Quero contratar! Eu gostei muito do layout. Quem fez? Quero contratar! </p>
+    </li>
+    <li>
+      <img width="48" height="48" style="border: 1px solid #999;" align="right" src="http://0.gravatar.com/avatar/4e1636efebc6a3709bca9ddefa78055b?s=48&d=identicon&r=G" alt=""/>
+      <big><b>Camilla pitanga</b> comentou: </big><br />
+      <p>Andoleta, lepeti peti petá! Negócio de coisa de coisa. Andoleta, lepeti peti petá! Negócio de coisa de coisa. Andoleta, lepeti peti petá! Negócio de coisa de coisa. Andoleta, lepeti peti petá! Negócio de coisa de coisa. Andoleta, lepeti peti petá! Negócio de coisa de coisa. Andoleta, lepeti peti petá! Negócio de coisa de coisa. Andoleta, lepeti peti petá! Negócio de coisa de coisa. Andoleta, lepeti peti petá! Negócio de coisa de coisa. Andoleta, lepeti peti petá! Negócio de coisa de coisa. Andoleta, lepeti peti petá! Negócio de coisa de coisa. Andoleta, lepeti peti petá! Negócio de coisa de coisa. </p>
+    </li>
+    <a href="#">Deixar um comentário</a>
+  </ul>
+
+</div> <!-- /container -->
+</div> <!-- /conteudo -->
 
