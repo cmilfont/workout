@@ -1,0 +1,24 @@
+<h1>Editing synonymous_of_exercise</h1>
+
+<% form_for(@synonymous_of_exercise) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :synonym %><br />
+    <%= f.text_field :synonym %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :exercise %><br />
+    <%= f.text_field :exercise %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @synonymous_of_exercise %> |
+<%= link_to 'Back', synonymous_of_exercises_path %>
