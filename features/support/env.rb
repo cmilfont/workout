@@ -1,18 +1,18 @@
 ENV["RAILS_ENV"] ||= "cucumber"
 require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
-require 'cucumber/rails/world'
 
-require 'cucumber/formatter/unicode'
+require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
+require 'cucumber/rails/rspec'
+require 'cucumber/rails/world'
+require 'cucumber/rails/active_record'
+
+ActionController::Base.allow_rescue = false
 
 #Cucumber::Rails.bypass_rescue
 Cucumber::Rails::World.use_transactional_fixtures = false
 
 require 'factory_girl'
 Dir.glob(File.join(File.dirname(__FILE__), '../../spec/factories/*.rb')).each {|f| require f }
-
-require 'cucumber/rails/rspec'
-#require 'webrat/core/matchers'
-
 require 'database_cleaner'
 require 'database_cleaner/cucumber'
 DatabaseCleaner.strategy = :truncation

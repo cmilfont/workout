@@ -9189,3 +9189,534 @@ Processing WeightGoalsController#create to json (for 127.0.0.1 at 2010-01-11 14:
   [4;36;1mWeightGoal Create (1.0ms)[0m   [0;1mINSERT INTO `weight_goals` (`goal`, `created_at`, `updated_at`, `weight`, `user_id`) VALUES('2010-10-10 00:00:00', '2010-01-11 17:44:28', '2010-01-11 17:44:28', 91.0, 1)[0m
   [4;35;1mSQL (2.8ms)[0m   [0mCOMMIT[0m
 Completed in 25ms (View: 5, DB: 7) | 201 Created [http://localhost/weight_goals.json]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (53.0ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (81.5ms)[0m   [0mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;36;1mSQL (12.9ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;36;1mSQL (51.9ms)[0m   [0;1mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;35;1mSQL (74.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (63.8ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (20.7ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (19.6ms)[0m   [0;1mTRUNCATE TABLE `sports`;[0m
+  [4;35;1mSQL (38.8ms)[0m   [0mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;36;1mSQL (63.1ms)[0m   [0;1mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;35;1mSQL (4.2ms)[0m   [0mTRUNCATE TABLE `trainings`;[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;35;1mSQL (14.5ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;35;1mSQL (45.2ms)[0m   [0mTRUNCATE TABLE `weight_goals`;[0m
+  [4;36;1mSQL (36.0ms)[0m   [0;1mTRUNCATE TABLE `weights`;[0m
+  [4;35;1mSQL (63.5ms)[0m   [0mTRUNCATE TABLE `workouts`;[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (23.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (7.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'cmilfont') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'f972aac700747bd8d4d310e1fe35a12bd615f40824c946704169e7123387ccbe03526611db76c9c5c211926de31c2100653f3b44588bca6dc2a44791b49571ba') LIMIT 1[0m
+  [4;36;1mUser Create (30.6ms)[0m   [0;1mINSERT INTO `users` (`name`, `last_request_at`, `created_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `height`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', NULL, '2010-04-09 19:41:28', '82fc4457a1f7dc6319bc23cfab948f1b52330e98029fa26dfe2068147e8f2e9f4cfccecb6854be7a4d3b48af870aec0f5c1c583b93971ba6f5d918174b25ef54', '2010-04-09 19:41:28', NULL, NULL, '_8dZG7PeZyziUaDSJwpX', NULL, 180, 'f972aac700747bd8d4d310e1fe35a12bd615f40824c946704169e7123387ccbe03526611db76c9c5c211926de31c2100653f3b44588bca6dc2a44791b49571ba', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mWeight Columns (142.1ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mWeight Create (0.7ms)[0m   [0;1mINSERT INTO `weights` (`created_at`, `updated_at`, `weight`, `user_id`) VALUES('2010-04-09 19:41:29', '2010-04-09 19:41:29', 98.5, 1)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mWeightGoal Columns (4.3ms)[0m   [0;1mSHOW FIELDS FROM `weight_goals`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mWeightGoal Create (0.7ms)[0m   [0;1mINSERT INTO `weight_goals` (`goal`, `created_at`, `updated_at`, `weight`, `user_id`) VALUES(NULL, '2010-04-09 19:41:29', '2010-04-09 19:41:29', 98.5, 1)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mWeight Load (0.8ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (21.8ms)[0m   [0;1mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (16.9ms)[0m   [0;1mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;36;1mSQL (24.7ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (23.2ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mTRUNCATE TABLE `sports`;[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mTRUNCATE TABLE `weight_goals`;[0m
+  [4;35;1mSQL (34.1ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'cmilfont') LIMIT 1[0m
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '7a2e51adebcbd92db874dd74ba1a217433052264010c503cef8edaca084d78515219eb5ec0b7ba067cf0af03dd8b61878bf1b3a4fb5e2df2176a9d6e6e1d2b71') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO `users` (`name`, `last_request_at`, `created_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `height`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', NULL, '2010-04-09 19:41:29', '5bb5e5a634eb1611fee7c423a5e8e5908f7dd0e09a574d9cb6ff8e2a0eca45fb8261ffa505df635a23c01a2b7fbc115fad64f2b0788a28684b5634975e46ab48', '2010-04-09 19:41:29', NULL, NULL, 'R3OindThWxaZmwzeWuJg', NULL, 180, '7a2e51adebcbd92db874dd74ba1a217433052264010c503cef8edaca084d78515219eb5ec0b7ba067cf0af03dd8b61878bf1b3a4fb5e2df2176a9d6e6e1d2b71', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mWeight Create (0.6ms)[0m   [0mINSERT INTO `weights` (`created_at`, `updated_at`, `weight`, `user_id`) VALUES('2010-04-09 19:41:29', '2010-04-09 19:41:29', 98.5, 1)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mWeightGoal Create (1.2ms)[0m   [0;1mINSERT INTO `weight_goals` (`goal`, `created_at`, `updated_at`, `weight`, `user_id`) VALUES(NULL, '2010-04-09 19:41:29', '2010-04-09 19:41:29', 98.5, 1)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mWeightGoal Load (0.8ms)[0m   [0;1mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (107.8ms)[0m   [0;1mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;35;1mSQL (52.5ms)[0m   [0mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;36;1mSQL (29.3ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mTRUNCATE TABLE `sports`;[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (5.1ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mTRUNCATE TABLE `weight_goals`;[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'cmilfont') LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '5f972f4b7654c31c9e2c7686080495f4951890bf0b8dcbd5ea1d1f89cd64e5dc3d15e147053cc1132cceb7e34b730fbc2a9def6656836afed16b23984395f7a6') LIMIT 1[0m
+  [4;36;1mUser Create (1.4ms)[0m   [0;1mINSERT INTO `users` (`name`, `last_request_at`, `created_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `height`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', NULL, '2010-04-09 19:41:29', '565b70173b9d2fcdf6e0fea4372fc3213ace5e22a7c69e24c69904edddc30f0ebf6e66f9c85afd4337f9594945f6399020fdee606d83fe37a58897ed7f5210bb', '2010-04-09 19:41:29', NULL, NULL, 'AStqCY60kVb7zQGYU6TJ', NULL, 180, '5f972f4b7654c31c9e2c7686080495f4951890bf0b8dcbd5ea1d1f89cd64e5dc3d15e147053cc1132cceb7e34b730fbc2a9def6656836afed16b23984395f7a6', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mWeight Create (1.1ms)[0m   [0mINSERT INTO `weights` (`created_at`, `updated_at`, `weight`, `user_id`) VALUES('2010-04-09 19:41:29', '2010-04-09 19:41:29', 98.5, 1)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mWeightGoal Create (0.6ms)[0m   [0;1mINSERT INTO `weight_goals` (`goal`, `created_at`, `updated_at`, `weight`, `user_id`) VALUES(NULL, '2010-04-09 19:41:29', '2010-04-09 19:41:29', 98.5, 1)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (60.7ms)[0m   [0mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (140.5ms)[0m   [0mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (5.3ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (99.1ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mTRUNCATE TABLE `sports`;[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mTRUNCATE TABLE `trainings`;[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;35;1mSQL (48.7ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (34.9ms)[0m   [0;1mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mTRUNCATE TABLE `weight_goals`;[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mTRUNCATE TABLE `weights`;[0m
+  [4;35;1mSQL (29.8ms)[0m   [0mTRUNCATE TABLE `workouts`;[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'd4ec7904221a91b353af531342366b2bd9e7faa71c224e982f2a9010ccf90b7bd4eea9492f7c3453d8fb685999b1acc94de2a66bccb01c39b87d5d00970ad66b') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (5.1ms)[0m   [0;1mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;35;1mSQL (5.1ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;35;1mSQL (13.1ms)[0m   [0mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;36;1mSQL (12.1ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (18.5ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mTRUNCATE TABLE `sports`;[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;36;1mSQL (35.4ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (9.9ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;36;1mSQL (17.0ms)[0m   [0;1mTRUNCATE TABLE `weight_goals`;[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (10.4ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfontgmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '5b037ae9e78b0368153fdb6f7367cb9ded42e2e2f9ec6fedc521037f9d3536b3ed5a2af06338da680a4f32b15bd3491993927a4d1fdf6f7ca0de7c7f4ce6b85f') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (98.2ms)[0m   [0mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;36;1mSQL (20.8ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;36;1mSQL (18.2ms)[0m   [0;1mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;35;1mSQL (67.9ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mTRUNCATE TABLE `sports`;[0m
+  [4;35;1mSQL (39.5ms)[0m   [0mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;36;1mSQL (13.7ms)[0m   [0;1mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mTRUNCATE TABLE `trainings`;[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;35;1mSQL (38.4ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mTRUNCATE TABLE `weight_goals`;[0m
+  [4;36;1mSQL (18.2ms)[0m   [0;1mTRUNCATE TABLE `weights`;[0m
+  [4;35;1mSQL (11.6ms)[0m   [0mTRUNCATE TABLE `workouts`;[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '603ebbf728750d6208698fcf266f2029c6dfce695047b5b1386cbdf513ad5f6cc45451402428b678334647571fdfb54907bce868446a5858d635ad4689dad194') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mTRUNCATE TABLE `exercises`;[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;35;1mSQL (38.7ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;35;1mSQL (26.2ms)[0m   [0mTRUNCATE TABLE `sessions`;[0m
+  [4;36;1mSQL (7.6ms)[0m   [0;1mTRUNCATE TABLE `sports`;[0m
+  [4;35;1mSQL (29.4ms)[0m   [0mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mTRUNCATE TABLE `trainings`;[0m
+  [4;36;1mSQL (16.5ms)[0m   [0;1mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;35;1mSQL (23.6ms)[0m   [0mTRUNCATE TABLE `users`;[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;35;1mSQL (9.1ms)[0m   [0mTRUNCATE TABLE `weight_goals`;[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mTRUNCATE TABLE `weights`;[0m
+  [4;35;1mSQL (14.7ms)[0m   [0mTRUNCATE TABLE `workouts`;[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;35;1mSQL (23.3ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;36;1mSQL (10.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (7.5ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (11.4ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (12.4ms)[0m   [0mTRUNCATE TABLE `sports`;[0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;35;1mSQL (9.9ms)[0m   [0mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (10.9ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (28.3ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mTRUNCATE TABLE `weight_goals`;[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (12.8ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'b43a64b7eebc0767965d7e5b17810b17bc3bf81483e701a950aec948cddf85ea1678f0420fe468743b7b18247f1bb53d1bf318522cbd65fe965c9f0542692256') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;35;1mSQL (5.6ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;35;1mSQL (14.0ms)[0m   [0mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mTRUNCATE TABLE `sports`;[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mTRUNCATE TABLE `weight_goals`;[0m
+  [4;35;1mSQL (8.1ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'dcbb340a17756843ca7335ef2f1c99025e4d8b0d0a1895bb5ccf7dc4922b60a6d7798152c35e23d2865a6107040dd745ba4a64a67db124c397d901f17eaf0936') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (52.4ms)[0m   [0;1mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;36;1mSQL (8.7ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (10.7ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (8.5ms)[0m   [0mTRUNCATE TABLE `sports`;[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (35.2ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (34.7ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;36;1mSQL (6.5ms)[0m   [0;1mTRUNCATE TABLE `weight_goals`;[0m
+  [4;35;1mSQL (28.1ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (22.5ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'f39321ddf0330c8e67b85ee2541cf6b496d13b4ac0ea73290863f2bf65f06b026044e5dc83f66d5f03e69d10cffee97c500a5d4606e2e1264e6c82216f0aa291') LIMIT 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;35;1mSQL (26.9ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (25.8ms)[0m   [0;1mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;36;1mSQL (29.5ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (10.5ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mTRUNCATE TABLE `sports`;[0m
+  [4;36;1mSQL (25.6ms)[0m   [0;1mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;35;1mSQL (25.6ms)[0m   [0mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (13.6ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (41.3ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (35.4ms)[0m   [0mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;36;1mSQL (37.8ms)[0m   [0;1mTRUNCATE TABLE `weight_goals`;[0m
+  [4;35;1mSQL (38.8ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'b72c99ab20d2710a176fa2665a1af487377a4be2fcae6d25a4e6eaac4fe7e8deb9f3a3e170ba01ca926ab622b7e5a3c591a9deec0a50d8ac1050614ef30166ad') LIMIT 1[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (23.0ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mTRUNCATE TABLE `sports`;[0m
+  [4;36;1mSQL (32.0ms)[0m   [0;1mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;35;1mSQL (9.5ms)[0m   [0mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;36;1mSQL (22.6ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (7.4ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (14.6ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (21.1ms)[0m   [0mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;36;1mSQL (5.9ms)[0m   [0;1mTRUNCATE TABLE `weight_goals`;[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'cmilfont') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '1fd4ef6e733299b33094e0c28632e6d5f25ed462e46a1e145a9b79f2476b5757fff979e7edbfa11ab46eccae84f274b770dec44afc0140d6bfe116581df73644') LIMIT 1[0m
+  [4;36;1mUser Create (2.1ms)[0m   [0;1mINSERT INTO `users` (`name`, `last_request_at`, `created_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `height`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', NULL, '2010-04-09 19:41:32', 'd67946c893139f3d74786750a06ada6792c47e5735ee569740867cddce771a0ce134754b9d763a1b07bf50331f973ab9e5fae03f6d76940404682726ff5cac8a', '2010-04-09 19:41:32', NULL, NULL, '5zXgtRQ-NU7y6dhiwhKr', NULL, 180, '1fd4ef6e733299b33094e0c28632e6d5f25ed462e46a1e145a9b79f2476b5757fff979e7edbfa11ab46eccae84f274b770dec44afc0140d6bfe116581df73644', 0, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'cmilfont') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c430bc57d1ebd14b6dea784e864749c747783aeb24885252308fe535d7f6c772dc010044467fa0c08d4ccaf40f579e330f20d3f6def918e3c61c162c9dc26336') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (46.7ms)[0m   [0;1mTRUNCATE TABLE `comments_of_exercises`;[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mTRUNCATE TABLE `exercises`;[0m
+  [4;36;1mSQL (8.8ms)[0m   [0;1mTRUNCATE TABLE `nokia_eventlaps`;[0m
+  [4;35;1mSQL (20.4ms)[0m   [0mTRUNCATE TABLE `nokia_workouts`;[0m
+  [4;36;1mSQL (29.0ms)[0m   [0;1mTRUNCATE TABLE `open_id_authentication_associations`;[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mTRUNCATE TABLE `open_id_authentication_nonces`;[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mTRUNCATE TABLE `sessions`;[0m
+  [4;35;1mSQL (10.6ms)[0m   [0mTRUNCATE TABLE `sports`;[0m
+  [4;36;1mSQL (12.6ms)[0m   [0;1mTRUNCATE TABLE `synonymous_of_exercises`;[0m
+  [4;35;1mSQL (8.6ms)[0m   [0mTRUNCATE TABLE `tags_of_exercises`;[0m
+  [4;36;1mSQL (10.5ms)[0m   [0;1mTRUNCATE TABLE `trainings`;[0m
+  [4;35;1mSQL (10.7ms)[0m   [0mTRUNCATE TABLE `types_of_exercises`;[0m
+  [4;36;1mSQL (16.6ms)[0m   [0;1mTRUNCATE TABLE `users`;[0m
+  [4;35;1mSQL (28.9ms)[0m   [0mTRUNCATE TABLE `videos_of_exercises`;[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mTRUNCATE TABLE `weight_goals`;[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mTRUNCATE TABLE `weights`;[0m
+  [4;36;1mSQL (23.4ms)[0m   [0;1mTRUNCATE TABLE `workouts`;[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-09 17:10:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (10.7ms)
+Rendered layouts/_header (1142.5ms)
+  [4;35;1mSQL (48.8ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2010-04-09 20:00:51') [0m
+Rendered layouts/_footer (1468.5ms)
+Completed in 3125ms (View: 2154, DB: 956) | 200 OK [http://localhost/account/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-09 17:11:12) [POST]
+  Parameters: {"commit"=>"Registrar", "action"=>"create", "controller"=>"users", "user"=>{"name"=>"Christiano Milfont", "password_confirmation"=>"[FILTERED]", "height"=>"180", "password"=>"[FILTERED]", "login"=>"cmilfont", "email"=>"cmilfont@gmail.com"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'cmilfont') LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '7ca36cdf524b05736b329a51a8c0f98b6db81e3828835422f959a3bbd5f0feb161b0abc02a43d6c63f133ee4539f2906ceedf3a56eeaf6b458a887fbb0fb46b1') LIMIT 1[0m
+  [4;36;1mUser Create (1.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `last_request_at`, `created_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `height`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2010-04-09 20:11:12', '2010-04-09 20:11:12', 'dcc4633c943f94e84075eb01108b45b41459ad9e728108531ddface2dd8898612d6f04cdb8e97035c0cecd99835aba7f4b3fb0a52dacd0ee39b07eb474fd1503', '2010-04-09 20:11:12', NULL, '127.0.0.1', 'kvTVJpSm_TTn-BtAGFph', '2010-04-09 20:11:12', 180, '7ca36cdf524b05736b329a51a8c0f98b6db81e3828835422f959a3bbd5f0feb161b0abc02a43d6c63f133ee4539f2906ceedf3a56eeaf6b458a887fbb0fb46b1', 1, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (7.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 697ms (DB: 148) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-09 17:11:13) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (306.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '7ca36cdf524b05736b329a51a8c0f98b6db81e3828835422f959a3bbd5f0feb161b0abc02a43d6c63f133ee4539f2906ceedf3a56eeaf6b458a887fbb0fb46b1') LIMIT 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (24.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-09 20:11:13', `last_request_at` = '2010-04-09 20:11:13' WHERE `id` = 1[0m
+  [4;35;1mSQL (21.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.8ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeightGoal Load (1.2ms)[0m   [0mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+Rendered layouts/_header (28.7ms)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2010-04-09 20:01:13') [0m
+Rendered layouts/_footer (4.9ms)
+Completed in 740ms (View: 361, DB: 459) | 200 OK [http://localhost/account]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-09 17:11:14) [GET]
+
+ActionController::RoutingError (No route matches "/img/carregando.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-09 17:11:14) [GET]
+
+ActionController::RoutingError (No route matches "/img/favorito.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-09 17:21:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (19.9ms)
+Rendered layouts/_header (59.2ms)
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2010-04-09 20:11:17') [0m
+Rendered layouts/_footer (178.1ms)
+Completed in 578ms (View: 561, DB: 5) | 200 OK [http://localhost/account/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-09 17:21:34) [POST]
+  Parameters: {"commit"=>"Registrar", "action"=>"create", "controller"=>"users", "user"=>{"name"=>"Christiano Milfont", "password_confirmation"=>"[FILTERED]", "height"=>"180", "password"=>"[FILTERED]", "login"=>"cmilfont", "email"=>"cmilfont@gmail.com"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'cmilfont') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'd64bb5d5a55e0aed859b37aed2f7163aea5a5801f78250c747b42013b78a56eb2523c188ecc0a537c9aafcf367adcb71d1add5f9e626ae97650df814abab6681') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO `users` (`name`, `last_request_at`, `created_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `height`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2010-04-09 20:21:35', '2010-04-09 20:21:35', '86729ee9a6ae4d9684f8d633f05e0b3e98400ac0c3f0a057dc749105076f5d4ad99bad5fb246f8a928c3a3abd387a02aa592db4c328aeee1cabfd1e212844c92', '2010-04-09 20:21:35', NULL, '127.0.0.1', 'xXphmfxFUq1dOE3ZMPKC', '2010-04-09 20:21:35', 180, 'd64bb5d5a55e0aed859b37aed2f7163aea5a5801f78250c747b42013b78a56eb2523c188ecc0a537c9aafcf367adcb71d1add5f9e626ae97650df814abab6681', 1, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 435ms (DB: 6) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-09 17:21:35) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'd64bb5d5a55e0aed859b37aed2f7163aea5a5801f78250c747b42013b78a56eb2523c188ecc0a537c9aafcf367adcb71d1add5f9e626ae97650df814abab6681') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-09 20:21:35', `last_request_at` = '2010-04-09 20:21:35' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (0.8ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeightGoal Load (0.7ms)[0m   [0mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+Rendered layouts/_header (30.5ms)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2010-04-09 20:11:35') [0m
+Rendered layouts/_footer (4.6ms)
+Completed in 344ms (View: 315, DB: 8) | 200 OK [http://localhost/account]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-09 17:21:35) [GET]
+
+ActionController::RoutingError (No route matches "/img/carregando.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-09 17:21:36) [GET]
+
+ActionController::RoutingError (No route matches "/img/favorito.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-09 17:22:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (19.2ms)
+Rendered layouts/_header (69.3ms)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2010-04-09 20:12:20') [0m
+Rendered layouts/_footer (101.5ms)
+Completed in 475ms (View: 453, DB: 6) | 200 OK [http://localhost/account/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-09 17:22:36) [POST]
+  Parameters: {"commit"=>"Registrar", "action"=>"create", "controller"=>"users", "user"=>{"name"=>"Christiano Milfont", "password_confirmation"=>"[FILTERED]", "height"=>"180", "password"=>"[FILTERED]", "login"=>"cmilfont", "email"=>"cmilfont@gmail.com"}}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'cmilfont@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'cmilfont') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'e04e3b43ee8b6283e63a05d7d6b978cb0e4ad1a2f5b54b40c5d1ed8c9d5670ad84183511cb7ba8887da060ecd7d6ec4d065997b9dc09625ac58ebb0d4af3890d') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO `users` (`name`, `last_request_at`, `created_at`, `crypted_password`, `updated_at`, `openid_identifier`, `current_login_ip`, `password_salt`, `current_login_at`, `height`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Christiano Milfont', '2010-04-09 20:22:37', '2010-04-09 20:22:37', '0ef5f1a9a2e7f18cc6c58e3ffe38977c270ebe25144679f54dc4ca03a5d602e27bd01ad5bff8ddd1b2ddcf7f31820a3a096e3dfa5b2c0a5b53ede72c4d237cd3', '2010-04-09 20:22:37', NULL, '127.0.0.1', 'FO_Qpx0Yxd7bXiKy4Qmm', '2010-04-09 20:22:37', 180, 'e04e3b43ee8b6283e63a05d7d6b978cb0e4ad1a2f5b54b40c5d1ed8c9d5670ad84183511cb7ba8887da060ecd7d6ec4d065997b9dc09625ac58ebb0d4af3890d', 1, NULL, 'cmilfont', NULL, 'cmilfont@gmail.com')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3001/account
+Completed in 492ms (DB: 8) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-09 17:22:37) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = 'e04e3b43ee8b6283e63a05d7d6b978cb0e4ad1a2f5b54b40c5d1ed8c9d5670ad84183511cb7ba8887da060ecd7d6ec4d065997b9dc09625ac58ebb0d4af3890d') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-09 20:22:37', `last_request_at` = '2010-04-09 20:22:37' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mWeight Load (1.2ms)[0m   [0;1mSELECT * FROM `weights` WHERE (`weights`.`user_id` = 1) ORDER BY weights.id DESC LIMIT 1[0m
+  [4;35;1mWeightGoal Load (0.7ms)[0m   [0mSELECT * FROM `weight_goals` WHERE (`weight_goals`.`user_id` = 1) ORDER BY weight_goals.id DESC LIMIT 1[0m
+Rendered layouts/_header (28.7ms)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (last_request_at > '2010-04-09 20:12:37') [0m
+Rendered layouts/_footer (4.8ms)
+Completed in 328ms (View: 300, DB: 30) | 200 OK [http://localhost/account]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-09 17:22:38) [GET]
+
+ActionController::RoutingError (No route matches "/img/carregando.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-09 17:22:38) [GET]
+
+ActionController::RoutingError (No route matches "/img/favorito.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
