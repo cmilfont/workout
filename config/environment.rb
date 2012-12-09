@@ -1,5 +1,4 @@
-RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
-
+RAILS_GEM_VERSION = '2.3.12' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
@@ -7,7 +6,7 @@ Rails::Initializer.run do |config|
   config.gem "ruby-openid", :lib => "openid"
   config.gem 'paperclip', :version => '=2.1.2'
   config.gem "binarylogic-authlogic", :lib => 'authlogic', :source => 'http://gems.github.com'
-  config.gem "authlogic-oid", :lib => "authlogic_openid"
+ # config.gem "authlogic-oid", :lib => "authlogic_openid"
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => "http://gems.github.com"
   config.gem 'nokogiri'
 
@@ -43,5 +42,5 @@ Rails::Initializer.run do |config|
 
 end
 
-ActionView::Base.field_error_proc = Proc.new { |html_tag, instance| "#{html_tag}" }
+#ActionView::Base.field_error_proc = Proc.new { |html_tag, instance| "#{html_tag}" }
 
