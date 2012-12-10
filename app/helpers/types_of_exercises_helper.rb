@@ -1,2 +1,0 @@
-module TypesOfExercisesHelper
-end

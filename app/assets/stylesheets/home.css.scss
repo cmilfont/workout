@@ -1,0 +1,36 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*.theme-workout {
+  background-color: "#7CADCA"
+}*/
+
+.x-toolbar .home_title {
+  color: #fff !important;
+  line-height: 18px;
+  font-size: 18px;
+}
+
+.x-toolbar .home_menu .x-btn-inner {
+  color: #70B4D6;
+
+  font-size: 18px;
+  text-shadow: none;
+}
+.x-toolbar .home_menu_over .x-btn-inner {
+  color: #fff;
+}
+
+.x-toolbar .home_split .x-btn-inner {
+  color: #fff;
+  font-size: 16px;
+  text-shadow: none;
+}
+.x-toolbar .home_split_over .x-btn-inner {
+  color: #FFF;
+}
+
+.x-toolbar .home_pressed {
+  background: #fff;
+}

@@ -1,31 +1,16 @@
-development:
-  adapter: mysql
-  host: localhost
+development: &DEV
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
   database: workout_development
+  pool: 5
   username: root
   password: root
 
-test: &TEST
-  adapter: mysql
-  host: localhost
+test:
+  <<: *DEV
   database: workout_test
-  username: root
-  password: root
 
 production:
-  adapter: mysql
-  host: localhost
+  <<: *DEV
   database: workout_production
-  username: root
-  password: root
-
-cucumber:
-  <<: *TEST
-
-
-cucumber:
-  <<: *TEST
-cucumber:
-  <<: *TEST
-cucumber:
-  <<: *TEST

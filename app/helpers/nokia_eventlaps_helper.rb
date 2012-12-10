@@ -1,2 +1,0 @@
-module NokiaEventlapsHelper
-end

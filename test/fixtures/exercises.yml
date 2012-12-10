@@ -1,9 +1,0 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  name: MyString
-  types_of_exercise: 
-
-two:
-  name: MyString
-  types_of_exercise: 
