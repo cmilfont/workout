@@ -3,14 +3,13 @@ Ext.define('Workout.view.rotina.List', {
   alias: 'widget.rotinalist',
   tpl: new Ext.XTemplate(
       '<tpl for=".">',
-          '<div style="margin-bottom: 10px;" class="thumb-wrap">',
-            '<img src="{src}" />',
-            '<br/><span>{caption}</span>',
+          '<div style="margin-bottom: 10px;" class="rotina-wrap">',
+            '<span>{titulo}</span>',
           '</div>',
       '</tpl>'
   ),
-  itemSelector: 'div.thumb-wrap',
-  emptyText: 'No images available',
+  itemSelector: 'div.rotina-wrap',
+  emptyText: 'Sem rotinas criadas',
   store: Ext.create("Workout.store.RotinaStore"),
   initComponent: function() {
     this.callParent(arguments);

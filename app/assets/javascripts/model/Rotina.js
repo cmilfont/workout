@@ -2,10 +2,14 @@ Ext.define('Workout.model.Rotina', {
   extend: 'Ext.data.Model',
   proxy: {
     type: 'rest',
+    format: 'json',
     url: '/rotinas'
   },
   fields: [
-    { name:'src', type:'string' },
-    { name:'caption', type:'string' }
+    'id',
+    'titulo'
+  ],
+  hasMany: [
+    {model: 'Workout.model.Item', name: 'getItens', associationKey: 'itens'}
   ]
 });

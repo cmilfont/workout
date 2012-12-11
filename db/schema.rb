@@ -11,6 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20121211001902) do
+
+  create_table "exercicios", :force => true do |t|
+    t.string   "titulo"
+    t.text     "descricao"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "itens", :force => true do |t|
+    t.integer  "rotina_id"
+    t.integer  "exercicio_id"
+    t.integer  "repeticao"
+    t.string   "tempo"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "itens", ["exercicio_id"], :name => "index_itens_on_exercicio_id"
+  add_index "itens", ["rotina_id"], :name => "index_itens_on_rotina_id"
+
+  create_table "rotinas", :force => true do |t|
+    t.string   "titulo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end
