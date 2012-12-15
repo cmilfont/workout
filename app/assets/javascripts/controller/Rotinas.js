@@ -1,7 +1,7 @@
 Ext.define('Workout.controller.Rotinas', {
   extend: 'Ext.app.Controller',
   views: ['rotina.List'],
-  models: ['Rotina', 'Item'],
+  models: ['Rotina', 'Item', 'Exercicio'],
   init: function() {
     this.control({
       "button[itemId='rotinas']": {
@@ -13,8 +13,8 @@ Ext.define('Workout.controller.Rotinas', {
       
       "rotinalist[itemId='tab-Rotinas']": {
         afterrender: function(view) {
-          view.store.load();
-          view.refresh();
+          //view.store.load();
+          //view.refresh();
         }
       }
     });

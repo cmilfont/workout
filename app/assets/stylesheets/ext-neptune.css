@@ -6816,24 +6816,24 @@ input, textarea, select {
 /* line 685, ../themes/stylesheets/neptune/default/widgets/_button.scss */
 .x-btn-default-toolbar-small-menu-active,
 .x-btn-default-toolbar-small-pressed {
-  border-color: #002d71;
+  border-color: #5589A3;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
   background-image: none;
   background-color: #235471;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1b6eed), color-stop(3%, #1055c0), color-stop(100%, #0c459a));
-  background-image: -webkit-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -moz-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -o-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -ms-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a); }
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #475156), color-stop(3%, #475156), color-stop(100%, #475156));
+  background-image: -webkit-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -moz-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -o-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -ms-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: linear-gradient(top, #475156, #475156 3%, #475156); }
   /* line 696, ../themes/stylesheets/neptune/default/widgets/_button.scss */
   .x-btn-default-toolbar-small-menu-active .x-btn-inner,
   .x-btn-default-toolbar-small-pressed .x-btn-inner {
     color: white;
-    text-shadow: #0a387e 0 -1px 0; }
+    text-shadow: #475156 0 -1px 0; }
 
 /* line 715, ../themes/stylesheets/neptune/default/widgets/_button.scss */
 .x-btn-default-toolbar-small-menu-active {
@@ -7185,24 +7185,24 @@ input, textarea, select {
 /* line 685, ../themes/stylesheets/neptune/default/widgets/_button.scss */
 .x-btn-default-toolbar-medium-menu-active,
 .x-btn-default-toolbar-medium-pressed {
-  border-color: #002d71;
+  border-color: #5589A3;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
   background-image: none;
   background-color: #235471;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1b6eed), color-stop(3%, #1055c0), color-stop(100%, #0c459a));
-  background-image: -webkit-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -moz-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -o-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -ms-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a); }
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #475156), color-stop(3%, #475156), color-stop(100%, #475156));
+  background-image: -webkit-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -moz-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -o-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -ms-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: linear-gradient(top, #475156, #475156 3%, #475156); }
   /* line 696, ../themes/stylesheets/neptune/default/widgets/_button.scss */
   .x-btn-default-toolbar-medium-menu-active .x-btn-inner,
   .x-btn-default-toolbar-medium-pressed .x-btn-inner {
     color: white;
-    text-shadow: #0a387e 0 -1px 0; }
+    text-shadow: #475156 0 -1px 0; }
 
 /* line 715, ../themes/stylesheets/neptune/default/widgets/_button.scss */
 .x-btn-default-toolbar-medium-menu-active {
@@ -7554,24 +7554,24 @@ input, textarea, select {
 /* line 685, ../themes/stylesheets/neptune/default/widgets/_button.scss */
 .x-btn-default-toolbar-large-menu-active,
 .x-btn-default-toolbar-large-pressed {
-  border-color: #002d71;
+  border-color: #5589A3;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
   background-image: none;
   background-color: #235471;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1b6eed), color-stop(3%, #1055c0), color-stop(100%, #0c459a));
-  background-image: -webkit-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -moz-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -o-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -ms-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a); }
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #475156), color-stop(3%, #475156), color-stop(100%, #475156));
+  background-image: -webkit-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -moz-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -o-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -ms-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: linear-gradient(top, #475156, #475156 3%, #475156); }
   /* line 696, ../themes/stylesheets/neptune/default/widgets/_button.scss */
   .x-btn-default-toolbar-large-menu-active .x-btn-inner,
   .x-btn-default-toolbar-large-pressed .x-btn-inner {
     color: white;
-    text-shadow: #0a387e 0 -1px 0; }
+    text-shadow: #475156 0 -1px 0; }
 
 /* line 715, ../themes/stylesheets/neptune/default/widgets/_button.scss */
 .x-btn-default-toolbar-large-menu-active {
@@ -8503,7 +8503,7 @@ table.x-datepicker-inner {
   border-color: #188ae5;
   color: white;
   background-color: #235471 !important;
-  text-shadow: #0a387e 0 -1px 0; }
+  text-shadow: #475156 0 -1px 0; }
 
 /* line 275, ../themes/stylesheets/neptune/default/widgets/_grid.scss */
 .x-grid-rowwrap-div .x-grid-cell,
@@ -8577,15 +8577,15 @@ table.x-datepicker-inner {
 
 /* line 348, ../themes/stylesheets/neptune/default/widgets/_grid.scss */
 .x-grid-row-selected .x-grid-cell-special {
-  border-right: 1px solid #0078d7;
+  border-right: 1px solid #5589A3;
   background-image: none;
   background-color: #235471;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1b6eed), color-stop(3%, #1055c0), color-stop(100%, #0c459a));
-  background-image: -webkit-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -moz-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -o-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: -ms-linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a);
-  background-image: linear-gradient(top, #1b6eed, #1055c0 3%, #0c459a); }
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #475156), color-stop(3%, #475156), color-stop(100%, #475156));
+  background-image: -webkit-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -moz-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -o-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: -ms-linear-gradient(top, #475156, #475156 3%, #475156);
+  background-image: linear-gradient(top, #475156, #475156 3%, #475156); }
 
 /* line 354, ../themes/stylesheets/neptune/default/widgets/_grid.scss */
 .x-grid-dirty-cell {
