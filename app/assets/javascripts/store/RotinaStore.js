@@ -1,7 +1,7 @@
 Ext.define('Workout.store.RotinaStore', {
   alias: 'store.rotinastore',
   extend: 'Ext.data.TreeStore',
-  model: "Workout.model.Rotina",
+  model: "Workout.model.RotinaTree",
   root: "Workout.model.Rotina",
   constructor: function() {
     this.callParent(arguments);

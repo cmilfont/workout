@@ -19,8 +19,16 @@ class RotinasController < ApplicationController
   
   def update
     @rotina = Rotina.find params[:id]
-    @rotina.update_attributes params[:rotina]
-    respond_with @rotina, :include => {:itens => {:include => :exercicio}}
+    @rotina.titulo = params[:titulo]
+    @rotina.save
+    #respond_with @rotina, :include => {:itens => {:include => :exercicio}}
+    render :json => @rotina.to_json(:include => {:itens => {:include => :exercicio}})
+  end
+  
+  def destroy
+    @rotina = Rotina.find params[:id]
+    @rotina.destroy
+    respond_with @rotina
   end
   
 end
