@@ -1,6 +1,6 @@
 Ext.define('Workout.controller.Rotinas', {
   extend: 'Ext.app.Controller',
-  views: ['rotina.List'],
+  views: ['rotina.List', 'rotina.Form'],
   models: ['Rotina', 'Item', 'Exercicio'],
   init: function() {
     this.control({
