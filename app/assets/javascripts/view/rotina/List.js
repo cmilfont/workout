@@ -16,7 +16,8 @@ Ext.define('Workout.view.rotina.List', {
 	  this.tbar = [
       { xtype: 'button', text: 'Cadastrar' , pressed: true, handler: this.abrirJanela, scope: this},
       { xtype: 'button', text: 'Editar', itemId: 'editar', disabled: true, pressed: true, handler: this.abrirJanela, scope: this },
-      { xtype: 'button', text: 'Excluir', itemId: 'excluir', disabled: true, pressed: true, handler: this.excluir, scope: this }
+      { xtype: 'button', text: 'Excluir', itemId: 'excluir', disabled: true, pressed: true, handler: this.excluir, scope: this },
+      "-"
     ];
     this.callParent(arguments);
     this.on({
@@ -71,12 +72,37 @@ Ext.define('Workout.view.rotina.List', {
      }
      
   },
-  desabilitarAoSelecionar: function() {
+  desabilitarAoSelecionar: function(rowModel, model, index, eOpts) {
     this.down("#editar").disable();
     this.down("#excluir").disable();
+    
+    var vincular = this.down("#vincular"),
+        editarexercicio = this.down("#editarexercicio"),
+        desvincular = this.down("#desvincular");
+    if(vincular) vincular.destroy();
+    if(editarexercicio) editarexercicio.destroy();
+    if(desvincular) desvincular.destroy();
   },
-  habilitarAoSelecionar: function() {
-    this.down("#editar").enable();
-    this.down("#excluir").enable();
+  habilitarAoSelecionar: function(rowModel, model, index, eOpts) {
+    var docked = this.getDockedItems()[0];
+    if(!model.raw.item) {
+      this.down("#editar").enable();
+      this.down("#excluir").enable();
+      docked.add({ text: "Vincular Exercicio", handler: this.vincularExercicio, pressed: true, itemId: "vincular" })
+    } else {
+      docked.add({ text: "Editar Exercicio", handler: function(){}, pressed: true, itemId: "editarexercicio" })
+      docked.add({ text: "Desvincular Exercicio", handler: function(){}, pressed: true, itemId: "desvincular" })
+    }
+  },
+  vincularExercicio: function() {
+    var tree = this;
+    Ext.create("Ext.window.Window", {
+      items: [{
+        xtype: "form", itemId: "exercicioForm", width: 400,
+        items:[
+          {xtype: "exerciciocombo"}
+        ]
+      }]
+    }).show()
   }
 });

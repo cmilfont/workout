@@ -23,6 +23,7 @@ Ext.define('Workout.store.RotinaStore', {
    adicionarItem: function(item){
       this.appendChild({
          leaf: true,
+         item: item,
          exercicio: item.exercicio().get("titulo")
       })
    }
