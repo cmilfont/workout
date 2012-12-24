@@ -1,6 +1,6 @@
-Ext.define('Workout.view.rotina.Form', {
+Ext.define('Workout.view.exercicio.Form', {
   extend: 'Ext.form.Panel',
-  alias: 'widget.rotinaform',
+  alias: 'widget.exercicioform',
   formBind: true, 
   salvarCallback: Ext.emptyFn,
   scopeSalvarCallback: null,
@@ -11,7 +11,7 @@ Ext.define('Workout.view.rotina.Form', {
   },
   items: [
     {xtype: "hiddenfield", name: "id"},
-    {name: "titulo", xtype: "textfield", fieldLabel: "Titulo", allowBlank: false, margin: 5 }
+    {xtype: "exerciciocombo"}
   ],
   buttons: [{ text: "Salvar", formBind:true, handler: function(){
       var panel = this.up("form");
@@ -20,4 +20,5 @@ Ext.define('Workout.view.rotina.Form', {
         panel.salvarCallback.call( panel.scopeSalvarCallback, form.getValues() );
       }
   }}]
+  
 });

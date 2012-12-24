@@ -1,10 +1,14 @@
 Ext.define('Workout.controller.Rotinas', {
   extend: 'Ext.app.Controller',
-  views: ['rotina.List', 'rotina.Form', 'exercicio.Combo'],
+  requires: ['Workout.store.Rotinas'],
+  views: ['rotina.List', 'rotina.Form', 'exercicio.Form', 'exercicio.Combo'],
   models: ['Rotina', 'Item', 'Exercicio'],
+  stores: ['Rotinas'],
   init: function() {
     this.control({
-      "button[itemId='rotinas']": {
+      
+      //"button[itemId='rotinas']": {
+      "#rotinas" : {
         click: {
           scope: this,
           fn: this.onTabAdd

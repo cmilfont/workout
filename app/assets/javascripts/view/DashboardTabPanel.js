@@ -9,7 +9,8 @@ Ext.define('Workout.view.DashboardTabPanel', {
   activeTab: 0,
   items: [{
     title: 'Dashboard',
-    html: 'The first tab\'s content. Others may be added dynamically'
+    xtype: "panel",
+    html: 'Dashboard com os dados do usuaário'
   }],
   
   addTab: function(panel) {

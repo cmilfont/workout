@@ -1,7 +1,10 @@
 Ext.define('Workout.view.rotina.List', {
   extend: 'Ext.tree.Panel',
   alias: 'widget.rotinalist',
-  store: Ext.create("Workout.store.RotinaStore"),
+  mixins: {
+    vincular: "Workout.view.rotina.Vincular"
+  },
+  store: Ext.createByAlias("store.rotinas"),
   columns: [
      { text: "", dataIndex: "id", xtype: "treecolumn" },
      { text: 'Rotina', sortable: false, flex: 2, dataIndex: 'titulo'},
@@ -38,40 +41,52 @@ Ext.define('Workout.view.rotina.List', {
       }
     });
   },
+  
+  criarJanela: function(config) {
+    return Ext.create("Ext.window.Window", config);
+  },
+  
   abrirJanela: function(button) {
     var model = null;
     if(button.text != "Cadastrar") model = this.getSelectionModel().getLastSelected();
-    Ext.create("Ext.window.Window", {
-      title: "Criar Rotina",
+    this.currentWindow = this.criarJanela({
+      title: "Criar/Editar Rotina",
         items: [{
             xtype: "rotinaform", 
             salvarCallback: this.adicionar, 
             scopeSalvarCallback: this,
             model: model
         }]
-    }).show();
+    });
+    this.currentWindow.show();
   },
   adicionar: function(json) {
-    var id = json["id"];
-    var model = this.getStore().getNodeById( id );
+    var model = this.getStore().getNodeById( json.id ),
+        params = { scope: this, callback: this.adicionarRotinaNaTree};
     if( !model ) {
       model = Ext.create('Workout.model.Rotina', json);
-       model.save({
-         scope: this,
-         callback: function(rec){
-           this.getRootNode().appendChild({
-              leaf: true,
-              id:  id,
-              titulo: model.get("titulo"),
-              exercicio: ""
-           });
-         } 
-       });
-     } else {
-       model.set("titulo", json.titulo);
-     }
-     
+    } else {
+      model.set("titulo", json.titulo);
+      params.callback = this.fecharESelecionar;
+    }
+    model.save( params );
   },
+  
+  adicionarRotinaNaTree: function(model) {
+    var model = this.getRootNode().appendChild({
+       leaf: true,
+       id:  model.getId(),
+       titulo: model.get("titulo")
+    });
+    this.fecharESelecionar(model);
+  },
+  
+  fecharESelecionar : function(model) {
+    this.getSelectionModel().deselectAll()
+    this.currentWindow.close();
+    this.getSelectionModel().select( model );
+  },
+  
   desabilitarAoSelecionar: function(rowModel, model, index, eOpts) {
     this.down("#editar").disable();
     this.down("#excluir").disable();
@@ -88,21 +103,10 @@ Ext.define('Workout.view.rotina.List', {
     if(!model.raw.item) {
       this.down("#editar").enable();
       this.down("#excluir").enable();
-      docked.add({ text: "Vincular Exercicio", handler: this.vincularExercicio, pressed: true, itemId: "vincular" })
+      docked.add({ text: "Vincular Exercicio", scope: this, handler: this.vincularExercicio, pressed: true, itemId: "vincular" })
     } else {
       docked.add({ text: "Editar Exercicio", handler: function(){}, pressed: true, itemId: "editarexercicio" })
       docked.add({ text: "Desvincular Exercicio", handler: function(){}, pressed: true, itemId: "desvincular" })
     }
-  },
-  vincularExercicio: function() {
-    var tree = this;
-    Ext.create("Ext.window.Window", {
-      items: [{
-        xtype: "form", itemId: "exercicioForm", width: 400,
-        items:[
-          {xtype: "exerciciocombo"}
-        ]
-      }]
-    }).show()
   }
 });

@@ -1,5 +1,5 @@
-Ext.define('Workout.store.RotinaStore', {
-  alias: 'store.rotinastore',
+Ext.define('Workout.store.Rotinas', {
+  alias: 'store.rotinas',
   extend: 'Ext.data.TreeStore',
   model: "Workout.model.RotinaTree",
   root: "Workout.model.Rotina",
