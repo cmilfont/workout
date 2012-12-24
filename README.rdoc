@@ -1,10 +1,2 @@
-== Instalar dependências
-apt-get install redis-server
-
-== Rodar Resque
-redis-server
-QUEUE=indexacao rake resque:work
-ou 
-PIDFILE=./resque.pid BACKGROUND=yes QUEUE=* VERBOSE=1 rake environment resque:work
-
-para produção verificar algumas soluções https://github.com/defunkt/resque/wiki/init.d-script
+== Sistema para administrar treinamentos físicos [workout]
+Material para o Workshop de ExtJS 4 http://www.milfont.org/workshopextjs4.html
