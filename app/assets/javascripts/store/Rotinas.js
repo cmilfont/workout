@@ -17,14 +17,19 @@ Ext.define('Workout.store.Rotinas', {
   adicionarItensExpandindo: function(root, node){
      if( node.itens().count() > 0 ){
         node.itens().each( this.adicionarItem, node);
-        node.expand()
+        node.expand();
      }
    },
    adicionarItem: function(item){
+     
+     console.log(item);
+     
       this.appendChild({
          leaf: true,
          item: item,
-         exercicio: item.exercicio().get("titulo")
-      })
+         exercicio: item.exercicio().get("titulo"),
+         repeticao: item.get("repeticao"),
+         tempo: item.get("tempo")
+      });
    }
 });

@@ -3,7 +3,7 @@ Ext.define('Workout.model.Rotina', {
   proxy: {
     type: 'rest', format: 'json', url: '/rotinas'
   },
-  fields: ['titulo', 'exercicio', {name:'id', mapping:'id'}],
+  fields: ['titulo', {name:'id', mapping:'id'}],
   hasMany: [
     {model: 'Workout.model.Item', name: 'itens', associationKey: 'itens'}
   ]
@@ -14,7 +14,7 @@ Ext.define('Workout.model.RotinaTree', {
   proxy: {
     type: 'rest', format: 'json', url: '/rotinas'
   },
-  fields: ['id', 'titulo', 'exercicio'],
+  fields: ['id', 'titulo', 'exercicio', 'repeticao', 'tempo'],
   hasMany: [
     {model: 'Workout.model.Item', name: 'itens', associationKey: 'itens'}
   ]
