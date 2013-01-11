@@ -17,7 +17,7 @@ Ext.define("Workout.view.exercicios.Form", {
     { 
       text: "Salvar", 
       handler: function() {
-        var panel = this.up("exercicioform");
+         var panel = this.up("exercicioform");
          var form = panel.getForm();
          var json = form.getValues();
          var model = Ext.create("Workout.model.Exercicio", json);

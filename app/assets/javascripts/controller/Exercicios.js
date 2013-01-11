@@ -5,7 +5,6 @@ Ext.define('Workout.controller.Exercicios', {
   stores: ['Exercicios'],
   views: ['exercicios.Grid', 'exercicios.Form', 'exercicios.Window'],
   addTabPanel: function(button) {
-    console.log("Clicou em exercicio", this);
     var tabpanel = Ext.ComponentQuery
             .query("tabpanel[itemId='tabs']")[0];
             

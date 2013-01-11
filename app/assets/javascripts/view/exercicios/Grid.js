@@ -14,7 +14,8 @@ Ext.define("Workout.view.exercicios.Grid", {
   initComponent: function() {
     this.tbar = [
       { text: "Cadastrar", handler: this.abrirJanela, scope: this},
-      { text: "Editar", handler: this.abrirJanela, scope: this}
+      { text: "Editar", handler: this.abrirJanela, scope: this},
+      { text: "Excluir", handler: this.excluir, scope: this}
     ];
     this.callParent();
   },

@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require ext-all-dev
+//= require base
 //= require app
