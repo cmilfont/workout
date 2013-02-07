@@ -1,4 +1,4 @@
-Ext.define("Workout.view.rotinas.Rotina", {
+Ext.define("Workout.view.rotinas.RotinaCrud", {
   
   excluir: function() {
     Ext.Msg.show({

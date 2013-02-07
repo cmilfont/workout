@@ -1,4 +1,4 @@
-Ext.define("Workout.view.rotinas.Exercicio", {
+Ext.define("Workout.view.rotinas.ExercicioCrud", {
   
   vincular: function() {
     var model = this.getSelectionModel().selected.first();
