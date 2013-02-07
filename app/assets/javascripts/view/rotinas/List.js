@@ -2,11 +2,12 @@ Ext.define('Workout.view.rotinas.List', {
   extend: 'Ext.tree.Panel',
   alias: 'widget.rotinaslist',
   mixins: {
-    rotina: "Workout.view.rotinas.Rotina"
+    rotina: "Workout.view.rotinas.Rotina",
+    exercicio: "Workout.view.rotinas.Exercicio"
   },
   store: Ext.createByAlias("store.rotinas"),
   selModel: { allowDeselect: true },
-  singleExpand: true,
+  singleExpand: false,
 	rootVisible: false,
   columns: [
      { text: "", dataIndex: "id", xtype: "treecolumn" },

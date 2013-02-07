@@ -1,7 +1,10 @@
 Ext.define('Workout.controller.Rotinas', {
   extend: 'Ext.app.Controller',
-  requires: ['Workout.store.Rotinas'],
-  views: ['rotinas.List', 'rotinas.Form'],
+  requires: [
+    'Workout.model.RotinaTree',
+    'Workout.store.Rotinas'
+  ],
+  views: ['rotinas.List', 'rotinas.Form', 'rotinas.ExercicioForm'],
   models: ['Rotina', 'RotinaTree','Item', 'Exercicio'],
   stores: ['Rotinas'],
   init: function() {
@@ -15,9 +18,9 @@ Ext.define('Workout.controller.Rotinas', {
         }
       },
       
-      "rotinalist[itemId='tab-Rotinas']": {
+      "rotinaslist": {
         afterrender: function(view) {
-          view.store.load();
+          //view.store.load();
         }
       }
     });

@@ -2,7 +2,7 @@ Ext.define('Workout.store.Rotinas', {
   alias: 'store.rotinas',
   extend: 'Ext.data.TreeStore',
   model: "Workout.model.RotinaTree",
-  root: "Workout.model.Rotina",
+  root: "Workout.model.RotinaTree",
   constructor: function() {
     this.callParent(arguments);
     
@@ -22,7 +22,7 @@ Ext.define('Workout.store.Rotinas', {
       node.expand();
     }
   },
-  adicionarItem: function(item) {
+  adicionarItem: function(item) {    
     this.appendChild({
       leaf: true,
       item: item,

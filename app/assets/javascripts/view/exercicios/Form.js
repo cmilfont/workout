@@ -20,13 +20,16 @@ Ext.define("Workout.view.exercicios.Form", {
          var panel = this.up("exercicioform");
          var form = panel.getForm();
          var json = form.getValues();
-         var model = Ext.create("Workout.model.Exercicio", json);
-         model.save({
-           callback: function() {
-             panel.callbackSave.call(panel.callbackSaveScope || panel,
-                                      model)
-           }
-         })
+         
+          panel.callbackSave.call(panel.callbackSaveScope, json);
+         
+         // var model = Ext.create("Workout.model.Exercicio", json);
+         // model.save({
+         //   callback: function() {
+         //     panel.callbackSave.call(panel.callbackSaveScope || panel,
+         //                              model)
+         //   }
+         // })
       }
     }
   ]
