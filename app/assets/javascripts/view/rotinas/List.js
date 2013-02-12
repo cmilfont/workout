@@ -50,7 +50,7 @@ Ext.define('Workout.view.rotinas.List', {
       this.down("#excluir").enable();
       docked.add({ text: "Vincular Exercicio", scope: this, handler: this.vincular, pressed: true, itemId: "vincular" })
     } else {
-      docked.add({ text: "Editar Exercicio", handler: function(){}, pressed: true, itemId: "editarexercicio" })
+      docked.add({ text: "Editar Exercicio", handler: this.editarVinculo, pressed: true, itemId: "editarexercicio" })
       docked.add({ text: "Desvincular Exercicio", handler: function(){}, pressed: true, itemId: "desvincular" })
     }
   }

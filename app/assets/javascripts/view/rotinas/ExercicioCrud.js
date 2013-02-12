@@ -1,7 +1,11 @@
 Ext.define("Workout.view.rotinas.ExercicioCrud", {
   
+  //var tree = Ext.ComponentQuery.query("rotinaslist")[0]
+  //var selecionado = tree.getSelectionModel().selected.first()
+  
   vincular: function() {
     var model = this.getSelectionModel().selected.first();
+    var item = { rotina_id: model.getId() };
     Ext.create("Ext.window.Window", {
       modal: false,
       constrain: true,
@@ -13,7 +17,7 @@ Ext.define("Workout.view.rotinas.ExercicioCrud", {
       },
       items: [{
         xtype: 'rotinaexercicioform',
-        rotina_id: model.getId(),
+        item: item,
         listeners: {
           vinculado: {
             fn: this.store.adicionarItem,
@@ -22,6 +26,30 @@ Ext.define("Workout.view.rotinas.ExercicioCrud", {
         }
       }]
     }).show();
+  },
+  
+  editarVinculo: function() {
+    var selecionado = this.getSelectionModel().selected.first();
+    var item = selecionado.raw.item;
+
+    Ext.create("Ext.window.Window", {
+      modal: false,
+      items: [{
+        xtype: 'rotinaexercicioform',
+        item: item,
+        listeners: { 
+          vinculado: function(model){
+            var json = Ext.apply(
+                         {exercicio: model.exercicio().get("titulo")}, 
+                         model.data);
+            delete json.id;
+            selecionado.set(json);
+            selecionado.raw.item = model;
+          }
+        }
+      }]
+    }).show();
+    
   },
   
   desvincular: function() {

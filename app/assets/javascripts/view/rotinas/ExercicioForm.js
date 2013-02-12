@@ -3,18 +3,18 @@ Ext.define('Workout.view.rotinas.ExercicioForm', {
   alias: 'widget.rotinaexercicioform',
   formBind: true,
   vincular: function() {
-    var formPanel = this;
-    var item = Ext.create("Workout.model.Item", this.getForm().getValues() )
-    item.save({
-      callback: function(){
-        formPanel.fireEvent("vinculado", item);
-      }
-    });
+    Ext.create("Workout.model.Item", this.getForm().getValues() )
+       .save({
+          callback: function(model, operation){
+            this.fireEvent("vinculado", operation.resultSet.records[0]);
+          },
+          scope: this
+        });
   },
   initComponent: function(){
     this.buttons = [{text: "Vincular", handler: this.vincular, scope: this, formBind: true}];
     this.callParent();
-    this.getForm().setValues({rotina_id: this.rotina_id} );
+    this.getForm().loadRecord(this.item);
   },
   items: [
     { 
@@ -24,10 +24,13 @@ Ext.define('Workout.view.rotinas.ExercicioForm', {
        displayField: 'titulo',
        valueField: 'id',
        allowBlank: false,
+       blankText: "Campo obrigatório",
+       queryMode: 'remote',
        store: Ext.createByAlias('store.exercicios')
     },
     { xtype: 'textfield', fieldLabel: "Repetições", name: "repeticao"},
     { xtype: 'textfield', fieldLabel: "Tempo", name: "tempo"},
-    { xtype: "hidden", name: "rotina_id"}
+    { xtype: "hidden", name: "rotina_id"},
+    { xtype: "hidden", name: "id"}
   ]
 });

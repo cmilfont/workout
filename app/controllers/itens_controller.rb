@@ -11,5 +11,11 @@ class ItensController < ApplicationController
     @item = Item.create params[:item]
     respond_with @item, :include => [:exercicio]
   end
+  
+  def update
+    @item = Item.find params[:id]
+    @item.update_attributes params[:item]
+    render :json => @item, :include => [:exercicio]
+  end
     
 end
