@@ -1,39 +1,35 @@
 Ext.define("Workout.view.exercicios.Crud", {
   abrirJanela: function(button) {
+
+    var model = this.selecionar(button.cadastro);
+    var formPanel = Ext.widget('exercicioform', { exercicio: model });
+    if(button.cadastro) formPanel.on("salvo", this.adicionar, this);
+
+    var win = Ext.widget("exerciciowindow", {
+      title: "Salvar exercício",
+      boundary: this,
+      items: [formPanel]
+    });
+    win.show();
     
+    formPanel.on("salvo", win.close, win);
+    
+  },
+  
+  selecionar: function(isCadastro) {
     var model = null;
-    if(button.text != "Cadastrar") {
+    if(!isCadastro) {
       model = this.getSelectionModel().selected.first();
       if(!model) {
         Ext.Msg.alert("Erro", "Selecione um Exercício para editar");
         Ext.Error.notify = true;
         Ext.Error.raise({ msg: 'Selecione um Exercício para editar' });
       }
-
     }
-
-    Ext.widget("exerciciowindow", {
-      title: "Salvar exercício",
-      boundary: this,
-      items: [{
-        xtype: "exercicioform",
-        callbackSave: this.adicionar,
-        callbackSaveScope: this,
-        exercicio: model
-      }]
-    }).show();
-    
+    return model;
   },
-  adicionar: function(json) {
-    
-    var local = this.store.findRecord("id", json.id);
-    if ( local ) {
-      local.set(json);
-    } else {
-      this.store.add(json);
-      this.store.sync();
-    }
-    
+  adicionar: function(model) {
+    this.store.add(model);    
   },
   excluir: function() {
     
@@ -46,9 +42,8 @@ Ext.define("Workout.view.exercicios.Crud", {
         if(btn == "yes") {
           var model = this.getSelectionModel().selected.first();
           this.store.remove(model);
-          model.destroy;
+          this.store.sync();
         }
-          
       }
     });
     
