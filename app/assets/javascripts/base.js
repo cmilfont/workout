@@ -1,16 +1,40 @@
 Ext.onReady(function(){
+
   Ext.Ajax.extraParams = {
-    authenticity_token: Ext.select("meta[name='csrf-token']")
-                           .first().getAttribute('content')
+    authenticity_token: Ext.select("meta[name='csrf-token']").first().getAttribute('content')
   }
   
-  Ext.Ajax.on('requestexception', 
-  function (conn, response, options) {
-    if (response.status === 401 || response.status === 401) {
-      resp = JSON.parse(response.responseText)
-      Ext.Msg.alert('Erro', resp.message);
+  
+  Ext.override(Ext.data.proxy.Rest, {
+    constructor: function() {
+      this.callParent(arguments);
+      this.on("exception", function(proxy, response, operation, opts) {
+        var errors    = new Ext.data.Errors(),
+	          exception = Ext.JSON.decode(response.responseText).errors;
+	          
+        for(var item in exception) {
+          errors.add({
+              field  : item,
+              message: exception[item]
+          });
+        }
+        if(operation.scope.getForm) {
+          var form = operation.scope.getForm();
+          var model = operation.scope.getForm().getRecord();
+          if(model) model.errors = errors;
+          operation.scope.getForm().markInvalid(errors);
+        }
+      });
     }
   });
+  
+  // Ext.Ajax.on('requestexception', 
+  // function (conn, response, options) {
+  //   if (response.status === 401 || response.status === 401) {
+  //     resp = JSON.parse(response.responseText)
+  //     Ext.Msg.alert('Erro', resp.message);
+  //   }
+  // });
   
 	Ext.override(Ext.form.field.Picker, {
 
