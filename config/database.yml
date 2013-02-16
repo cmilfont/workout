@@ -1,11 +1,12 @@
 development: &DEV
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   database: workout_development
   pool: 5
-  username: root
-  password: root
+  timeout: 5000
+  username: postgres
+  password: postgres
 
 test:
   <<: *DEV
