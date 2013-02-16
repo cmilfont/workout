@@ -1,6 +1,10 @@
 Ext.application({
   name: "Workout",
-  appFolder: "/assets",
+  paths: {"Ext.ux":"/assets/ux"},
+  requires: [
+    'Ext.ux.RowExpander'
+  ],
+  appFolder: "/assets/app",
   autoCreateViewport: true,
   controllers: ['Exercicios', 'Rotinas'],
   init: function(application){

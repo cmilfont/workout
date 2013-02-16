@@ -1,3 +1,6 @@
+//
+//= require_tree ../view/exercicios/
+
 Ext.define('Workout.controller.Exercicios', {
   extend: 'Ext.app.Controller',
   requires: [ 'Workout.store.Exercicios'],

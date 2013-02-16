@@ -1,4 +1,4 @@
-Ext.define('Workout.view.DashboardTabPanel', {
+Ext.define('Workout.view.dashboard.TabPanel', {
   alias: 'widget.dtabpanel',
   extend: 'Ext.tab.Panel',
   itemId: "tabs",

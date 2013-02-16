@@ -28,14 +28,7 @@ Ext.onReady(function(){
     }
   });
   
-  // Ext.Ajax.on('requestexception', 
-  // function (conn, response, options) {
-  //   if (response.status === 401 || response.status === 401) {
-  //     resp = JSON.parse(response.responseText)
-  //     Ext.Msg.alert('Erro', resp.message);
-  //   }
-  // });
-  
+
 	Ext.override(Ext.form.field.Picker, {
 
 	    initEvents: function() {

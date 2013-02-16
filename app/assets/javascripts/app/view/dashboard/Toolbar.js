@@ -1,4 +1,4 @@
-Ext.define('Workout.view.DashboardToolbar', {
+Ext.define('Workout.view.dashboard.Toolbar', {
   alias: 'widget.dtoolbar',
   extend: 'Ext.toolbar.Toolbar',
   style: {
