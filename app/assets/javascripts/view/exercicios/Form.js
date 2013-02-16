@@ -7,30 +7,29 @@ Ext.define("Workout.view.exercicios.Form", {
     {xtype: "textfield", fieldLabel: "Título", name: "titulo"},
     {xtype: "textfield", fieldLabel: "Descrição", name: "descricao"}
   ],
+  salvar: function() {
+    var form = this.getForm();
+    var json = form.getValues();
+    var model = form.getRecord();
+    if( model ) {
+      model.set(json);
+    } else {
+      model = Ext.create("Workout.model.Exercicio", json);
+    }
+    model.save({
+      success: function(record, operation) {
+        this.fireEvent('salvo', model);
+      },
+      scope: this
+    });
+  },
   initComponent: function() {
+    this.buttons = [ 
+      this.SalvarButton = Ext.create("Ext.button.Button", {text: "Salvar"})
+    ];
     this.callParent();
+    this.SalvarButton.setHandler(this.salvar, this);
     if( this.exercicio )
       this.getForm().loadRecord( this.exercicio );
-  },
-  callbackSave: Ext.emptyFn,
-  buttons: [
-    { 
-      text: "Salvar", 
-      handler: function() {
-         var panel = this.up("exercicioform");
-         var form = panel.getForm();
-         var json = form.getValues();
-         
-          panel.callbackSave.call(panel.callbackSaveScope, json);
-         
-         // var model = Ext.create("Workout.model.Exercicio", json);
-         // model.save({
-         //   callback: function() {
-         //     panel.callbackSave.call(panel.callbackSaveScope || panel,
-         //                              model)
-         //   }
-         // })
-      }
-    }
-  ]
+  }
 });
