@@ -1,3 +1,6 @@
+//
+//= require_tree ../view/rotinas/
+
 Ext.define('Workout.controller.Rotinas', {
   extend: 'Ext.app.Controller',
   requires: [
