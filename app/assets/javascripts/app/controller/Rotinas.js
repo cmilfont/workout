@@ -1,32 +1,37 @@
 //
-//= require_tree ../view/rotinas/
+//= require ../model/Exercicio
+//= require ../model/Item
+//= require ../model/Rotina
+//= require ../model/RotinaTree
+//= require ../store/Rotinas
+//= require ../store/Exercicios
+//= require ../view/rotinas/RotinaCrud
+//= require ../view/rotinas/ExercicioCrud
+//= require ../view/rotinas/Grid
+//= require ../view/rotinas/Form
+//= require ../view/rotinas/ExercicioForm
 
 Ext.define('Workout.controller.Rotinas', {
   extend: 'Ext.app.Controller',
-  requires: [
-    'Workout.model.RotinaTree',
-    'Workout.store.Rotinas'
-  ],
-  views: ['rotinas.List', 'rotinas.Form', 'rotinas.ExercicioForm'],
-  models: ['Rotina', 'RotinaTree','Item', 'Exercicio'],
-  stores: ['Rotinas'],
-  init: function() {
-    this.control({
-      "rotinaslist": {
-        afterrender: function(view) {
-          //view.store.load();
-        }
-      }
-    });
+  // requires: [
+  //   'Workout.model.RotinaTree',
+  //   'Workout.store.Rotinas'
+  // ],
+  //views: ['rotinas.List', 'rotinas.Form', 'rotinas.ExercicioForm'],
+  //models: ['Rotina', 'RotinaTree','Item', 'Exercicio'],
+  //stores: ['Rotinas'],
+  init: function(button) {
+    this.addTabPanel(button);
   },
-  
-  onTabAdd: function(button) {
+  addTabPanel: function(button) {
     this.getTabPanel().addTab({
       title: button.text,
-      itemId: "tab-" + button.text,
+      itemId: "tab-" + button.controller,
       closable: true,
-      xtype: "rotinaslist"
+      controller: button.controller,
+      xtype: 'rotinaslist'
     });
+    
   }
   
   , getTabPanel: function() {

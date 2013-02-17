@@ -1,4 +1,4 @@
-Ext.define('Workout.view.rotinas.List', {
+Ext.define('Workout.view.rotinas.Grid', {
   extend: 'Ext.tree.Panel',
   alias: 'widget.rotinaslist',
   mixins: {
