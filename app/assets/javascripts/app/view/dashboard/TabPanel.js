@@ -14,7 +14,7 @@ Ext.define('Workout.view.dashboard.TabPanel', {
   }],
   
   addTab: function(panel) {
-    var tab = this.down("[itemId='tab-" + panel.title + "']");
+    var tab = this.down("[itemId='tab-" + panel.controller + "']");
     if(!tab) tab = this.add(panel);
     this.setActiveTab(tab);
   }

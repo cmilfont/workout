@@ -12,15 +12,6 @@ Ext.define('Workout.controller.Rotinas', {
   stores: ['Rotinas'],
   init: function() {
     this.control({
-      
-      //"button[itemId='rotinas']": {
-      "#rotinas" : {
-        click: {
-          scope: this,
-          fn: this.onTabAdd
-        }
-      },
-      
       "rotinaslist": {
         afterrender: function(view) {
           //view.store.load();

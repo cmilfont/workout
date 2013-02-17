@@ -6,7 +6,7 @@ Ext.application({
   ],
   appFolder: "/assets/app",
   autoCreateViewport: true,
-  controllers: ['Exercicios', 'Rotinas'],
+  controllers: ['Dashboard'],
   init: function(application){
     Workout.getApplication = function() { return application; };
   }

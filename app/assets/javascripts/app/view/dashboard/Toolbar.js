@@ -9,7 +9,11 @@ Ext.define('Workout.view.dashboard.Toolbar', {
     '->',
     { xtype: 'button', overCls: 'home_menu_over', cls: 'home_menu', pressedCls: "home_pressed", text: 'Rotinas', itemId: 'rotinas'},
     { xtype: 'button', overCls: 'home_menu_over', cls: 'home_menu', pressedCls: "home_pressed", text: 'Treinos', itemId: 'treinos'},
-    { xtype: 'button', overCls: 'home_menu_over', cls: 'home_menu', pressedCls: "home_pressed", text: 'Exercícios', itemId: 'exercicios'},
+    { xtype: 'button', overCls: 'home_menu_over', cls: 'home_menu', pressedCls: "home_pressed", 
+      text: 'Exercícios', 
+      itemId: 'exercicios',
+      controller: 'Exercicios'
+    },
     {
       xtype: 'splitbutton',  overCls: 'home_split_over', cls: 'home_split', text : 'Perfil',
       menu: {
