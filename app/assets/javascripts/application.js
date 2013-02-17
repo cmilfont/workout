@@ -10,7 +10,7 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require ext-all-dev
+//= require ext-all
 //= require base
 //= require_tree ./app/view/dashboard
 //= require ./app/view/Viewport
