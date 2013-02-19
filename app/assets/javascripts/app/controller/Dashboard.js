@@ -2,9 +2,10 @@ Ext.define('Workout.controller.Dashboard', {
   extend: 'Ext.app.Controller',
   loadController: function(button) {
     if(button.controller) {
-      Workout.getApplication()
-             .getController( button.controller )
-             .init(button);
+      var controller = Workout.getApplication()
+                              .getController( button.controller );
+      if (!controller._initialized) controller.init();
+      controller.addTabPanel(button);
     }
   },
   init: function() {

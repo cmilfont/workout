@@ -20,8 +20,8 @@ Ext.define('Workout.controller.Rotinas', {
   //views: ['rotinas.List', 'rotinas.Form', 'rotinas.ExercicioForm'],
   //models: ['Rotina', 'RotinaTree','Item', 'Exercicio'],
   //stores: ['Rotinas'],
-  init: function(button) {
-    this.addTabPanel(button);
+  init: function() {
+    if (!this._initialized) this._initialized = true;
   },
   addTabPanel: function(button) {
     this.getTabPanel().addTab({
@@ -31,12 +31,8 @@ Ext.define('Workout.controller.Rotinas', {
       controller: button.controller,
       xtype: 'rotinaslist'
     });
-    
-  }
-  
-  , getTabPanel: function() {
-    return Ext.ComponentQuery.query("tabpanel[itemId='tabs']")[0];
-  }
-  
-    
+  }, 
+  getTabPanel: function() {
+    return Ext.ComponentQuery.query("dtabpanel")[0];
+  } 
 });

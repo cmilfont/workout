@@ -18,11 +18,16 @@ Ext.onReady(function(){
               message: exception[item]
           });
         }
-        if(operation.scope.getForm) {
+        if(operation.scope && operation.scope.getForm) {
           var form = operation.scope.getForm();
           var model = operation.scope.getForm().getRecord();
           if(model) model.errors = errors;
           operation.scope.getForm().markInvalid(errors);
+        } else {
+          var messages = errors.items.map(function(item, i){
+            return item.field + " <br/> " + item.message.map(function(msg, k){ return (i+1) + "." + (k+1) + ": " + msg  }) + "";
+          })
+          Ext.Msg.alert('Erro(s)', messages );
         }
       });
     }

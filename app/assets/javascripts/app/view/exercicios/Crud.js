@@ -41,8 +41,14 @@ Ext.define("Workout.view.exercicios.Crud", {
       fn: function(btn){
         if(btn == "yes") {
           var model = this.getSelectionModel().selected.first();
-          this.store.remove(model);
-          this.store.sync();
+          model.destroy({
+              success : function() {
+                  this.store.remove(model);
+                  //this.store.sync();
+              },
+              scope: this
+          });
+          
         }
       }
     });

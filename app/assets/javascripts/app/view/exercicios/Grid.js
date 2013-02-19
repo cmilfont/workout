@@ -18,6 +18,11 @@ Ext.define("Workout.view.exercicios.Grid", {
       { text: "Excluir", handler: this.excluir, scope: this}
     ];
     this.callParent();
+    // this.store.on('datachanged', function(store) {
+    //   debugger;
+    //   store.rejectChanges()
+    //   //store.sync();
+    // });
   },
   store: Ext.createByAlias("store.exercicios")
 });
